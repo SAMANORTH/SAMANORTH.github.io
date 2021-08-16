@@ -471,7 +471,7 @@ summary {
 }
 u {
   text-decoration: none;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, #000 50%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, #800080 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 1.05em;
@@ -490,7 +490,7 @@ blockquote {
   display: block;
   margin-left: -1em;
   padding-left: 0.8em;
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid #800080;
 }
 .arrow svg #rod {
   stroke: #545454;
