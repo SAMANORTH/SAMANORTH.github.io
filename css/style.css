@@ -49,12 +49,12 @@ a {
 }
 .al_button_theme {
   color: #fff;
-  background: #fff;
-  border: 1px solid #fff;
+  background: #808080;
+  border: 1px solid #808080;
 }
 .al_button_transparent {
-  color: #fff;
-  border: 1px solid #fff;
+  color: #808080;
+  border: 1px solid #808080;
 }
 .al_letter {
   text-transform: uppercase;
@@ -146,7 +146,7 @@ em {
 @charset "UTF-8";
 .al_index_background {
   z-index: 10;
-  background-color: #fff;
+  background-color: #808080;
 }
 .al_index_background_letter {
   font-size: 600px;
@@ -193,8 +193,8 @@ em {
   color: #444;
 }
 .al_post_nav .al_post_nav_item:hover {
-  fill: #fff;
-  color: #fff;
+  fill: #808080;
+  color: #808080;
 }
 .al_post_nav .al_arrow {
   width: 10px;
@@ -276,7 +276,7 @@ em {
   word-wrap: break-word;
 }
 .al_index_post_title a:hover {
-  color: #fff;
+  color: #808080;
 }
 .al_index_post_button {
   width: calc(50% - 15px);
@@ -314,7 +314,7 @@ em {
   z-index: 11;
 }
 .al_index_footer a {
-  color: #fff;
+  color: #808080;
 }
 .al_index_footer_item {
   margin-bottom: 10px;
@@ -342,7 +342,7 @@ em {
   }
 }
 .al_page_background {
-  background-color: #fff;
+  background-color: #808080;
   z-index: 10;
 }
 .al_page_container {
@@ -364,7 +364,7 @@ em {
   cursor: zoom-in;
 }
 .al_main_page_container a {
-  color: #fff;
+  color: #808080;
 }
 .al_main_page_container q,
 .al_main_page_container blockquote {
@@ -471,7 +471,7 @@ summary {
 }
 u {
   text-decoration: none;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, #fff 50%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, #000 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 1.05em;
@@ -490,7 +490,7 @@ blockquote {
   display: block;
   margin-left: -1em;
   padding-left: 0.8em;
-  border-left: 0.2em solid #fff;
+  border-left: 0.2em solid #000;
 }
 .arrow svg #rod {
   stroke: #545454;
@@ -566,7 +566,7 @@ code:not(.hljs) {
 }
 #post-body > ul li::before {
   content: "•";
-  color: #fff;
+  color: #808080;
   display: inline-block;
   margin-right: 10px;
 }
@@ -580,7 +580,7 @@ ol li {
 ol li::before {
   content: counter(ol) ".";
   counter-increment: ol;
-  color: #fff;
+  color: #808080;
   text-align: right;
   display: inline-block;
   min-width: 1em;
@@ -593,7 +593,7 @@ ol li::before {
   width: 400px;
   bottom: 0;
   z-index: 1001;
-  background-color: #fff;
+  background-color: #808080;
 }
 .al_sidebar_author_cnt {
   background-color: #fff;
@@ -729,8 +729,8 @@ ol li::before {
     fill: #bbb;
   }
   .al_post_nav .al_post_nav_item:hover {
-    fill: #fff;
-    color: #fff;
+    fill: #808080;
+    color: #808080;
   }
   .gt-comment-content {
     background-color: #090601 !important;
