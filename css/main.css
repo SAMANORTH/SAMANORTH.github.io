@@ -56,6 +56,12 @@
     --site-bg: #000;
   }
 }
+body {
+  background-image: url("images/walker.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
 pre {
   font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-size: 0.8125rem;
@@ -575,7 +581,6 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  background: var(--site-bg);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -948,6 +953,7 @@ div.toast {
   text-decoration: underline;
 }
 .nav-wrap {
+  border-radius: 10px;
   position: sticky;
   position: -webkit-sticky;
   margin-top: 1.75rem;
@@ -2808,6 +2814,9 @@ nav.menu a.nav-item:hover {
 }
 .l_left .widgets .widget-wrap {
   margin: 1rem 0 3rem 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
 }
 .l_left .widgets .widget-wrap .widget-header {
   display: flex;
