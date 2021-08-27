@@ -3216,17 +3216,19 @@ article.md.error-page a#back {
   display: block;
   margin: 1rem 0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px 0px rgba(0,0,0,0.02);
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px 0px rgba(0,0,0,0.5);
   transition: box-shadow 0.2s ease-out;
   -moz-transition: box-shadow 0.2s ease-out;
   -webkit-transition: box-shadow 0.2s ease-out;
   -o-transition: box-shadow 0.2s ease-out;
   overflow: hidden;
-  background: var(--card);
 }
+.post-list .post-card #background: var(--card),
 .post-list .post-card .excerpt {
   margin: 1rem 0;
 }
+.post-list .post-card #background: var(--card) >p,
 .post-list .post-card .excerpt >p {
   margin: 1rem 0;
 }
@@ -3247,7 +3249,7 @@ article.md.error-page a#back {
   height: 1.5em;
 }
 .post-list .post-card:hover {
-  box-shadow: 0 1px 4px 0px rgba(0,0,0,0.08), 0 2px 8px 0px rgba(0,0,0,0.06), 0 4px 16px 0px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px 0px rgba(0,0,0,0.5), 0 2px 8px 0px rgba(0,0,0,0.5), 0 4px 16px 0px rgba(0,0,0,0.5);
 }
 .post-list article {
   padding: 1rem;
