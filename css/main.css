@@ -2774,7 +2774,7 @@ nav.menu::-webkit-scrollbar-thumb {
 nav.menu a.nav-item {
   text-overflow: ellipsis;
   word-break: keep-all;
-  margin: 1px;
+  margin: 3px;
   border-radius: 4px;
   font-size: 0.875rem;
   font-weight: 500;
@@ -2826,11 +2826,12 @@ nav.menu a.nav-item:hover {
   position: sticky;
   position: -webkit-sticky;
   top: -2px;
-  background: var(--site-bg);
-  padding-top: 2px;
-  z-index: 1;
-  line-height: 2.4;
 }
+.l_left .widgets .widget-wrap .widget-header #background: var(--site-bg),
+.l_left .widgets .widget-wrap .widget-header padding-top: 2px,
+.l_left .widgets .widget-wrap .widget-header z-index 1,
+.l_left .widgets .widget-wrap .widget-header line-height: 2.4,
+.l_left .widgets .widget-wrap .widget-header background: transparent,
 .l_left .widgets .widget-wrap .widget-header:empty {
   display: none;
 }
