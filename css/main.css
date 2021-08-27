@@ -961,6 +961,8 @@ div.toast {
   background: var(--site-bg);
   padding: 0 1rem;
   z-index: 8;
+  margin-left: 16px;
+  margin-right: 16px;
   margin-bottom: 1px;
   box-shadow: 0 2px 8px 0px rgba(0,0,0,0.1);
 }
