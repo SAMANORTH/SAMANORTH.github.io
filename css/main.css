@@ -28,6 +28,7 @@
   --text-p3: #848484;
   --text-p4: #b7b7b7;
   --text-p5: #333;
+  --text-p6: #333;
   --text-meta: #d6d6d6;
   --text-code: #111;
   --card: rgba(255,255,255,0.8);
@@ -42,11 +43,12 @@
     --block-border: #444e5a;
     --block-hover: #2c323a;
     --text-p0: #fff;
-    --text-p1: #d1d1d1;
+    --text-p1: #eee;
     --text-p2: #b5b5b5;
     --text-p3: #868686;
     --text-p4: #737373;
     --text-p5: #fff;
+    --text-p6: #000;
     --text-meta: #6a6a6a;
     --text-code: #ff7043;
     --card: rgba(0,0,0,0.8);
@@ -3388,7 +3390,7 @@ article.md.error-page a#back {
 article.md {
   max-width: 100%;
   padding: 1rem;
-  color: var(--text-p1);
+  color: var(--text-p6);
   line-height: 1.7;
   word-break: break-word;
 }
