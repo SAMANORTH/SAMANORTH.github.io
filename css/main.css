@@ -31,6 +31,7 @@
   --text-meta: rgba(207,207,207,0.92);
   --text-code: #111;
   --card: rgba(255,255,255,0.9);
+  --wrapcard: #fff;
   --theme-highlight: #03c7fa;
   --theme-bg: rgba(227,249,254,0.91);
 }
@@ -49,6 +50,7 @@
     --text-meta: #676c72;
     --text-code: #ff7043;
     --card: rgba(64,69,75,0.9);
+    --wrapcard: #40454b;
     --theme-highlight: #1bcdfc;
     --theme-bg: rgba(59,85,96,0.91);
   }
@@ -2818,7 +2820,7 @@ nav.menu a.nav-item:hover {
 }
 .l_left .widgets .widget-wrap {
   margin: 1rem 0 3rem 0;
-  background: var(--card);
+  background: var(--wrapcard);
   border-radius: 10px;
   padding: 15px;
 }
