@@ -2803,23 +2803,7 @@ nav.menu a.nav-item:hover {
   flex-grow: 1;
 }
 .l_left .widgets {
-  overflow: scroll;
   z-index: 1;
-}
-.l_left .widgets::-webkit-scrollbar {
-  height: 0;
-  width: 0;
-}
-.l_left .widgets::-webkit-scrollbar-track-piece {
-  background: transparent;
-}
-.l_left .widgets::-webkit-scrollbar-thumb {
-  background: var(--text-meta);
-  cursor: pointer;
-  border-radius: 0;
-}
-.l_left .widgets::-webkit-scrollbar-thumb:hover {
-  background: var(--text-p3);
 }
 .l_left .widgets .widget-wrap {
   margin: 1rem 0 3rem 0;
