@@ -2770,6 +2770,7 @@ nav.menu {
   display: flex;
   padding: 1px;
   flex-wrap: wrap;
+  box-shadow: 0 2px 2px 0px rgba(0,0,0,0.07), 0 1px 5px 0px rgba(0,0,0,0.1);
 }
 nav.menu::-webkit-scrollbar {
   display: none;
@@ -2825,6 +2826,7 @@ nav.menu a.nav-item:hover {
   background: var(--wrapcard);
   border-radius: 10px;
   padding: 15px;
+  box-shadow: 0 2px 2px 0px rgba(0,0,0,0.07), 0 1px 5px 0px rgba(0,0,0,0.1);
 }
 .l_left .widgets .widget-wrap .widget-header {
   display: flex;
