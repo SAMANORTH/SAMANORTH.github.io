@@ -31,10 +31,10 @@
   --text-p6: #333;
   --text-meta: #d6d6d6;
   --text-code: #111;
-  --card: rgba(255,255,255,0.8);
+  --card: rgba(255,255,255,0.5);
   --wrapcard: #fff;
   --theme-highlight: #03c7fa;
-  --theme-bg: rgba(222,247,254,0.82);
+  --theme-bg: rgba(198,242,254,0.55);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -51,10 +51,10 @@
     --text-p6: #000;
     --text-meta: #6a6a6a;
     --text-code: #ff7043;
-    --card: rgba(0,0,0,0.8);
+    --card: rgba(0,0,0,0.5);
     --wrapcard: #000;
     --theme-highlight: #1bcdfc;
-    --theme-bg: rgba(3,29,36,0.82);
+    --theme-bg: rgba(6,51,62,0.55);
   }
 }
 @media screen and (prefers-color-scheme: dark) and (max-width: 768px) {
@@ -1515,38 +1515,38 @@ nav.cap a+a {
 }
 .tag-plugin[color='red'] {
   --theme: #f44336;
-  --theme-border: rgba(249,161,154,0.88);
-  --theme-bg: rgba(253,228,226,0.82);
+  --theme-border: rgba(247,129,121,0.7);
+  --theme-bg: rgba(252,208,204,0.55);
 }
 .tag-plugin[color='orange'] {
   --theme: #fa6400;
-  --theme-border: rgba(252,177,127,0.88);
-  --theme-bg: rgba(254,232,218,0.82);
+  --theme-border: rgba(251,151,84,0.7);
+  --theme-bg: rgba(253,216,191,0.55);
 }
 .tag-plugin[color='yellow'] {
   --theme: #ffbd2b;
-  --theme-border: rgba(255,222,149,0.88);
-  --theme-bg: rgba(255,245,224,0.82);
+  --theme-border: rgba(255,211,113,0.7);
+  --theme-bg: rgba(255,238,202,0.55);
 }
 .tag-plugin[color='green'] {
   --theme: #3dc550;
-  --theme-border: rgba(158,226,167,0.88);
-  --theme-bg: rgba(227,246,230,0.82);
+  --theme-border: rgba(125,216,138,0.7);
+  --theme-bg: rgba(206,240,211,0.55);
 }
 .tag-plugin[color='cyan'] {
   --theme: #1bcdfc;
-  --theme-border: rgba(141,230,253,0.88);
-  --theme-bg: rgba(222,247,254,0.82);
+  --theme-border: rgba(102,221,253,0.7);
+  --theme-bg: rgba(198,242,254,0.55);
 }
 .tag-plugin[color='blue'] {
   --theme: #2196f3;
-  --theme-border: rgba(144,202,249,0.88);
-  --theme-bg: rgba(223,240,253,0.82);
+  --theme-border: rgba(106,185,247,0.7);
+  --theme-bg: rgba(199,228,252,0.55);
 }
 .tag-plugin[color='purple'] {
   --theme: #9c27b0;
-  --theme-border: rgba(205,147,215,0.88);
-  --theme-bg: rgba(240,224,243,0.82);
+  --theme-border: rgba(189,110,202,0.7);
+  --theme-bg: rgba(230,201,235,0.55);
 }
 .tag-plugin[color='light'] {
   --theme-bg: #fff;
@@ -1557,32 +1557,32 @@ nav.cap a+a {
 }
 @media (prefers-color-scheme: dark) {
   .tag-plugin[color='red'] {
-    --theme-border: rgba(209,57,46,0.96);
-    --theme-bg: rgba(34,9,7,0.82);
+    --theme-border: rgba(225,61,49,0.9);
+    --theme-bg: rgba(60,16,13,0.55);
   }
   .tag-plugin[color='orange'] {
-    --theme-border: rgba(214,85,0,0.96);
-    --theme-bg: rgba(35,14,0,0.82);
+    --theme-border: rgba(230,92,0,0.9);
+    --theme-bg: rgba(62,24,0,0.55);
   }
   .tag-plugin[color='yellow'] {
-    --theme-border: rgba(218,162,36,0.96);
-    --theme-bg: rgba(36,27,6,0.82);
+    --theme-border: rgba(235,174,39,0.9);
+    --theme-bg: rgba(63,47,10,0.55);
   }
   .tag-plugin[color='green'] {
-    --theme-border: rgba(52,168,68,0.96);
-    --theme-bg: rgba(8,28,11,0.82);
+    --theme-border: rgba(56,181,73,0.9);
+    --theme-bg: rgba(15,49,19,0.55);
   }
   .tag-plugin[color='cyan'] {
-    --theme-border: rgba(23,175,216,0.96);
-    --theme-bg: rgba(3,29,36,0.82);
+    --theme-border: rgba(24,189,232,0.9);
+    --theme-bg: rgba(6,51,62,0.55);
   }
   .tag-plugin[color='blue'] {
-    --theme-border: rgba(28,128,208,0.96);
-    --theme-bg: rgba(4,21,34,0.82);
+    --theme-border: rgba(30,138,224,0.9);
+    --theme-bg: rgba(8,37,60,0.55);
   }
   .tag-plugin[color='purple'] {
-    --theme-border: rgba(133,33,150,0.96);
-    --theme-bg: rgba(22,5,25,0.82);
+    --theme-border: rgba(144,36,162,0.9);
+    --theme-bg: rgba(38,9,43,0.55);
   }
   .tag-plugin[color='light'] {
     --theme-border: #fff;
@@ -3216,7 +3216,8 @@ article.md.error-page a#back {
   -webkit-transition: box-shadow 0.2s ease-out;
   -o-transition: box-shadow 0.2s ease-out;
   overflow: hidden;
-  background: var(--card);
+  background-color: var(--card);
+  position: relative;
 }
 .post-list .post-card .excerpt {
   margin: 1rem 0;
@@ -3242,6 +3243,25 @@ article.md.error-page a#back {
 }
 .post-list .post-card:hover {
   box-shadow: 0 1px 4px 0px rgba(0,0,0,0.1), 0 2px 8px 0px rgba(0,0,0,0.1), 0 4px 16px 0px rgba(0,0,0,0.1);
+}
+.post-list .post-card::after {
+  background-image: url("/css/images/house1.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter: blur(20px);
+  filter: blur(5px);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
+  margin: -30px;
 }
 .post-list article {
   padding: 1rem;
