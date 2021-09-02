@@ -1093,6 +1093,8 @@ nav.cap a+a {
   background-color: var(--card);
   border-radius: 10px;
   margin: 15px;
+  overflow: hidden;
+  position: relative;
 }
 .related-wrap:empty {
   display: none;
@@ -3435,33 +3437,53 @@ article.md.content {
   background-color: var(--card);
   border-radius: 10px;
   margin: 15px;
+  overflow: hidden;
 }
-article.md.content >:first-child {
+article.md.content::after {
+  background-image: url("/css/images/house1.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter: blur(20px);
+  filter: blur(5px);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
+  margin: -30px;
+}
+article.md.content::after >:first-child {
   margin-top: 0;
 }
-article.md.content h1.article-title {
+article.md.content::after h1.article-title {
   margin-top: 0.5rem;
   line-height: 1.2;
   color: var(--text-p0);
 }
-article.md.content h2:first-child {
+article.md.content::after h2:first-child {
   margin-top: 0;
 }
-article.md.content h2,
-article.md.content h3,
-article.md.content h4,
-article.md.content h5,
-article.md.content h6 {
+article.md.content::after h2,
+article.md.content::after h3,
+article.md.content::after h4,
+article.md.content::after h5,
+article.md.content::after h6 {
   color: var(--text-p0);
   padding-top: 1rem;
   margin-bottom: 1em;
   line-height: 1.8;
 }
-article.md.content h2:hover a.headerlink:before,
-article.md.content h3:hover a.headerlink:before,
-article.md.content h4:hover a.headerlink:before,
-article.md.content h5:hover a.headerlink:before,
-article.md.content h6:hover a.headerlink:before {
+article.md.content::after h2:hover a.headerlink:before,
+article.md.content::after h3:hover a.headerlink:before,
+article.md.content::after h4:hover a.headerlink:before,
+article.md.content::after h5:hover a.headerlink:before,
+article.md.content::after h6:hover a.headerlink:before {
   opacity: 1;
 }
 .md ul:not(:last-child),
