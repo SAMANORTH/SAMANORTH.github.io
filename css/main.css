@@ -832,9 +832,12 @@ div.toast {
   visibility: visible !important;
 }
 .bread-nav {
-  padding: 1rem 1rem 0;
+  padding: 1rem 1rem 1rem 1rem;
   color: var(--text-p3);
   font-weight: 500;
+  background-color: var(--card);
+  border-radius: 10px;
+  margin: 15px;
 }
 .bread-nav div#breadcrumb {
   display: flex;
@@ -1087,6 +1090,9 @@ nav.cap a+a {
 }
 .related-wrap {
   padding: 2rem 1rem;
+  background-color: var(--card);
+  border-radius: 10px;
+  margin: 15px;
 }
 .related-wrap:empty {
   display: none;
@@ -1260,6 +1266,25 @@ nav.cap a+a {
 }
 .related-wrap#comments div.cmt-body svg.loading {
   top: 60px;
+}
+.related-wrap::after {
+  background-image: url("/css/images/house1.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter: blur(20px);
+  filter: blur(5px);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
+  margin: -30px;
 }
 .tag-plugin.about {
   background: var(--block);
@@ -3407,6 +3432,9 @@ article.md.excerpt p {
 article.md.content {
   position: relative;
   margin-bottom: 2rem;
+  background-color: var(--card);
+  border-radius: 10px;
+  margin: 15px;
 }
 article.md.content >:first-child {
   margin-top: 0;
