@@ -32,7 +32,7 @@
   --text-meta: rgba(199,199,199,0.84);
   --text-code: #111;
   --card: rgba(255,255,255,0.5);
-  --wrapcard: #fff;
+  --wrapcard: rgba(255,255,255,0.8);
   --theme-highlight: #03c7fa;
   --theme-bg: rgba(198,242,254,0.55);
 }
@@ -52,7 +52,7 @@
     --text-meta: rgba(93,93,93,0.86);
     --text-code: #ff7043;
     --card: rgba(0,0,0,0.5);
-    --wrapcard: #000;
+    --wrapcard: rgba(0,0,0,0.8);
     --theme-highlight: #1bcdfc;
     --theme-bg: rgba(6,51,62,0.55);
   }
@@ -63,7 +63,7 @@
   }
 }
 body {
-  background-image: url("images/house1.jpg");
+  background-image: url("images/house1.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
