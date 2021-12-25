@@ -124,7 +124,7 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/unityar/index.html">Unity制作AR应用</a></div><div id="post-meta">更新于&nbsp;<time datetime="2021-12-25T04:59:09.894Z">2021-12-25</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/unityar/index.html">Unity制作AR应用</a></div><div id="post-meta">更新于&nbsp;<time datetime="2021-12-25T05:54:06.084Z">2021-12-25</time></div></div>
 
   <article class='content md wiki'>
   <h1 class="article-title"><span>Unity制作AR应用</span></h1>
@@ -133,11 +133,11 @@
 <p>想用Unity实现AR的功能还需要一个插件：Vuforia engine，当然其他插件包括ARkit、ARcore理论上也是可以用的，但这两者分别是Apple和Google推出的，可能兼容性会有问题。</p>
 <h2 id="2-制作过程"><a href="#2-制作过程" class="headerlink" title="2.制作过程"></a>2.制作过程</h2><h3 id="2-1新建Unity工程、激活VuforiaAR引擎"><a href="#2-1新建Unity工程、激活VuforiaAR引擎" class="headerlink" title="2.1新建Unity工程、激活VuforiaAR引擎"></a>2.1新建Unity工程、激活VuforiaAR引擎</h3><p>Vuforia功能插件是提前集成在Unity中的，一般不需要单独下载安装。</p>
 <p>从File-BuildSettings-PlayerSettings，勾选Vuforia AR以激活引擎。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s3.bmp.ovh/imgs/2021/12/03b4e4db536a6de8.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/zko61TX3dAbPCiM.png" alt="1.png"></p>
 <h3 id="2-2添加AR-Camera和Camera-Image-Target"><a href="#2-2添加AR-Camera和Camera-Image-Target" class="headerlink" title="2.2添加AR Camera和Camera Image Target"></a>2.2添加AR Camera和Camera Image Target</h3><p>AR Camera是Vuforia的核心，在GameObject中添加。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s3.bmp.ovh/imgs/2021/12/49b73b863bc4996f.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/7ZWh635udDeSJKz.png" alt="2.png"></p>
 <p>默认场景中包含Main Camera、Directional Light，但并不包含Target，而我们要实现的是在特定目标上（明信片）展示3D模型，所以需要我们右键添加一个Target出来，我们要定位的明信片上的图片，所以添加Camera Image Target即可。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s3.bmp.ovh/imgs/2021/12/25cafba7797a4d1e.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/oxNMrHmaA6kJElC.png" alt="3.png"></p>
 <p>当然，我们可以在Inspector中调整一些模式，比如World Center Mode提供了三种模式：SPECIFIC_TARGET、FIRST_TARGET、DEVICE，分别是以特定物体、照相机识别的第一个物体、照相机所在设备为AR视角的中心，我们默认DEVICE即可；除此之外，还可以调整Camera Device Mode、Max Simultaneous Tracked Images、Camera Direction（选定前、后摄像头）、Camera Device等，基本都是字面意思，没有特殊需求则全部默认即可。</p>
 <h3 id="2-3配置Vuforia-Engine"><a href="#2-3配置Vuforia-Engine" class="headerlink" title="2.3配置Vuforia Engine"></a>2.3配置Vuforia Engine</h3><p>在Inspector中打开Open Vuforia Engine configuration，添加License Key。</p>
 <p>License Key的获取：</p>
@@ -146,16 +146,16 @@
 <h3 id="2-4为场景添加定位图片、3D模型"><a href="#2-4为场景添加定位图片、3D模型" class="headerlink" title="2.4为场景添加定位图片、3D模型"></a>2.4为场景添加定位图片、3D模型</h3><p>其实前面都可以视为准备工作，这一步才是真正开始制作AR效果，好在这一步是最简单的。</p>
 <p>①制作定位数据包：Vuforia Engine网页Target Manager→Add Database（Type: Device）→导入明信片上的图片（按照经验设置width0.05即可）→Download Database。</p>
 <p>②将定位数据包和3D模型（.fbx格式)拖入Assets，或者Import Unity Package。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s3.bmp.ovh/imgs/2021/12/07608459f913554a.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/pGSMDb97g4JsIqF.png" alt="4.png"></p>
 <p>③将场景目标和定位数据包匹配：设置Image Target Behaviour为Predefined，适当调整参数。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.bmp.ovh/imgs/2021/12/caacfd7835f83a14.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/AbwNSOoFD96pBtW.png" alt="5.png"></p>
 <p>④将场景目标和3D模型匹配：将Assets中的3D模型.fbx文件拖入Image Target子目录，适当调整参数。</p>
 <h3 id="2-5导出移动端设备APK"><a href="#2-5导出移动端设备APK" class="headerlink" title="2.5导出移动端设备APK"></a>2.5导出移动端设备APK</h3><p>这一步以安卓系统为例，IOS系统的应用发布要麻烦许多，需要MAC端Unity发布，并且应用上架有阻力。再次感叹苹果生态的闭塞…</p>
 <p>①配置java语言环境：可以参考教程<a target="_blank" rel="noopener" href="https://blog.csdn.net/x13804709/article/details/78852060">https://blog.csdn.net/x13804709/article/details/78852060</a></p>
 <p>②签名：注意签名栏格式要与公司名称及产品名称一致，即“com.公司名称.产品名称”，最后勾选“Build”</p>
 <p>小功告成！！！</p>
-<h2 id="3-成果展示"><a href="#3-成果展示" class="headerlink" title="3.成果展示"></a>3.成果展示</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s3.bmp.ovh/imgs/2021/12/f578453f537758de.png"></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.bmp.ovh/imgs/2021/12/13e86830221468c9.jpg"></p>
+<h2 id="3-成果展示"><a href="#3-成果展示" class="headerlink" title="3.成果展示"></a>3.成果展示</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/LeynzBbUFEhYiGd.png" alt="6.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2021/12/25/aJGors1Zh9jvwYN.jpg" alt="7.jpg"></p>
 
   
 
