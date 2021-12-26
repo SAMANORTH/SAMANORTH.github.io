@@ -3669,7 +3669,7 @@ div.swiper-slide img {
 .swiper-button-prev,
 .swiper-button-next {
   padding: 1rem 0.5rem;
-  margin-top: 50rem !important;
+  margin-top: 45rem !important;
   border-radius: 4px;
   background: rgba(255,255,255,0.25);
   transition: background 0.2s ease-out;
@@ -3687,12 +3687,6 @@ div.swiper-slide img {
 .swiper-button-next:hover {
   background: #fff !important;
   --swiper-theme-color: #ff5722 !important;
-}
-.swiper-pagination {
-  text-align: center;
-  transition: 0.3s opacity;
-  transform: translate3d(0, 0, 0);
-  z-index: 10;
 }
 .cmt-body.beaudar {
   margin: 0 -4px;
