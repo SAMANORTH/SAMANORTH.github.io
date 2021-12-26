@@ -3640,8 +3640,6 @@ img.lazy.error {
   border-radius: 4px;
   --gap-p: 2rem;
 }
-.swiper-container:not(.swiper-container-initialized),
-#  display: none,
 div.swiper-slide {
   text-align: center;
   display: -webkit-box;
@@ -3659,8 +3657,6 @@ div.swiper-slide {
   align-items: center;
   width: 50%;
 }
-.swiper-container:not(.swiper-container-initialized) img,
-#  display: none img,
 div.swiper-slide img {
   border-radius: 4px;
 }
@@ -3691,6 +3687,12 @@ div.swiper-slide img {
 .swiper-button-next:hover {
   background: #fff !important;
   --swiper-theme-color: #ff5722 !important;
+}
+.swiper-pagination {
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
 }
 .cmt-body.beaudar {
   margin: 0 -4px;
