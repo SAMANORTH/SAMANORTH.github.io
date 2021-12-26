@@ -2092,6 +2092,9 @@ details.folding[child=codeblock]>div.body .highlight .code:before {
 .md .tag-plugin.mark[color=dark] {
   border-color: var(--theme-bg);
 }
+.md .tag-plugin.navbar {
+  text-align: center;
+}
 .md .tag-plugin.navbar nav.cap {
   margin: 0;
   padding: 1px;
@@ -3637,9 +3640,8 @@ img.lazy.error {
   border-radius: 4px;
   --gap-p: 2rem;
 }
-.swiper-container:not(.swiper-container-initialized) {
-  display: none;
-}
+.swiper-container:not(.swiper-container-initialized),
+#  display: none,
 div.swiper-slide {
   text-align: center;
   display: -webkit-box;
@@ -3657,6 +3659,8 @@ div.swiper-slide {
   align-items: center;
   width: 50%;
 }
+.swiper-container:not(.swiper-container-initialized) img,
+#  display: none img,
 div.swiper-slide img {
   border-radius: 4px;
 }
