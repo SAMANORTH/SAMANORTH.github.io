@@ -3733,7 +3733,7 @@ div.swiper-slide img {
 .cmt-body.valine #valine_container .vwrap .vemojis,
 .cmt-body.valine #valine_container .vwrap .vpreview {
   background: var(--block);
-  border-radius: 4px;
+  border-radius: 15px;
   padding: 0.5rem;
 }
 .cmt-body.valine #valine_container .vwrap .vemojis::-webkit-scrollbar,
