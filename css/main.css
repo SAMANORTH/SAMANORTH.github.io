@@ -3701,7 +3701,7 @@ div.swiper-slide img {
 }
 .cmt-body.valine #valine_container .vwrap {
   background: var(--card);
-  border-radius: 6px;
+  border-radius: 15px;
   border-style: dashed;
   border: 1px dashed var(--text-meta);
 }
