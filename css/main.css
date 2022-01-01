@@ -3703,7 +3703,7 @@ div.swiper-slide img {
   background: var(--card);
   border-radius: 15px;
   border-style: dashed;
-  border: 1px dashed var(--text-meta);
+  border: 1px var(--text-meta);
 }
 .cmt-body.valine #valine_container .vwrap:hover {
   border-color: #1bcdfc;
@@ -3719,7 +3719,7 @@ div.swiper-slide img {
   margin: -10px;
   padding: 5px 10px 0;
   background: var(--site-bg);
-  border-bottom: 1px dashed var(--text-meta);
+  border-bottom: 1px var(--text-meta);
 }
 .cmt-body.valine #valine_container .vwrap .vheader .vinput {
   border: none;
