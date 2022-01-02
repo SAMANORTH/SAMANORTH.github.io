@@ -42,12 +42,12 @@
     --block: #000;
     --block-border: #1a1a1a;
     --block-hover: #000;
-    --text-p0: #fff;
+    --text-p0: #000;
     --text-p1: #eee;
     --text-p2: rgba(193,193,193,0.91);
     --text-p3: rgba(143,143,143,0.835);
     --text-p4: rgba(119,119,119,0.805);
-    --text-p5: #fff;
+    --text-p5: #333;
     --text-p6: #fff;
     --text-meta: rgba(105,105,105,0.79);
     --text-code: #ff7043;
@@ -63,7 +63,7 @@
   }
 }
 body {
-  background-image: url("images/bear.jpg");
+  background-image: url("images/polebear.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
@@ -167,7 +167,7 @@ a.button {
 }
 a.button.theme {
   background: #1bcdfc;
-  color: #fff;
+  color: #000;
 }
 a.button.theme:hover {
   background: #ff5722;
@@ -894,6 +894,7 @@ div.toast {
 }
 .l_cover .cover-wrap .description {
   margin: 1rem 0;
+  color: #000;
 }
 .l_cover .cover-wrap .start-wrap {
   margin: 2rem 0;
@@ -2781,7 +2782,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .logo-wrap.wiki a.wiki-home {
   margin-bottom: 0.5rem;
-  color: var(--text-p1);
+  color: #000;
 }
 .logo-wrap.wiki a.wiki-home svg {
   margin-right: 2px;
