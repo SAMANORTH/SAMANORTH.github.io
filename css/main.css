@@ -2660,7 +2660,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   }
 }
 .l_left[layout=wiki] .widgets >:last-child {
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 .logo-wrap {
   margin: 1rem 0;
@@ -2837,7 +2837,7 @@ nav.menu a.nav-item:hover {
   z-index: 1;
 }
 .l_left .widgets .widget-wrap {
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 1rem 0;
   background: var(--wrapcard);
   border-radius: 10px;
   padding: 15px;
@@ -2947,6 +2947,8 @@ nav.menu a.nav-item:hover {
 #toc .widget-body {
   line-height: 1.2;
   margin-top: 0;
+  overflow: auto;
+  height: 200px;
 }
 #toc .widget-body ul ul,
 #toc .widget-body ul ol {
@@ -2956,31 +2958,34 @@ nav.menu a.nav-item:hover {
 #toc .widget-body ol ol {
   padding-left: 0;
 }
-#toc .widget-body .doc-tree {
+::-webkit-scrollbar {
+  visibility: hidden;
+}
+.doc-tree {
   margin: 4px 0;
 }
-#toc .widget-body .toc {
+.toc {
   padding: 0;
   margin: 0;
   padding-left: 0.25rem;
 }
-#toc .widget-body .toc .toc-item .toc-link {
+.toc .toc-item .toc-link {
   padding: 0.5rem;
   font-weight: 500;
   font-size: 0.8125rem;
   color: var(--text-p2);
 }
-#toc .widget-body .toc .toc-child .toc-item .toc-link {
+.toc .toc-child .toc-item .toc-link {
   padding: 0.25rem 0.5rem 0.25rem 1.3rem;
   font-weight: 400;
   color: var(--text-p2);
 }
-#toc .widget-body .toc .toc-child .toc-child .toc-item .toc-link {
+.toc .toc-child .toc-child .toc-item .toc-link {
   padding-left: 2.1rem;
   font-size: 0.75rem;
   color: var(--text-p3);
 }
-#toc .widget-body .toc .toc-child .toc-child .toc-child .toc-item .toc-link {
+.toc .toc-child .toc-child .toc-child .toc-item .toc-link {
   padding-left: 2.9rem;
 }
 #toc .toc-item {
