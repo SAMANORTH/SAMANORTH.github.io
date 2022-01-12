@@ -17,11 +17,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>重点分析 - 北方SAMA</title>
+  <title>PMCAD入门（二） - 北方SAMA</title>
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="构件截面估算了解了PMCAD的基本规则和操作后，就可以开始建模了。
+首先我们需要根据建筑图柱网快速估算出柱、梁、板截面的尺寸，从而形成初步的结构模型。
+柱截面估算
+梁截面估算
+其中，框架梁即主梁，除了承担竖向荷载外还要为框架结构提供抗侧刚度，承担水平力，所以框架梁的截面宜大不宜小。
+框架梁截面...">
 
   <!-- feed -->
   
@@ -56,9 +60,7 @@
 
 <div class="widgets">
 
-
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="line"></div><a class="more-item" href="/2022/01/12/2022011202/"><div class="cap"><time>2022-01-12</time><span>PKPM复习</span></div><span class="title">PMCAD入门（二）</span></a><div class="line"></div><a class="more-item" href="/2022/01/12/2022011201/"><div class="cap"><time>2022-01-12</time><span>PKPM复习</span></div><span class="title">PMCAD入门（一）</span></a><div class="line"></div><a class="more-item" href="/2022/01/03/2022010301/"><div class="cap"><time>2022-01-03</time><span>日记2022</span></div><span class="title">日记0103</span></a><div class="line"></div><a class="more-item" href="/2021/08/26/2021082601/"><div class="cap"><time>2022-01-02</time><span>日记2021</span></div><span class="title">日记0826</span></a></div></div>
-
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E4%BB%B6%E6%88%AA%E9%9D%A2%E4%BC%B0%E7%AE%97"><span class="toc-text">构件截面估算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%B1%E6%88%AA%E9%9D%A2%E4%BC%B0%E7%AE%97"><span class="toc-text">柱截面估算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%81%E6%88%AA%E9%9D%A2%E4%BC%B0%E7%AE%97"><span class="toc-text">梁截面估算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E6%B5%87%E6%9D%BF%E5%8E%9A%E4%BC%B0%E7%AE%97"><span class="toc-text">现浇板厚估算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84%E4%B8%AD%E7%9A%84%E6%A1%86%E6%9E%B6%E6%9F%B1%E6%88%AA%E9%9D%A2%E4%BC%B0%E7%AE%97"><span class="toc-text">框架结构中的框架柱截面估算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E5%89%AA%E7%BB%93%E6%9E%84%E4%B8%AD%E7%9A%84%E6%A1%86%E6%9E%B6%E6%9F%B1%E6%88%AA%E9%9D%A2%E4%BC%B0%E7%AE%97"><span class="toc-text">框剪结构中的框架柱截面估算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8D%B7%E8%BD%BD%E8%BE%93%E5%85%A5"><span class="toc-text">荷载输入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E4%BF%A1%E6%81%AF"><span class="toc-text">总信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%B7%E8%BD%BD%E7%B1%BB%E5%9E%8B"><span class="toc-text">荷载类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E9%98%B2%E8%8D%B7%E8%BD%BD"><span class="toc-text">人防荷载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A5%BC%E5%B1%82%E7%BB%84%E8%A3%85"><span class="toc-text">楼层组装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="toc-text">设计参数定义</span></a></li></ol></li></ol></div></div></div>
 
 
 
@@ -123,18 +125,51 @@
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%AE%AA%E6%B3%95/">宪法</a></div><div id="post-meta">发布于&nbsp;<time datetime="2021-12-08T11:08:53.000Z">2021-12-08</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/PKPM%E5%A4%8D%E4%B9%A0/">PKPM复习</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-01-12T12:31:32.000Z">2022-01-12</time></div></div>
 
 <article class='content md post'>
-<h1 class="article-title"><span>重点分析</span></h1>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="%E9%87%8D%E7%82%B9%E5%88%86%E6%9E%90.png"></p>
+<h1 class="article-title"><span>PMCAD入门（二）</span></h1>
+<h2 id="构件截面估算"><a href="#构件截面估算" class="headerlink" title="构件截面估算"></a>构件截面估算</h2><p>了解了PMCAD的基本规则和操作后，就可以开始建模了。</p>
+<p>首先我们需要根据建筑图柱网快速估算出柱、梁、板截面的尺寸，从而形成初步的结构模型。</p>
+<h3 id="柱截面估算"><a href="#柱截面估算" class="headerlink" title="柱截面估算"></a>柱截面估算</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="zjm.png"></p>
+<h3 id="梁截面估算"><a href="#梁截面估算" class="headerlink" title="梁截面估算"></a>梁截面估算</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ljm.png"></p>
+<p>其中，框架梁即<strong>主梁</strong>，除了承担竖向荷载外还要为框架结构提供抗侧刚度，承担水平力，所以框架梁的截面宜大不宜小。</p>
+<p>框架梁截面的估算还应注意：</p>
+<blockquote>
+<p>多跨连续梁截面等宽以便施工</p>
+<p><strong>多跨连续梁不等跨时可根据线刚度相近原则估算截面</strong></p>
+<p>外立面梁高应一致，保证建筑立面效果</p>
+</blockquote>
+<h3 id="现浇板厚估算"><a href="#现浇板厚估算" class="headerlink" title="现浇板厚估算"></a>现浇板厚估算</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="xjb.png"></p>
+<h3 id="框架结构中的框架柱截面估算"><a href="#框架结构中的框架柱截面估算" class="headerlink" title="框架结构中的框架柱截面估算"></a>框架结构中的框架柱截面估算</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="kjz.png"></p>
+<h3 id="框剪结构中的框架柱截面估算"><a href="#框剪结构中的框架柱截面估算" class="headerlink" title="框剪结构中的框架柱截面估算"></a>框剪结构中的框架柱截面估算</h3><p>框剪结构中的框架柱截面尺寸的估算方法和多层框架结构的估算方法类似，区别主要在于水平力的影响，由于框剪结构中的水平力主要由剪力墙承担，所以水平力分项系数可以较框架结构适当减小，为1.05~1.2。</p>
+<h2 id="荷载输入"><a href="#荷载输入" class="headerlink" title="荷载输入"></a>荷载输入</h2><h3 id="总信息"><a href="#总信息" class="headerlink" title="总信息"></a>总信息</h3><p>恒活设置：PMCAD中定义的楼面恒载和活载是本标准层统一施加的荷载，所以宜定义本层使用最广泛的恒、活载，不同部分可以通过荷载输入环节修改。</p>
+<p>程序默认的导荷方式：对矩形房间按照屈服线划分的<strong>梯形三角形</strong>传导，对异形房间按照<strong>周边</strong>传导。</p>
+<p>程序默认屈服线：角度45°，可以调整。</p>
+<h3 id="荷载类型"><a href="#荷载类型" class="headerlink" title="荷载类型"></a>荷载类型</h3><p>在设置梁、柱荷载时，需要注意调整荷载类型，PMCAD用不同序号表示不同类型，如下图。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="hzlx.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ljhz.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="zjhz1.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="zjhz2.png"></p>
+<h3 id="人防荷载"><a href="#人防荷载" class="headerlink" title="人防荷载"></a>人防荷载</h3><p>我所列举的板、梁、柱、人防荷载均为不完全列举，具体要考虑哪些荷载需要研读项目要求和规范。</p>
+<p>在设计时应关注项目的人防类别，对于甲类防空地下室结构应能承受常规武器爆炸动荷载和核武器爆炸动荷载的分别作用，乙类防空地下室结构应能承受常规武器爆炸动荷载的作用。</p>
+<p>对常规武器爆炸动荷载和核武器爆炸动荷载，设计时均按一次作用。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="rfhz.png"></p>
+<h2 id="楼层组装"><a href="#楼层组装" class="headerlink" title="楼层组装"></a>楼层组装</h2><h3 id="设计参数定义"><a href="#设计参数定义" class="headerlink" title="设计参数定义"></a>设计参数定义</h3><p>在楼层组装完成前我们需要先定义设计参数，这一步需要清楚对话框中部分信息的含义，其中：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="lczz.png"></p>
+<blockquote>
+<p>总信息-与基础相连构件的最大底标高(m)：指当柱、墙等竖向构件的底标高高于程序默认的柱底标高时的<strong>底标高</strong>，例如坡地吊脚楼建筑；</p>
+<p>材料信息-混凝土容重：考虑到装修材料的重量，我们可将其增大到26~27kN/m³；</p>
+<p>地震信息-振型个数：考虑扭转偶联，不宜小于15；</p>
+<p>地震信息-周期折减系数：考虑填充墙对刚度的影响，宜采用0.8~0.9，当然，如果设计中采取措施减少填充墙的影响，则可取大值甚至1.0。</p>
+</blockquote>
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2021/12/08/2021120803/">诉讼时效与期间<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2021/12/08/2021120802/">代理<span class="note">较新</span></a><div class="line"></div><a id="more" href="/archives">检索全部文章</a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/01/12/2022011201/">PMCAD入门（一）<span class="note">较早</span></a><div class="line"></div><div class="line"></div><a id="more" href="/archives">检索全部文章</a></section></div>
 
 
 

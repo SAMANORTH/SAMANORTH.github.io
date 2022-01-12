@@ -3448,8 +3448,8 @@ article.md.content {
   margin: 15px;
   overflow: hidden;
 }
-article.md.content::after,
-#  background-image: url(/css/images/house1.jpg) {
+article.md.content::after {
+  background-image: url("/css/images/polebear.jpg");
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
@@ -3467,45 +3467,32 @@ article.md.content::after,
   z-index: -99;
   margin: -30px;
 }
-article.md.content::after >:first-child,
-#  background-image: url(/css/images/house1.jpg) >:first-child {
+article.md.content::after >:first-child {
   margin-top: 0;
 }
-article.md.content::after h1.article-title,
-#  background-image: url(/css/images/house1.jpg) h1.article-title {
+article.md.content::after h1.article-title {
   margin-top: 0.5rem;
   line-height: 1.2;
   color: var(--text-p0);
 }
-article.md.content::after h2:first-child,
-#  background-image: url(/css/images/house1.jpg) h2:first-child {
+article.md.content::after h2:first-child {
   margin-top: 0;
 }
 article.md.content::after h2,
-#  background-image: url(/css/images/house1.jpg) h2,
 article.md.content::after h3,
-#  background-image: url(/css/images/house1.jpg) h3,
 article.md.content::after h4,
-#  background-image: url(/css/images/house1.jpg) h4,
 article.md.content::after h5,
-#  background-image: url(/css/images/house1.jpg) h5,
-article.md.content::after h6,
-#  background-image: url(/css/images/house1.jpg) h6 {
+article.md.content::after h6 {
   color: var(--text-p0);
   padding-top: 1rem;
   margin-bottom: 1em;
   line-height: 1.8;
 }
 article.md.content::after h2:hover a.headerlink:before,
-#  background-image: url(/css/images/house1.jpg) h2:hover a.headerlink:before,
 article.md.content::after h3:hover a.headerlink:before,
-#  background-image: url(/css/images/house1.jpg) h3:hover a.headerlink:before,
 article.md.content::after h4:hover a.headerlink:before,
-#  background-image: url(/css/images/house1.jpg) h4:hover a.headerlink:before,
 article.md.content::after h5:hover a.headerlink:before,
-#  background-image: url(/css/images/house1.jpg) h5:hover a.headerlink:before,
-article.md.content::after h6:hover a.headerlink:before,
-#  background-image: url(/css/images/house1.jpg) h6:hover a.headerlink:before {
+article.md.content::after h6:hover a.headerlink:before {
   opacity: 1;
 }
 .md ul:not(:last-child),
