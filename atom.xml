@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-01-12T12:31:49.188Z</updated>
+  <updated>2022-01-15T05:07:35.975Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>走进TRIZ理论</title>
+    <link href="http://samanorth.github.io/2022/01/15/2022011501/"/>
+    <id>http://samanorth.github.io/2022/01/15/2022011501/</id>
+    <published>2022-01-15T05:05:32.000Z</published>
+    <updated>2022-01-15T05:07:35.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>PMCAD入门（二）</title>
@@ -44,7 +67,7 @@
     <link href="http://samanorth.github.io/2022/01/12/2022011201/"/>
     <id>http://samanorth.github.io/2022/01/12/2022011201/</id>
     <published>2022-01-12T04:46:32.000Z</published>
-    <updated>2022-01-12T11:31:08.663Z</updated>
+    <updated>2022-01-12T13:14:24.019Z</updated>
     
     
       
@@ -104,29 +127,6 @@
     
     
     <category term="日记2021" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02021/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>重点分析</title>
-    <link href="http://samanorth.github.io/2021/12/08/2021120801/"/>
-    <id>http://samanorth.github.io/2021/12/08/2021120801/</id>
-    <published>2021-12-08T11:08:53.000Z</published>
-    <updated>2021-12-08T11:10:32.969Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="宪法" scheme="http://samanorth.github.io/categories/%E5%AE%AA%E6%B3%95/"/>
     
     
   </entry>
