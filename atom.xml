@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-01-15T05:07:35.975Z</updated>
+  <updated>2022-01-16T04:43:58.667Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>功能分析（一）</title>
+    <link href="http://samanorth.github.io/2022/01/16/2022011601/"/>
+    <id>http://samanorth.github.io/2022/01/16/2022011601/</id>
+    <published>2022-01-16T04:41:24.000Z</published>
+    <updated>2022-01-16T04:43:58.667Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>走进TRIZ理论</title>
     <link href="http://samanorth.github.io/2022/01/15/2022011501/"/>
     <id>http://samanorth.github.io/2022/01/15/2022011501/</id>
     <published>2022-01-15T05:05:32.000Z</published>
-    <updated>2022-01-15T05:07:35.975Z</updated>
+    <updated>2022-01-15T12:44:26.425Z</updated>
     
     
       
@@ -104,29 +127,6 @@
     
     
     <category term="日记2022" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2021年终总结</title>
-    <link href="http://samanorth.github.io/2021/12/31/2021123101/"/>
-    <id>http://samanorth.github.io/2021/12/31/2021123101/</id>
-    <published>2021-12-31T15:17:53.000Z</published>
-    <updated>2021-12-31T15:19:40.091Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="日记2021" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02021/"/>
     
     
   </entry>
