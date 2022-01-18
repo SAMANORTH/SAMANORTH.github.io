@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-01-17T13:24:17.288Z</updated>
+  <updated>2022-01-18T13:39:07.411Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>功能分析（一）</title>
+    <title>剪裁</title>
+    <link href="http://samanorth.github.io/2022/01/18/2022011802/"/>
+    <id>http://samanorth.github.io/2022/01/18/2022011802/</id>
+    <published>2022-01-18T13:34:45.000Z</published>
+    <updated>2022-01-18T13:39:07.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>因果链分析</title>
+    <link href="http://samanorth.github.io/2022/01/18/2022011801/"/>
+    <id>http://samanorth.github.io/2022/01/18/2022011801/</id>
+    <published>2022-01-18T13:22:41.000Z</published>
+    <updated>2022-01-18T13:35:45.043Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>功能分析</title>
     <link href="http://samanorth.github.io/2022/01/16/2022011601/"/>
     <id>http://samanorth.github.io/2022/01/16/2022011601/</id>
     <published>2022-01-16T04:41:24.000Z</published>
-    <updated>2022-01-17T13:24:17.288Z</updated>
+    <updated>2022-01-18T13:41:38.500Z</updated>
     
     
       
@@ -81,52 +127,6 @@
     
     
     <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>PMCAD入门（一）</title>
-    <link href="http://samanorth.github.io/2022/01/12/2022011201/"/>
-    <id>http://samanorth.github.io/2022/01/12/2022011201/</id>
-    <published>2022-01-12T04:46:32.000Z</published>
-    <updated>2022-01-12T13:14:24.019Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>日记0103</title>
-    <link href="http://samanorth.github.io/2022/01/03/2022010301/"/>
-    <id>http://samanorth.github.io/2022/01/03/2022010301/</id>
-    <published>2022-01-03T09:17:53.000Z</published>
-    <updated>2022-01-03T10:02:28.196Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="日记2022" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022/"/>
     
     
   </entry>
