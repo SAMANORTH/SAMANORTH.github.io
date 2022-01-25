@@ -32,6 +32,7 @@
   --text-meta: rgba(190,190,190,0.76);
   --text-code: #111;
   --card: rgba(255,255,255,0.5);
+  --navcard: #fff;
   --wrapcard: rgba(255,255,255,0.8);
   --theme-highlight: #03c7fa;
   --theme-bg: rgba(198,242,254,0.55);
@@ -42,16 +43,17 @@
     --block: #000;
     --block-border: #1a1a1a;
     --block-hover: #000;
-    --text-p0: #000;
+    --text-p0: #646464;
     --text-p1: #eee;
     --text-p2: rgba(193,193,193,0.91);
     --text-p3: rgba(143,143,143,0.835);
     --text-p4: rgba(119,119,119,0.805);
-    --text-p5: #333;
+    --text-p5: #646464;
     --text-p6: #fff;
     --text-meta: rgba(105,105,105,0.79);
     --text-code: #ff7043;
     --card: rgba(0,0,0,0.5);
+    --navcard: #000;
     --wrapcard: rgba(0,0,0,0.8);
     --theme-highlight: #1bcdfc;
     --theme-bg: rgba(6,51,62,0.55);
@@ -1038,7 +1040,7 @@ nav.cap a:hover {
   color: var(--text-p1);
 }
 nav.cap a.active {
-  background: var(--card);
+  background: var(--navcard);
   box-shadow: 0 0 2px 0px rgba(0,0,0,0.04), 0 0 8px 0px rgba(0,0,0,0.04);
 }
 nav.cap a.active:after {
@@ -2782,7 +2784,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .logo-wrap.wiki a.wiki-home {
   margin-bottom: 0.5rem;
-  color: #000;
+  color: var(--text-p5);
 }
 .logo-wrap.wiki a.wiki-home svg {
   margin-right: 2px;
@@ -3298,6 +3300,156 @@ article.md.error-page a#back {
   right: 0;
   z-index: -99;
   margin: -30px;
+}
+.post-list article {
+  padding: 1rem;
+}
+.post-list .post-card .post-cover {
+  overflow: hidden;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  margin-right: -1rem;
+}
+.post-list .post-card .post-cover img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0;
+  height: 280px;
+}
+@media screen and (max-width: 900px) {
+  .post-list .post-card .post-cover img {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-list .post-card .post-cover img {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post-list .post-card .post-cover img {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .post-list .post-card .post-cover img {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .post-list .post-card .post-cover img {
+    height: 180px;
+  }
+}
+.post-list .post-card .post-cover img:not(.lazy) {
+  transition: transform 1s ease-out;
+  -moz-transition: transform 1s ease-out;
+  -webkit-transition: transform 1s ease-out;
+  -o-transition: transform 1s ease-out;
+}
+.post-list .post-card.post.photo .post-cover img {
+  height: 400px;
+}
+@media screen and (max-width: 900px) {
+  .post-list .post-card.post.photo .post-cover img {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-list .post-card.post.photo .post-cover img {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post-list .post-card.post.photo .post-cover img {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .post-list .post-card.post.photo .post-cover img {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .post-list .post-card.post.photo .post-cover img {
+    height: 240px;
+  }
+}
+.post-list .post-card.wiki article {
+  display: flex;
+  flex-wrap: wrap;
+  transition: box-shadow 0.2s ease-out;
+  -moz-transition: box-shadow 0.2s ease-out;
+  -webkit-transition: box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+.post-list .post-card.wiki article .preview {
+  display: flex;
+  width: 200px;
+  margin: 1rem 0.5rem;
+  align-items: center;
+}
+.post-list .post-card.wiki article .preview img {
+  object-fit: contain;
+}
+.post-list .post-card.wiki article .preview img:not(.lazy) {
+  transition: transform 0.75s ease-out;
+  -moz-transition: transform 0.75s ease-out;
+  -webkit-transition: transform 0.75s ease-out;
+  -o-transition: transform 0.75s ease-out;
+}
+.post-list .post-card.wiki article .excerpt {
+  margin: 1rem 0.5rem;
+  min-width: 220px;
+  flex: 1;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.post-list .post-card.wiki article .excerpt p:last-child {
+  margin-bottom: 0;
+}
+.post-list {
+  margin: 1rem;
+}
+.post-list .post-card {
+  display: block;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0px rgba(0,0,0,0.25);
+  transition: box-shadow 0.2s ease-out;
+  -moz-transition: box-shadow 0.2s ease-out;
+  -webkit-transition: box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  overflow: hidden;
+  background: var(--card);
+  position: relative;
+}
+.post-list .post-card .excerpt {
+  margin: 1rem 0;
+}
+.post-list .post-card .excerpt >p {
+  margin: 1rem 0;
+}
+.post-list .post-card .meta.cap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.post-list .post-card .meta.cap span+span {
+  margin-left: 0.5rem;
+}
+.post-list .post-card .meta.cap span.pin {
+  line-height: 0;
+}
+.post-list .post-card .meta.cap span.pin img {
+  object-fit: contain;
+  height: 1.5em;
+}
+.post-list .post-card:hover {
+  box-shadow: 0 1px 4px 0px rgba(0,0,0,0.1), 0 2px 8px 0px rgba(0,0,0,0.1), 0 4px 16px 0px rgba(0,0,0,0.1);
 }
 .post-list article {
   padding: 1rem;
