@@ -18,18 +18,18 @@
   }
 }
 :root {
-  --site-bg: rgba(255,255,255,0.7);
+  --site-bg: rgba(255,255,255,0.6);
   --block: #f2f2f2;
   --block-border: #e5e5e5;
   --block-hover: #ededed;
   --text-p0: #000;
   --text-p1: #333;
-  --text-p2: rgba(75,75,75,0.94);
-  --text-p3: rgba(104,104,104,0.88);
-  --text-p4: rgba(153,153,153,0.805);
+  --text-p2: rgba(70,70,70,0.92);
+  --text-p3: rgba(96,96,96,0.84);
+  --text-p4: rgba(141,141,141,0.74);
   --text-p5: #333;
   --text-p6: #333;
-  --text-meta: rgba(190,190,190,0.76);
+  --text-meta: rgba(179,179,179,0.68);
   --text-code: #111;
   --card: rgba(255,255,255,0.5);
   --navcard: #fff;
@@ -39,18 +39,18 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: rgba(0,0,0,0.7);
+    --site-bg: rgba(0,0,0,0.6);
     --block: #000;
     --block-border: #1a1a1a;
     --block-hover: #000;
     --text-p0: #646464;
     --text-p1: #eee;
-    --text-p2: rgba(193,193,193,0.91);
-    --text-p3: rgba(143,143,143,0.835);
-    --text-p4: rgba(119,119,119,0.805);
+    --text-p2: rgba(201,201,201,0.88);
+    --text-p3: rgba(156,156,156,0.78);
+    --text-p4: rgba(132,132,132,0.74);
     --text-p5: #646464;
     --text-p6: #fff;
-    --text-meta: rgba(105,105,105,0.79);
+    --text-meta: rgba(119,119,119,0.72);
     --text-code: #ff7043;
     --card: rgba(0,0,0,0.5);
     --navcard: #000;
@@ -61,7 +61,7 @@
 }
 @media screen and (prefers-color-scheme: dark) and (max-width: 768px) {
   :root {
-    --site-bg: rgba(0,0,0,0.8);
+    --site-bg: rgba(0,0,0,0.6);
   }
 }
 body {
@@ -2839,7 +2839,7 @@ nav.menu a.nav-item:hover {
   z-index: 1;
 }
 .l_left .widgets .widget-wrap {
-  margin: 1rem 0 1rem 0;
+  margin: 0 0 1rem 0;
   background: var(--wrapcard);
   border-radius: 10px;
   padding: 15px;
@@ -3817,6 +3817,7 @@ div.swiper-slide img {
   margin-top: 51rem !important;
   border-radius: 4px;
   background: rgba(255,255,255,0.25);
+  z-index: 1 !important;
   transition: background 0.2s ease-out;
   -moz-transition: background 0.2s ease-out;
   -webkit-transition: background 0.2s ease-out;
