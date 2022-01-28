@@ -21,8 +21,8 @@
 
   
   <meta name="description" content="功能分析的对象：由若干组件or若干工艺组成的系统，即工程系统，工程系统（以下简称“系统”）能够执行一定的功能。
-需要注意，组件既可以是实体、也可以是场；工程系统具有相对性，它的范围由我们的研究目的确定。
-除了工程系统，我们再了解超系统的定义：包含了被分析的工程系统的系统。所以超系统中所研究的系...">
+&emsp;&emsp;需要注意，组件既可以是实体、也可以是场；工程系统具有相对性，它的范围由我们的研究目的确定。
+&emsp;&emsp;除了工程系统，我们再了解超系统的定义：包含...">
 
   <!-- feed -->
   
@@ -141,8 +141,8 @@
 <article class='content md post'>
 <h1 class="article-title"><span>功能分析</span></h1>
 <p>功能分析的对象：由若干组件or若干工艺组成的系统，即工程系统，<em><strong>工程系统</strong></em>（以下简称“<em><strong>系统</strong></em>”）能够执行一定的功能。</p>
-<p>需要注意，组件既可以是实体、也可以是场；工程系统具有相对性，它的范围由我们的研究目的确定。</p>
-<p>除了工程系统，我们再了解超系统的定义：包含了被分析的工程系统的系统。所以<strong>超系统</strong>中所研究的<strong>系统</strong>以外的其他组件不是我们研究的对象，我们只关心它们对<strong>系统</strong>的影响，不关心它们的功能。</p>
+<p>&emsp;&emsp;需要注意，组件既可以是实体、也可以是场；工程系统具有相对性，它的范围由我们的研究目的确定。</p>
+<p>&emsp;&emsp;除了工程系统，我们再了解超系统的定义：包含了被分析的工程系统的系统。所以<strong>超系统</strong>中所研究的<strong>系统</strong>以外的其他组件不是我们研究的对象，我们只关心它们对<strong>系统</strong>的影响，不关心它们的功能。</p>
 <p>功能分析的步骤：组件分析→相互作用分析→功能建模</p>
 <ul>
 <li><p>组件分析：罗列系统和超系统的组件；</p>
@@ -152,17 +152,17 @@
 <li><p>功能建模：描述系统或超系统组件的功能、用途、性能水平、成本等。</p>
 </li>
 </ul>
-<h2 id="组件分析"><a href="#组件分析" class="headerlink" title="组件分析"></a>组件分析</h2><h3 id="选择合适的组件分析层级"><a href="#选择合适的组件分析层级" class="headerlink" title="选择合适的组件分析层级"></a>选择合适的组件分析层级</h3><p>分析的层级越高、组件越少，层级越低、组件越多。所以这里需要我们根据项目的需要来选择，原则是在避免遗漏细节组件的前提下，尽可能简化系统组成（10个组件以内为宜）。确定分析层级后，我们可以用三线表罗列清楚系统、组件、超系统组件</p>
+<h2 id="组件分析"><a href="#组件分析" class="headerlink" title="组件分析"></a>组件分析</h2><h3 id="选择合适的组件分析层级"><a href="#选择合适的组件分析层级" class="headerlink" title="选择合适的组件分析层级"></a>选择合适的组件分析层级</h3><p>&emsp;&emsp;分析的层级越高、组件越少，层级越低、组件越多。所以这里需要我们根据项目的需要来选择，原则是在避免遗漏细节组件的前提下，尽可能简化系统组成（10个组件以内为宜）。确定分析层级后，我们可以用三线表罗列清楚系统、组件、超系统组件</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct1.png"></p>
-<p>注意，组件之间的关系必须是互斥的，则①如果只有个别组件有详细分析的必要，我们可以只对个别组件以更低层级拆分，但整体、宏观上必须层级统一②区分组件的核心标准是它<strong>执行的功能</strong>！</p>
-<h2 id="相互作用分析"><a href="#相互作用分析" class="headerlink" title="相互作用分析"></a>相互作用分析</h2><p>为了防止混淆，我们可以改称相互“接触”分析。</p>
-<p>所谓相互作用，即一组件对另一组件有某种功能，前提条件是二者必须<strong>相互接触</strong>。注意，组件之间也可能通过场接触！比如人可以通过声场与第二个人相互作用。</p>
-<p>所以两两分析，如果有接触，则标记“+”，如果没有，则标记“-”，如果某组件和其他所有组件都没有接触，那么说明它对系统无功能，去掉即可。</p>
-<p>画相互作用矩阵！</p>
-<p>记得检查一下，矩阵值应该中心对称。</p>
+<p>&emsp;&emsp;注意，组件之间的关系必须是互斥的，则①如果只有个别组件有详细分析的必要，我们可以只对个别组件以更低层级拆分，但整体、宏观上必须层级统一②区分组件的核心标准是它<strong>执行的功能</strong>！</p>
+<h2 id="相互作用分析"><a href="#相互作用分析" class="headerlink" title="相互作用分析"></a>相互作用分析</h2><p>&emsp;&emsp;为了防止混淆，我们可以改称相互“接触”分析。</p>
+<p>&emsp;&emsp;所谓相互作用，即一组件对另一组件有某种功能，前提条件是二者必须<strong>相互接触</strong>。注意，组件之间也可能通过场接触！比如人可以通过声场与第二个人相互作用。</p>
+<p>&emsp;&emsp;所以两两分析，如果有接触，则标记“+”，如果没有，则标记“-”，如果某组件和其他所有组件都没有接触，那么说明它对系统无功能，去掉即可。</p>
+<p>&emsp;&emsp;画相互作用矩阵！</p>
+<p>&emsp;&emsp;记得检查一下，矩阵值应该中心对称。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct2.png"></p>
 <h2 id="功能建模（一）"><a href="#功能建模（一）" class="headerlink" title="功能建模（一）"></a>功能建模（一）</h2><h3 id="描述功能"><a href="#描述功能" class="headerlink" title="描述功能"></a>描述功能</h3><p>功能=组件+相互作用（接触）+参数改变。</p>
-<p>为了方便表述，我们将两两有作用的组件成为<strong>组件对</strong>，根据相互作用分析，我们将<strong>组件对</strong>拎出来，按照如下规则画作用图示：</p>
+<p>&emsp;&emsp;为了方便表述，我们将两两有作用的组件成为<strong>组件对</strong>，根据相互作用分析，我们将<strong>组件对</strong>拎出来，按照如下规则画作用图示：</p>
 <ul>
 <li>系统组件用方框表示，超系统组件用棱框表示，目标用圆角框表示</li>
 <li>箭线表示有功能关系，箭头指向功能对象，箭尾连接功能载体</li>
@@ -177,42 +177,42 @@
 <li>功能的载体：执行功能的<strong>组件</strong></li>
 <li>功能的对象：接受功能的<strong>组件</strong>（某个参数由于功能的作用而得到保持或改变）。参数可以比较、量化，如位置、温度、重量等。</li>
 </ul>
-<p>注意：并不是所有的组件对都可以描述功能，因为两个组件接触了并不一定有功能，功能更加强调结果，即某个参数的保持或改变。</p>
-<p>当然，我们也可以用列表形式表示，格式如下表：</p>
+<p>&emsp;&emsp;注意：并不是所有的组件对都可以描述功能，因为两个组件接触了并不一定有功能，功能更加强调结果，即某个参数的保持或改变。</p>
+<p>&emsp;&emsp;当然，我们也可以用列表形式表示，格式如下表：</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="cb.png"></p>
-<p>在描述功能的时候，不能望文生义想当然！要站在分析的角度定义功能，即“功能=组件+相互作用（接触）+参数改变”。</p>
-<p>比如：虽然开着的门是让人通过的，但用功能分析的语言来描述，二者根本没有功能，因为开着的门和人并没有接触，更没有功能！而门关上的时候阻挡了要过门的人，使人的运动轨迹改变，所以可以说二者有接触、有功能！</p>
-<p>再比如：牙刷的功能评价参数是牙屑的多少，所以牙刷的功能并非刷牙，而是清除牙屑。不要小看了这微小的改变，面对复杂的项目，它会很清晰得告诉我们重点放在哪里，放在如何高效彻底清除牙屑或细菌，而非刷牙的动作！</p>
+<p>&emsp;&emsp;在描述功能的时候，不能望文生义想当然！要站在分析的角度定义功能，即“功能=组件+相互作用（接触）+参数改变”。</p>
+<p>&emsp;&emsp;比如：虽然开着的门是让人通过的，但用功能分析的语言来描述，二者根本没有功能，因为开着的门和人并没有接触，更没有功能！而门关上的时候阻挡了要过门的人，使人的运动轨迹改变，所以可以说二者有接触、有功能！</p>
+<p>&emsp;&emsp;再比如：牙刷的功能评价参数是牙屑的多少，所以牙刷的功能并非刷牙，而是清除牙屑。不要小看了这微小的改变，面对复杂的项目，它会很清晰得告诉我们重点放在哪里，放在如何高效彻底清除牙屑或细菌，而非刷牙的动作！</p>
 <p>一些常用的可用于描述功能的词：</p>
 <blockquote>
 <p>吸收、分解、支撑、生成<br>挡住、冷却、蒸发/汽化、切割<br>加热、移动、折射、吸附<br>控制、去除、保持、粉碎</p>
 </blockquote>
-<p>描述功能的词不能是否定词，如“不让人通过”。</p>
-<p>以上是描述组件之间的功能和作用，下面我们需要描述系统的功能。</p>
-<h3 id="主要功能和目标"><a href="#主要功能和目标" class="headerlink" title="主要功能和目标"></a>主要功能和目标</h3><p>一个系统能够执行的功能可能不止一个，所以我们有必要通过系统的设计目的来确定主要功能。（当然，主要功能也可能不止一个）</p>
+<p>&emsp;&emsp;描述功能的词不能是否定词，如“不让人通过”。</p>
+<p>&emsp;&emsp;以上是描述组件之间的功能和作用，下面我们需要描述系统的功能。</p>
+<h3 id="主要功能和目标"><a href="#主要功能和目标" class="headerlink" title="主要功能和目标"></a>主要功能和目标</h3><p>&emsp;&emsp;一个系统能够执行的功能可能不止一个，所以我们有必要通过系统的设计目的来确定主要功能。（当然，主要功能也可能不止一个）</p>
 <ul>
 <li><p>主要功能：系统的某一个或某几个能够体现设计目的的功能。</p>
 </li>
 <li><p>目标：主要功能的作用对象，它属于超系统组件。</p>
 </li>
 </ul>
-<p>所以，目标有3个特征：①是超系统组件②是主要功能的对象③它的某个参数被主要功能保持或者改变。</p>
-<p>根据这三个特征，我们可以确定系统的目标。</p>
-<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>功能的分类如图所示，其中不足、过量、有害的功能都值得我们利用其他工具，比如因果链分析、剪裁等做深入的研究，有可能被选为关键问题。</p>
+<p>&emsp;&emsp;所以，目标有3个特征：①是超系统组件②是主要功能的对象③它的某个参数被主要功能保持或者改变。</p>
+<p>&emsp;&emsp;根据这三个特征，我们可以确定系统的目标。</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>&emsp;&emsp;功能的分类如图所示，其中不足、过量、有害的功能都值得我们利用其他工具，比如因果链分析、剪裁等做深入的研究，有可能被选为关键问题。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct5.png"></p>
-<h3 id="有用的功能的等级"><a href="#有用的功能的等级" class="headerlink" title="有用的功能的等级"></a>有用的功能的等级</h3><p>除了上述分类，有用的功能还可以做如下分类。</p>
+<h3 id="有用的功能的等级"><a href="#有用的功能的等级" class="headerlink" title="有用的功能的等级"></a>有用的功能的等级</h3><p>&emsp;&emsp;除了上述分类，有用的功能还可以做如下分类。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct6.png"></p>
-<p>根据有用功能对目标的影响力，我们用分数来区别不同类别的等级，由高到低分别为3分、2分、1分。既然我们没有必要研究有害功能的等级，那我们不妨将有害功能记为0分。</p>
-<h3 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h3><p>为了研究的方便，我们引入价值概念。我们仅需要分析有用功能的价值。</p>
+<p>&emsp;&emsp;根据有用功能对目标的影响力，我们用分数来区别不同类别的等级，由高到低分别为3分、2分、1分。既然我们没有必要研究有害功能的等级，那我们不妨将有害功能记为0分。</p>
+<h3 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h3><p>&emsp;&emsp;为了研究的方便，我们引入价值概念。我们仅需要分析有用功能的价值。</p>
 <p>价值V=功能F/成本C</p>
 <p>功能F：该组件的功能得分，即上述3分、2分、1分</p>
 <p>成本C：可以量化的成本数值。</p>
-<h3 id="功能-成本图"><a href="#功能-成本图" class="headerlink" title="功能-成本图"></a>功能-成本图</h3><p>用横轴表示成本，竖轴表示功能，我们就可以表示出各具备有用功能的组件的坐标。斜率即该组件的价值V=F/C。</p>
+<h3 id="功能-成本图"><a href="#功能-成本图" class="headerlink" title="功能-成本图"></a>功能-成本图</h3><p>&emsp;&emsp;用横轴表示成本，竖轴表示功能，我们就可以表示出各具备有用功能的组件的坐标。斜率即该组件的价值V=F/C。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct7.png"></p>
-<p>接着，我们画一条过原点的线，将图中所列的部件尽量均匀地分布在线的两边。</p>
+<p>&emsp;&emsp;接着，我们画一条过原点的线，将图中所列的部件尽量均匀地分布在线的两边。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct8.png"></p>
-<p>那么我们可以这样理解这条线：这条线代表了一个组件的合理价值，即为了实现功能而应当付出的合理成本；如果组件在这条线以下，说明这个组件的价值不太理想，如果在这条线以上，则价值比较理想。</p>
-<p>进一步来看，我们可以把功能-成本图分为四个部分，对待不同部分的组件采取不同的策略。如下图。</p>
+<p>&emsp;&emsp;那么我们可以这样理解这条线：这条线代表了一个组件的合理价值，即为了实现功能而应当付出的合理成本；如果组件在这条线以下，说明这个组件的价值不太理想，如果在这条线以上，则价值比较理想。</p>
+<p>&emsp;&emsp;进一步来看，我们可以把功能-成本图分为四个部分，对待不同部分的组件采取不同的策略。如下图。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct9.png"></p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ct10.png"></p>
 <p><em>参考教材：《TRIZ 打开创新之门的金钥匙》（孙永伟博士）</em></p>
