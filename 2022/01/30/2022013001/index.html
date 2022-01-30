@@ -142,7 +142,7 @@
 <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>&emsp;&emsp;自从我养成给博客文章添加目录的习惯后，我发现配置好的目录功能居然不能实现跳转！每次点击标题都无法跳转到相应的位置。在完善了博客的功能、布局和样式之后，我总该修补一下这些缺失的小功能。</p>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>&emsp;&emsp;一开始我以为是文章标题位置没有生成锚点，但测试了一下发现锚点是正常的，标题herf也能正常链接到锚点，可以排除是文章锚点的问题；用开发者工具检查了一下文章页面，控制台显示js文件都是加载成功的，也没有报错，所以又可以排除js文件加载失败、错误的情况了。</p>
 <p>&emsp;&emsp;接着我试着捣鼓了一下网页的事件侦听器，发现删除掉click动作下的smoothscroll.js脚本就可以正常跳转，所以基本确定了问题就处在这个平滑滚动的脚本上，于是昨天拉着吴海涛让他帮我分析，试图找到这个smoothscoll.js脚本，但捣鼓了一晚上也没找到。虽然没捣鼓出什么成果，但我们又发现了一个现象：英文标题可以正常跳转，但中文标题不可以，我们就进一步把问题缩小到smoothscroll.js脚本中关于标题字符处理的代码上了。</p>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>&emsp;&emsp;于是，怀着不甘的心，我又开始在必应上搜索解决方案，我怎么能允许自己的博客有这样的bug！😎😎😎终于，找到了有大佬给出的方法：<a target="_blank" rel="noopener" href="https://blog.wangriyu.wang/2018/06-Aplayer.html">https://blog.wangriyu.wang/2018/06-Aplayer.html</a>。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>&emsp;&emsp;于是，怀着不甘的心，我又开始在必应上搜索解决方案，我怎么能允许自己的博客有这样的bug！😎😎😎终于，找到了大佬给出的方法：<a target="_blank" rel="noopener" href="https://blog.wangriyu.wang/2018/06-Aplayer.html">https://blog.wangriyu.wang/2018/06-Aplayer.html</a>。</p>
 <p>&emsp;&emsp;由于我给博客添加了Aplayer播放器，而它的仓库里使用了smoothscroll的插件，所以就解释了为什么我在本地苦苦无法找到smoothscroll.js的脚本文件和链接。之所以中文标题无法实现跳转，是因为smoothscroll在处理跳转链接的hash时只测试了英文，而中文字符则转成了Unicode码，导致函数的判断条件无法成立，因此后面的点击处理就失效了。</p>
 <p>&emsp;&emsp;所以，我们只需要在Aplayer中找到Aplayer.main.js地址：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js">https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js</a></p>
 <p>&emsp;&emsp;打开后将其中defaultPrevented后面的代码替换为：</p>
