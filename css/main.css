@@ -2949,7 +2949,7 @@ nav.menu a.nav-item:hover {
   line-height: 1.2;
   margin-top: 0;
   overflow: auto;
-  height: 200px;
+  height: 150px;
 }
 #toc .widget-body ul ul,
 #toc .widget-body ul ol {
