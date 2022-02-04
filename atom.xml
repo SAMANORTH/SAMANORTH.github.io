@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-01-30T04:01:30.076Z</updated>
+  <updated>2022-02-04T01:30:48.803Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>板配筋计算与施工图绘制</title>
+    <link href="http://samanorth.github.io/2022/02/04/2022020401/"/>
+    <id>http://samanorth.github.io/2022/02/04/2022020401/</id>
+    <published>2022-02-04T01:27:07.000Z</published>
+    <updated>2022-02-04T01:30:48.803Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>解决目录无法跳转的问题</title>
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/01/27/2022012703/</id>
     <published>2022-01-27T10:56:39.000Z</published>
     <updated>2022-01-28T12:46:10.055Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>技术矛盾的解决</title>
-    <link href="http://samanorth.github.io/2022/01/27/2022012702/"/>
-    <id>http://samanorth.github.io/2022/01/27/2022012702/</id>
-    <published>2022-01-27T10:56:33.000Z</published>
-    <updated>2022-01-30T01:24:35.513Z</updated>
     
     
       
