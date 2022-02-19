@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-02-19T05:48:39.200Z</updated>
+  <updated>2022-02-19T05:53:21.586Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IM in Civil Engineering</title>
+    <link href="http://samanorth.github.io/2022/02/19/2022021904/"/>
+    <id>http://samanorth.github.io/2022/02/19/2022021904/</id>
+    <published>2022-02-19T05:51:53.000Z</published>
+    <updated>2022-02-19T05:53:21.586Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Oxford Prospects Programmes" scheme="http://samanorth.github.io/categories/Oxford-Prospects-Programmes/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Academic Profile Development</title>
     <link href="http://samanorth.github.io/2022/02/19/2022021903/"/>
     <id>http://samanorth.github.io/2022/02/19/2022021903/</id>
     <published>2022-02-19T05:46:55.000Z</published>
-    <updated>2022-02-19T05:48:39.200Z</updated>
+    <updated>2022-02-19T05:52:55.792Z</updated>
     
     
       
@@ -67,7 +90,7 @@
     <link href="http://samanorth.github.io/2022/02/19/2022021901/"/>
     <id>http://samanorth.github.io/2022/02/19/2022021901/</id>
     <published>2022-02-19T05:33:33.000Z</published>
-    <updated>2022-02-19T05:43:22.106Z</updated>
+    <updated>2022-02-19T05:51:36.027Z</updated>
     
     
       
@@ -104,29 +127,6 @@
     
     
     <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>解决目录无法跳转的问题</title>
-    <link href="http://samanorth.github.io/2022/01/30/2022013001/"/>
-    <id>http://samanorth.github.io/2022/01/30/2022013001/</id>
-    <published>2022-01-30T02:23:10.000Z</published>
-    <updated>2022-01-30T04:01:30.076Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="日记2022" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022/"/>
     
     
   </entry>
