@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-02-19T10:44:43.791Z</updated>
+  <updated>2022-02-20T11:56:40.260Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ArchiCAD学习笔记</title>
+    <link href="http://samanorth.github.io/2022/02/20/2022022001/"/>
+    <id>http://samanorth.github.io/2022/02/20/2022022001/</id>
+    <published>2022-02-20T11:51:37.000Z</published>
+    <updated>2022-02-20T11:56:40.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="日记2022" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>IM in Civil Engineering</title>
@@ -104,29 +127,6 @@
     
     
     <category term="Oxford Prospects Programmes" scheme="http://samanorth.github.io/categories/Oxford-Prospects-Programmes/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>板配筋计算与施工图绘制</title>
-    <link href="http://samanorth.github.io/2022/02/04/2022020401/"/>
-    <id>http://samanorth.github.io/2022/02/04/2022020401/</id>
-    <published>2022-02-04T01:27:07.000Z</published>
-    <updated>2022-02-04T01:30:48.803Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
     
     
   </entry>
