@@ -213,7 +213,7 @@ a[onclick]:hover {
 .float-panel {
   position: sticky;
   right: 0;
-  bottom: 2rem;
+  bottom: 10rem;
   float: right;
   z-index: 9;
   display: flex;
@@ -223,11 +223,11 @@ a[onclick]:hover {
   border-right: 0;
   overflow: hidden;
   --blur-px: 24px;
-  --blur-bg: rgba(234,234,234,0.6);
+  --blur-bg: rgba(100,100,100,0.6);
 }
 @media (prefers-color-scheme: dark) {
   .float-panel {
-    --blur-bg: rgba(85,85,85,0.6);
+    --blur-bg: rgba(0,0,0,0.6);
   }
 }
 .sidebar-toggle.mobile {
