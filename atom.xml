@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>北方SAMA</title>
   
-  <subtitle>重大/港大/结构</subtitle>
+  <subtitle>一只土木狗</subtitle>
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-02-20T12:24:18.499Z</updated>
+  <updated>2022-02-04T01:30:48.803Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ArchiCAD学习笔记</title>
-    <link href="http://samanorth.github.io/2022/02/20/2022022001/"/>
-    <id>http://samanorth.github.io/2022/02/20/2022022001/</id>
-    <published>2022-02-20T11:51:37.000Z</published>
-    <updated>2022-02-20T12:24:18.499Z</updated>
+    <title>板配筋计算与施工图绘制</title>
+    <link href="http://samanorth.github.io/2022/02/04/2022020401/"/>
+    <id>http://samanorth.github.io/2022/02/04/2022020401/</id>
+    <published>2022-02-04T01:27:07.000Z</published>
+    <updated>2022-02-04T01:30:48.803Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决目录无法跳转的问题</title>
+    <link href="http://samanorth.github.io/2022/01/30/2022013001/"/>
+    <id>http://samanorth.github.io/2022/01/30/2022013001/</id>
+    <published>2022-01-30T02:23:10.000Z</published>
+    <updated>2022-01-30T04:01:30.076Z</updated>
     
     
       
@@ -40,11 +63,11 @@
   </entry>
   
   <entry>
-    <title>Smart Cities after the Pandemic</title>
-    <link href="http://samanorth.github.io/2022/02/19/2022021905/"/>
-    <id>http://samanorth.github.io/2022/02/19/2022021905/</id>
-    <published>2022-02-19T12:49:54.000Z</published>
-    <updated>2022-02-20T12:58:23.530Z</updated>
+    <title>银川市发改委实习总结</title>
+    <link href="http://samanorth.github.io/2022/01/28/2022012801/"/>
+    <id>http://samanorth.github.io/2022/01/28/2022012801/</id>
+    <published>2022-01-28T12:42:56.000Z</published>
+    <updated>2022-01-28T12:57:26.300Z</updated>
     
     
       
@@ -57,17 +80,17 @@
     
     
     
-    <category term="Oxford Prospects Programmes" scheme="http://samanorth.github.io/categories/Oxford-Prospects-Programmes/"/>
+    <category term="银川市发改委挂职实习" scheme="http://samanorth.github.io/categories/%E9%93%B6%E5%B7%9D%E5%B8%82%E5%8F%91%E6%94%B9%E5%A7%94%E6%8C%82%E8%81%8C%E5%AE%9E%E4%B9%A0/"/>
     
     
   </entry>
   
   <entry>
-    <title>IM in Civil Engineering</title>
-    <link href="http://samanorth.github.io/2022/02/19/2022021904/"/>
-    <id>http://samanorth.github.io/2022/02/19/2022021904/</id>
-    <published>2022-02-19T05:51:53.000Z</published>
-    <updated>2022-02-19T10:44:43.791Z</updated>
+    <title>物-场模型与标准解系统</title>
+    <link href="http://samanorth.github.io/2022/01/27/2022012704/"/>
+    <id>http://samanorth.github.io/2022/01/27/2022012704/</id>
+    <published>2022-01-27T10:59:52.000Z</published>
+    <updated>2022-01-28T12:45:44.928Z</updated>
     
     
       
@@ -80,17 +103,17 @@
     
     
     
-    <category term="Oxford Prospects Programmes" scheme="http://samanorth.github.io/categories/Oxford-Prospects-Programmes/"/>
+    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
     
     
   </entry>
   
   <entry>
-    <title>Academic Profile Development</title>
-    <link href="http://samanorth.github.io/2022/02/19/2022021903/"/>
-    <id>http://samanorth.github.io/2022/02/19/2022021903/</id>
-    <published>2022-02-19T05:46:55.000Z</published>
-    <updated>2022-02-19T10:44:42.024Z</updated>
+    <title>物理矛盾的解决</title>
+    <link href="http://samanorth.github.io/2022/01/27/2022012703/"/>
+    <id>http://samanorth.github.io/2022/01/27/2022012703/</id>
+    <published>2022-01-27T10:56:39.000Z</published>
+    <updated>2022-01-28T12:46:10.055Z</updated>
     
     
       
@@ -103,30 +126,7 @@
     
     
     
-    <category term="Oxford Prospects Programmes" scheme="http://samanorth.github.io/categories/Oxford-Prospects-Programmes/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Challenges Associated with Transitioning Towards Zero-Carbon Energy Systems</title>
-    <link href="http://samanorth.github.io/2022/02/19/2022021902/"/>
-    <id>http://samanorth.github.io/2022/02/19/2022021902/</id>
-    <published>2022-02-19T05:43:59.000Z</published>
-    <updated>2022-02-19T10:44:34.078Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Oxford Prospects Programmes" scheme="http://samanorth.github.io/categories/Oxford-Prospects-Programmes/"/>
+    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
     
     
   </entry>
