@@ -3811,29 +3811,6 @@ div.swiper-slide img {
 .swiper-container[width='min'] div.swiper-slide {
   width: 25%;
 }
-.swiper-button-prev,
-.swiper-button-next {
-  padding: 1rem 0.5rem;
-  margin-top: 51rem !important;
-  border-radius: 4px;
-  background: rgba(255,255,255,0.25);
-  z-index: 1 !important;
-  transition: background 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
-  --swiper-theme-color: #000 !important;
-}
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background: #fff !important;
-  --swiper-theme-color: #ff5722 !important;
-}
 .cmt-body.valine {
   --more-before: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,246,246,0.9));
   --more-after: rgba(246,246,246,0.9);
