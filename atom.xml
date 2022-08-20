@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-08-20T09:14:55.470Z</updated>
+  <updated>2022-08-20T14:33:31.671Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Response to Periodic Force</title>
+    <link href="http://samanorth.github.io/2022/08/20/2022082002/"/>
+    <id>http://samanorth.github.io/2022/08/20/2022082002/</id>
+    <published>2022-08-20T14:28:27.000Z</published>
+    <updated>2022-08-20T14:33:31.671Z</updated>
+    
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Harmonic Vibration With Viscous Damping</title>
     <link href="http://samanorth.github.io/2022/08/20/2022082001/"/>
     <id>http://samanorth.github.io/2022/08/20/2022082001/</id>
     <published>2022-08-20T07:31:42.000Z</published>
-    <updated>2022-08-20T09:14:55.470Z</updated>
+    <updated>2022-08-20T14:39:58.452Z</updated>
     
     
       
@@ -104,29 +119,6 @@
     
     
     <category term="日记2022" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>物-场模型与标准解系统</title>
-    <link href="http://samanorth.github.io/2022/01/27/2022012704/"/>
-    <id>http://samanorth.github.io/2022/01/27/2022012704/</id>
-    <published>2022-01-27T10:59:52.000Z</published>
-    <updated>2022-01-28T12:45:44.928Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="TRIZ" scheme="http://samanorth.github.io/categories/TRIZ/"/>
     
     
   </entry>
