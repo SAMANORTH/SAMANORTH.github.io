@@ -17,10 +17,13 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Response to Periodic Force - 北方SAMA</title>
+  <title>Response to Periodic Excitation & Fourier Series Representation - 北方SAMA</title>
 
   
-  <meta name="description" content="null">
+  <meta name="description" content=" 
+
+1.Representation of Periodic Force: Fourier SeriesA function \(p(t)\) can be separated into its harmonic components using the Fourier series:
+\[...">
 
   <!-- feed -->
   
@@ -53,17 +56,12 @@
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/about/">关于</a><a class="nav-item" href="/messages/">留言板</a></nav></header>
 
 
-<div class="widgets"><div class='widget-wrap' id='markdown'>
-  <div class='widget-header cap dis-select'>
-    <span class='name'>北方的博客</span>
-  </div>
-  <div class='widget-body fs14'>
-    
-      <p>如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。</p>
+<div class="widgets">
 
-    
-  </div>
-</div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Representation-of-Periodic-Force-Fourier-Series"><span class="toc-text">1.Representation of Periodic Force: Fourier Series</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Response-to-Periodic-Force-The-Solution-of-p-t"><span class="toc-text">2.Response to Periodic Force: The Solution of  \(p(t)\)</span></a></li></ol></div></div></div>
+
+
+
 </div><div class="Aplayer">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/css/aplayerst.css">
 <div id="aplayer"></div>
@@ -126,7 +124,7 @@
 
 
     </aside>
-    <div class='l_main list'>
+    <div class='l_main'>
       
 
       
@@ -135,7 +133,39 @@
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Dynamics-of-Structures/">Dynamics of Structures</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-08-20T14:28:27.000Z">2022-08-20</time></div></div>
 
 <article class='content md post'>
-<h1 class="article-title"><span>Response to Periodic Force</span></h1>
+<h1 class="article-title"><span>Response to Periodic Excitation & Fourier Series Representation</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
+<h2 id="1-Representation-of-Periodic-Force-Fourier-Series"><a href="#1-Representation-of-Periodic-Force-Fourier-Series" class="headerlink" title="1.Representation of Periodic Force: Fourier Series"></a>1.Representation of Periodic Force: Fourier Series</h2><p>A function \(p(t)\) can be separated into its harmonic components using the Fourier series:</p>
+<p>\[ p_(t) = a_0 + \sum_{j=1}^{\infty} a_j cosjw_0t + \sum_{j=1}^{\infty} b_j sinjw_0t \]</p>
+<p>Although it`s apparent, we still need to emphasize the implication of the parameters above:</p>
+<p>\(a_0\) is the average value of \(p(t)\) ;</p>
+<p>\(a_j\) and \(b_j\)is the amplitudes of the \(j\)th harmonics of frequency \(jw_0\) , they decrease with \(j\)</p>
+<p>And I`d also like to illustrate the implication of \(\sum\) , it shows that an infinite number of terms are required for the Fourier series to converge to (p(t)\) theoretically; however, we do not have to worry because a few terms (might 3~4) are sufficient for good convergence, we will find it later.</p>
+<p>So, let`s make it more clear. The coefficients in the Fourier series can be expressed in terms of \(p(t)\) because the sine and cosine functions are orthogonal. The derivation could refer to the following link.</p>
+<div class="tag-plugin link dis-select"><a class="link-card" title="毕业设计&nbsp;-&nbsp;城市绿建筑——建筑学部联合毕业设计" href="https://samanorth.github.io/wiki/pkpm0101/index.html#start" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><span class="title fs14">毕业设计&nbsp;-&nbsp;城市绿建筑——建筑学部联合毕业设计</span><span class="url fs12">icon: https://samanorth.github.io/image/logo/pkpm.png</span></div><div class="right"><div class="lazy img" data-bg="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+
+<p>\[a_0 = \frac{1}{T_0} \int_{0}^{T_0} p(t) dt\]</p>
+<p>\[a_j = \frac{2}{T_0} \int_{0}^{T_0} p(t) cos jw_0t dt …… j=1,2,3,…\]</p>
+<p>\[b_j = \frac{2}{T_0} \int_{0}^{T_0} p(t) sin jw_0t dt …… j=1,2,3,…\]</p>
+<h2 id="2-Response-to-Periodic-Force-The-Solution-of-p-t"><a href="#2-Response-to-Periodic-Force-The-Solution-of-p-t" class="headerlink" title="2.Response to Periodic Force: The Solution of  \(p(t)\)"></a>2.Response to Periodic Force: The Solution of  \(p(t)\)</h2><p>Just as for harmonic excitation, we are only intersted in finding the steady state response, in the other words, the particular solution is our main topic.</p>
+<p>For convenience, we give the steady state reponse of a viscously damped SDF system to harmonic force again:</p>
+<p>\[<br>u_0 = \frac{a_0}{k}<br>\]</p>
+<p>1.For cosine force:</p>
+<p>\[<br>u_j^{cos} (t) = \frac{a_j}{k} \frac{2\zeta \beta _j sinjw_0t + (1-\beta _j^2)cosjw_0t}{(1-\beta _j^2 )^2 + (2\zeta \beta _j)^2}<br>\]</p>
+<p>2.For sine force:</p>
+<p>\[<br>u_j^{sin} (t) = \frac{a_j}{k} \frac{(1-\beta _j^2)sinjw_0t - 2\zeta \beta _j cosjw_0t}{(1-\beta _j^2 )^2 + (2\zeta \beta _j)^2}<br>\]</p>
+<p>Where \(\beta _j = \frac{jw_0}{w_n}\)</p>
+<p>The particular solution or the steady state response of a system with damping to periodic excitation \(p(t)\) is the combination of responses to individual terms in the Fourier series. So, we can directly add the solutions above together:</p>
+<p>\[<br>u(t) = u_0(t) + \sum_{j=1}^{\infty} u_j^{cos}(t) + \sum_{j=1}^{\infty} u_j^{sin}(t)<br>\\ = \frac{a_0}{k} + \sum_{j=1}^\infty \frac{1}{k} \frac{1}{(1-\beta_j^2)^2+(2\zeta \beta_j)^2} {[2a_j\zeta \beta _j+b_j(1-\beta_j^2)]sinjw_0t<br>\\ + [a_j(1-\beta_j^2)-2b_j\zeta \beta_j]cosjw_0t }<br>\]</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="1.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="2.png"></p>
+<p>From the example above we note that:</p>
+<p>①Approximate Fourier series \(p(t)\) consist of 3 or 4 terms is close to the original function curve \(p(t)\) and \(u(t)\).</p>
+<p>②And the higher the term is, the smaller the contribution to simulation is. This is because the amplitudes of the harmonic components of \(p(t)\) decrease with \(j\) and \(\beta_j\) would be even farther from unity(1).</p>
+<p>③The relative contributions of the various harmonic terms in Fourier series depend on two factors:</p>
+<p>(1) The amlitudes \(a_j\) and \(b_j\) of the harmonic components of the forcing function \(p(t)\);</p>
+<p>(2)The frequency ratio \(\beta _j\), and the response will be dominated by those harmonic components for which \(\beta_j\) is close to unity(1), which also means the forcing frequency is close to the natural frequency.</p>
 
 
 
