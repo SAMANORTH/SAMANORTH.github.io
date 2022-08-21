@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-08-21T11:30:55.648Z</updated>
+  <updated>2022-08-21T13:13:33.136Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Derivation of Fourier Series</title>
+    <link href="http://samanorth.github.io/2022/08/21/2022082101/"/>
+    <id>http://samanorth.github.io/2022/08/21/2022082101/</id>
+    <published>2022-08-21T11:44:50.000Z</published>
+    <updated>2022-08-21T13:13:33.136Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Response to Periodic Excitation &amp; Fourier Series Representation</title>
     <link href="http://samanorth.github.io/2022/08/20/2022082002/"/>
     <id>http://samanorth.github.io/2022/08/20/2022082002/</id>
     <published>2022-08-20T14:28:27.000Z</published>
-    <updated>2022-08-21T11:30:55.648Z</updated>
+    <updated>2022-08-21T11:48:40.752Z</updated>
     
     
       
@@ -104,29 +127,6 @@
     
     
     <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>解决目录无法跳转的问题</title>
-    <link href="http://samanorth.github.io/2022/01/30/2022013001/"/>
-    <id>http://samanorth.github.io/2022/01/30/2022013001/</id>
-    <published>2022-01-30T02:23:10.000Z</published>
-    <updated>2022-08-20T06:08:53.173Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="日记2022" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022/"/>
     
     
   </entry>
