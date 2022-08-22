@@ -3581,6 +3581,10 @@ article.md.error-page a#back {
 .l_main header .logo-wrap {
   margin: 0;
 }
+.mjx-chtml {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 article.md {
   max-width: 100%;
   padding: 1rem;
