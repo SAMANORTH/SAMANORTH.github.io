@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-08-22T15:16:00.561Z</updated>
+  <updated>2022-08-29T16:47:44.331Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Response to arbitrary excitation</title>
+    <link href="http://samanorth.github.io/2022/08/28/2022082801/"/>
+    <id>http://samanorth.github.io/2022/08/28/2022082801/</id>
+    <published>2022-08-28T12:48:45.000Z</published>
+    <updated>2022-08-29T16:47:44.331Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Derivation of Fourier Series</title>
     <link href="http://samanorth.github.io/2022/08/21/2022082101/"/>
     <id>http://samanorth.github.io/2022/08/21/2022082101/</id>
     <published>2022-08-21T11:44:50.000Z</published>
-    <updated>2022-08-22T15:16:00.561Z</updated>
+    <updated>2022-08-29T15:44:21.362Z</updated>
     
     
       
@@ -67,7 +90,7 @@
     <link href="http://samanorth.github.io/2022/08/20/2022082001/"/>
     <id>http://samanorth.github.io/2022/08/20/2022082001/</id>
     <published>2022-08-20T07:31:42.000Z</published>
-    <updated>2022-08-21T10:59:55.551Z</updated>
+    <updated>2022-08-29T15:29:51.576Z</updated>
     
     
       
@@ -104,29 +127,6 @@
     
     
     <category term="日记2022007" scheme="http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022007/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>板配筋计算与施工图绘制</title>
-    <link href="http://samanorth.github.io/2022/02/04/2022020401/"/>
-    <id>http://samanorth.github.io/2022/02/04/2022020401/</id>
-    <published>2022-02-04T01:27:07.000Z</published>
-    <updated>2022-02-04T01:30:48.803Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="PKPM复习" scheme="http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/"/>
     
     
   </entry>
