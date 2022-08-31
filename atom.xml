@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-08-30T16:57:17.795Z</updated>
+  <updated>2022-08-31T16:12:30.107Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>The Mechanics of Water Reducers</title>
+    <link href="http://samanorth.github.io/2022/08/31/2022083101/"/>
+    <id>http://samanorth.github.io/2022/08/31/2022083101/</id>
+    <published>2022-08-31T15:26:23.000Z</published>
+    <updated>2022-08-31T16:12:30.107Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Advanced Concrete" scheme="http://samanorth.github.io/categories/Advanced-Concrete/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>The Mechanism of Air-entraining Admixture</title>
     <link href="http://samanorth.github.io/2022/08/30/2022083001/"/>
     <id>http://samanorth.github.io/2022/08/30/2022083001/</id>
     <published>2022-08-30T14:16:24.000Z</published>
-    <updated>2022-08-30T16:57:17.795Z</updated>
+    <updated>2022-08-31T15:25:48.742Z</updated>
     
     
       
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/08/20/2022082002/</id>
     <published>2022-08-20T14:28:27.000Z</published>
     <updated>2022-08-22T15:15:53.080Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Harmonic Vibration With Viscous Damping</title>
-    <link href="http://samanorth.github.io/2022/08/20/2022082001/"/>
-    <id>http://samanorth.github.io/2022/08/20/2022082001/</id>
-    <published>2022-08-20T07:31:42.000Z</published>
-    <updated>2022-08-29T15:29:51.576Z</updated>
     
     
       
