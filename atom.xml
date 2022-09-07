@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-09-03T14:16:50.695Z</updated>
+  <updated>2022-09-07T14:43:29.820Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MDoF入门</title>
+    <link href="http://samanorth.github.io/2022/09/07/2022090702/"/>
+    <id>http://samanorth.github.io/2022/09/07/2022090702/</id>
+    <published>2022-09-07T14:39:10.000Z</published>
+    <updated>2022-09-07T14:43:29.820Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Response to Step Excitation &amp; Linearly Increasing Force</title>
+    <link href="http://samanorth.github.io/2022/09/07/2022090701/"/>
+    <id>http://samanorth.github.io/2022/09/07/2022090701/</id>
+    <published>2022-09-07T14:39:01.000Z</published>
+    <updated>2022-09-07T14:43:02.246Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>The Mechanism of Water Reducers</title>
@@ -68,52 +114,6 @@
     <id>http://samanorth.github.io/2022/08/28/2022082801/</id>
     <published>2022-08-28T12:48:45.000Z</published>
     <updated>2022-08-30T14:23:48.985Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Derivation of Fourier Series</title>
-    <link href="http://samanorth.github.io/2022/08/21/2022082101/"/>
-    <id>http://samanorth.github.io/2022/08/21/2022082101/</id>
-    <published>2022-08-21T11:44:50.000Z</published>
-    <updated>2022-08-29T16:50:13.637Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Response to Periodic Excitation &amp; Fourier Series Representation</title>
-    <link href="http://samanorth.github.io/2022/08/20/2022082002/"/>
-    <id>http://samanorth.github.io/2022/08/20/2022082002/</id>
-    <published>2022-08-20T14:28:27.000Z</published>
-    <updated>2022-08-22T15:15:53.080Z</updated>
     
     
       
