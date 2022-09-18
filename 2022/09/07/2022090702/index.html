@@ -17,11 +17,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>MDoF入门 - 北方SAMA</title>
+  <title>Introduction to MDOF(1) - 北方SAMA</title>
 
   
   <meta name="description" content=" 
-">
+
+Before we talk about the dynamics of MDOF structures, we need to recap and understand the three basic regimes of vibration of SDOF dynamics. And...">
 
   <!-- feed -->
   
@@ -56,9 +57,7 @@
 
 <div class="widgets">
 
-
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="line"></div><a class="more-item" href="/2022/09/07/2022090701/"><div class="cap"><time>2022-09-07</time><span>Dynamics of Structures</span></div><span class="title">Response to Step Excitation & Linearly Increasing Force</span></a><div class="line"></div><a class="more-item" href="/2022/08/31/2022083101/"><div class="cap"><time>2022-09-07</time><span>Advanced Concrete</span></div><span class="title">The Mechanism of Water Reducers</span></a><div class="line"></div><a class="more-item" href="/2022/09/07/2022090702/"><div class="cap"><time>2022-09-07</time><span>Dynamics of Structures</span></div><span class="title">MDoF入门</span></a><div class="line"></div><a class="more-item" href="/2022/08/30/2022083001/"><div class="cap"><time>2022-09-03</time><span>Advanced Concrete</span></div><span class="title">The Mechanism of Air-entraining Admixture</span></a></div></div>
-
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Three-regimes-in-SDOF"><span class="toc-text">Three regimes in SDOF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pseudo-static-regime"><span class="toc-text">Pseudo-static regime</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resonance-regime"><span class="toc-text">Resonance regime</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Isolation-regime"><span class="toc-text">Isolation regime</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Three-regimes-in-MDOF"><span class="toc-text">Three regimes in MDOF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Resonance-Mode-1"><span class="toc-text">Resonance Mode 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Resonance-Mode-2"><span class="toc-text">Resonance Mode 2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mode-shape"><span class="toc-text">Mode shape</span></a></li></ol></div></div></div>
 
 
 
@@ -133,8 +132,53 @@
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Dynamics-of-Structures/">Dynamics of Structures</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-09-07T14:39:10.000Z">2022-09-07</time></div></div>
 
 <article class='content md post'>
-<h1 class="article-title"><span>MDoF入门</span></h1>
+<h1 class="article-title"><span>Introduction to MDOF(1)</span></h1>
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
+<p>Before we talk about the dynamics of MDOF structures, we need to recap and understand the three basic regimes of vibration of SDOF dynamics. And as an engineer, we should know where we are, I mean, we should know in which regime the structure is though it is not easy.</p>
+<h2 id="Three-regimes-in-SDOF"><a href="#Three-regimes-in-SDOF" class="headerlink" title="Three regimes in SDOF"></a>Three regimes in SDOF</h2><p>Consider the most simple SDOF system, a highly idealized one-story frame subjected to periodic excitation on the base. For convenience, we make some assumptions in this idealization, the beams and floor systems are rigid (infinitely stiff) in flexure, and several factors are neglected: axial deformation of the beams and columns, and the effect of axial force on the stiffness of the columns. The mass is distributed throughout the building, but we idealize it as concentrated at the floor levels while the columns only provide stiffness. This assumption is generally reliable because the mass of walls and columns in real structure is relatively small compared to the mass of floors together with beams.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="1.png"></p>
+<p>Therefore, there are three regimes of vibration:</p>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Pseudo-static: when the excitation frequency is very low</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Resonance: when the excitation frequency nearly equals the natural frequency</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Isolation: when the excitation frequency is very high</span></div>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="2.png"></p>
+<h3 id="Pseudo-static-regime"><a href="#Pseudo-static-regime" class="headerlink" title="Pseudo-static regime"></a>Pseudo-static regime</h3><p>Since the frequency of excitation is very low, the effect of excitation is very similar to that of a constant external force with zero frequency. Therefore, the relative displacement of the floor to the foundation is very small, almost negligible. </p>
+<p>In this case, we engineers do not have to worry about the dynamic response of the structure which is small enough to be ignored, so it is “good”, but is it “interesting”? No, it`s not interesting, it cannot help us to determine the natural frequency and the dynamic response.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="ps.gif"></p>
+<h3 id="Resonance-regime"><a href="#Resonance-regime" class="headerlink" title="Resonance regime"></a>Resonance regime</h3><p>What will happen if we keep making the excitation faster and faster? The amplitude will get bigger and bigger and at some point it will reach the maximum value. And this point could be called the resonance regime, where the largest response amplitude occurs and the  natural frequency nearly equals the excitation frequency.</p>
+<p>It turns out that at this frequency, the input excitation will amplify a lot in the output of relative displacement response of structure.  </p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="r.gif"></p>
+<h3 id="Isolation-regime"><a href="#Isolation-regime" class="headerlink" title="Isolation regime"></a>Isolation regime</h3><p>How about we keep increasing the frequency, moving the base faster and faster? Finally we will get another interesting phenomenon. </p>
+<p>Although it does have some relative displacement, the floor does not seems to move with base as the base moving a lot in a high speed. In other words, the floor does not catch up with the base.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="i.gif"></p>
+<p>Why the floor cannot catch up the base? We think it in a pretty simple way:</p>
+<p>The stiffness of the column is limited, and its flexibility at such high frequencies allows it to dissipate much energy that the superstructure cannot catch up the movement of base. In other words, if we make the columns absolutely stiff (just assume the EI of column → ∞), then the force and energy can be transferred quickly to the floor so that the floor can catch up the movement.</p>
+<p>Therefore, it inspires us to apply this regime to isolators,  it’s a natural idea, isn’t it?</p>
+<h2 id="Three-regimes-in-MDOF"><a href="#Three-regimes-in-MDOF" class="headerlink" title="Three regimes in MDOF"></a>Three regimes in MDOF</h2><p>Now let`s think about the MDOF.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="3.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="4.png"></p>
+<p>Same as the SDOF, MDOF also has three basic regimes, but the difference is that there are 2 modes of resonance in 2-story system. Actually the number of resonance peaks is equal to the number of degrees of freedom. For this case, there are only 2 DOF which is the displacement of floor 1 and floor 2 separately because we make the same assumptions as above SDOF.</p>
+<p>The structure at pseudo-static regime and the response at isolation acts the same as the SDOF, so allow me to omit this part.</p>
+<p>What interests us is the mode of resonance.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="mr.gif"></p>
+<p>If we take a snapshot of the response GIF above, we can find there are two different resonance modes as follows.</p>
+<h3 id="Resonance-Mode-1"><a href="#Resonance-Mode-1" class="headerlink" title="Resonance Mode 1"></a>Resonance Mode 1</h3><p>At this mode, the 2 floors act in the same phase which means they act in the same direction with only the difference of displacement.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="5.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="6.png"></p>
+<h3 id="Resonance-Mode-2"><a href="#Resonance-Mode-2" class="headerlink" title="Resonance Mode 2"></a>Resonance Mode 2</h3><p>If we keep increasing the excitation frequency after we reach the first peak, the curve will decline to a certain degree and then reach another peak which means we will hit another natural frequency the structure likes. Then we will have resonance again.</p>
+<p>We should note that the peak of second mode may not always lower than resonance mode 1. Suppose the damping ratio of second mode is very small thus the the second peak will have higher amplitude.</p>
+<p>In addition, the peak also relies on the excitation pattern. In this case that we apply the excitation on the base, the pattern is fixed. But if we apply a certain force pattern on the structure,  it may only excite the second mode not the first mode.</p>
+<p>This time, we take another snapshot. This time the 2 floors move out-of-phase which means they move towards opposite directions. If we assume a positive direction, then we can calculate the ratio between //( x_2//) and //( x_1//).</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="7.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="8.png"></p>
+<p>If we mark the displacement of every instance of the response of MDOF, we can find an amazing thing that the ratio //(\frac{x_2}{x_1}//) remains the same, and this constant is the <strong><u>“mode shape”</u></strong> we will discuss after.</p>
+<p>Essentially, the shape and the associated frequency is not arbitrary, they are determined by the mass and stiffness. </p>
+<h2 id="Mode-shape"><a href="#Mode-shape" class="headerlink" title="Mode shape"></a>Mode shape</h2><p>From the above discussion, we know that the mode shapes are independent of absolute displacement. They are about the ratio. Thus we can give the definition of mode shape:</p>
+<p><strong>mode shapes</strong> are a manifestation of eigenvectors which describe the relative displacement of two or more elements in a mechanical system  or wave front. A mode shape is a deflection pattern related to a particular natural frequency and represents the relative displacement of all parts of a structure for that particular mode.</p>
 
 
 
