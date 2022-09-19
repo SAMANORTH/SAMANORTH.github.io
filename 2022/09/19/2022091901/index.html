@@ -156,20 +156,26 @@ Newtons Secon...">
 <blockquote>
 <p>This ideal model is a shear-building model. I think it is necessary to summarize the differences between shear-building model and bending-building model.<br>The most straightforward difference is the position of the reverse bending porint under lateral force. The position of the reverse bending point of the shear-frame occurs on the column, while the bending-frame  appears on the beam and floor.<br>This is because the floor stiffness of the former is much higher than that of the pillar, while the latter is just the opposite. In engineering practice, frame structure is generally shear deformation, shear wall structure is generally bending deformation just like a huge beam, frame shear structure have both.<br>It’s a very basic concept.</p>
 </blockquote>
-<h2 id="Using-Newton-s-Sencond-Law"><a href="#Using-Newton-s-Sencond-Law" class="headerlink" title="Using Newton`s Sencond Law"></a>Using Newton`s Sencond Law</h2><p>According to Newton`s second law, the EOM is:<br>$$<br>m_i \ddot{u_i} = p_i - f_{si} - f_{Di}<br>$$<br>And then these assumptions come in handy.</p>
+<h2 id="Using-Newton-s-Sencond-Law"><a href="#Using-Newton-s-Sencond-Law" class="headerlink" title="Using Newton`s Sencond Law"></a>Using Newton`s Sencond Law</h2><p>According to Newton`s second law, the EOM is:</p>
+<p>$$<br>m_i \ddot{u_i} = p_i - f_{si} - f_{Di}<br>$$</p>
+<p>And then these assumptions come in handy.</p>
 <p>①Because the beams and floor systems have EI → ∞, the number of DOF goes down from 6 to 2, which means that there are 2 unknowns to solve.</p>
 <p>②Because we neglect the mass of columns, </p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="2.png"></p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="3.png"></p>
-<p>we can get \(f_{s2} = f{s12})<br>$$<br>f_{s2} = k_2(x_2-x_1)<br>$$</p>
+<p>we can get \(f_{s2} = f{s12})</p>
+<p>$$<br>f_{s2} = k_2(x_2-x_1)<br>$$</p>
 <p>$$<br>f_{s12} = f_{s1} = k_2(x_2-x_1)<br>$$</p>
 <p>Then we can get:<br>\[<br>m_2 \ddot{x_2} = -k_2(x_2-x_1) + p_2<br>\\ \rightarrow m_2 \ddot{x_2} -k_2x_1 + k_2x_2 = p_2<br>\]</p>
 <p>\[<br>m_1 \ddot{x_1} = k_2(x_2-x_1) - k_1x_1 + p_1<br>\\ \rightarrow m_1 \ddot{x_1} +(k_1+k_2)x_1 - k_2x_2 = p_1<br>\]</p>
 <p>Writing the two equations in matrix form:</p>
 <p>\[<br>\begin{bmatrix}<br>    m_1&amp;0\<br>    0&amp;m_2<br>\end{bmatrix}<br>\begin{bmatrix}<br>    \ddot{x_1}(t)\<br>    \ddot{x_2}(t)<br>\end{bmatrix}<br>+<br>\begin{bmatrix}<br>    k_1+k_2&amp;-k_2\<br>    -k_2&amp;k_2<br>\end{bmatrix}<br>\begin{bmatrix}<br>    x_1(t)\<br>    x_2(t)<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>    p_1(t)\<br>    p_2(t)<br>\end{bmatrix}<br>\]</p>
-<p>Write it in matrix form:<br>$$<br>{M}<em>{2×2}\ddot{x}(t)</em>{2×1} + K_{2×2}x(t)<em>{2×1} = P(t)</em>{2×1}<br>$$<br>But what about the damping? Actually damping is really hard to tell from the structure because there are too many factors such as the non-structure members, the material, and even the furniture affect the damping. So it is usually determined by the past data and expeiments or even experience. But we always have to represent it in our fomula to calculate the response, so how do we do?</p>
+<p>Write it in matrix form:</p>
+<p>$$<br>{M}<em>{2×2}\ddot{x}(t)</em>{2×1} + K_{2×2}x(t)<em>{2×1} = P(t)</em>{2×1}<br>$$</p>
+<p>But what about the damping? Actually damping is really hard to tell from the structure because there are too many factors such as the non-structure members, the material, and even the furniture affect the damping. So it is usually determined by the past data and expeiments or even experience. But we always have to represent it in our fomula to calculate the response, so how do we do?</p>
 <p>We <strong><u>artificially</u></strong>  assume that a  linear viscous damping mechanism represents the energy dissipation in a structure to empirically match the reality, just as in the case of SDOF systems, which means energy dissipation is associated with the deformational motions of each story. Luckily, this assumption suits the math calculation very well. But we still have to emphasize again that this damping form does not reflect the real situation of a structure.</p>
-<p>Then we can give the general EOM form:<br>$$<br>{M}<em>{n×n}\ddot{x}(t)</em>{n×1} + C_{n×n}\dot{x}(t)<em>{n×1} + K</em>{n×n}x(t)<em>{n×1} = P(t)</em>{n×1}<br>$$</p>
+<p>Then we can give the general EOM form:</p>
+<p>$$<br>{M}<em>{n×n}\ddot{x}(t)</em>{n×1} + C_{n×n}\dot{x}(t)<em>{n×1} + K</em>{n×n}x(t)<em>{n×1} = P(t)</em>{n×1}<br>$$</p>
 <h2 id="Using-D-Alembert-Dynamic-Equilibrium"><a href="#Using-D-Alembert-Dynamic-Equilibrium" class="headerlink" title="Using D`Alembert Dynamic Equilibrium"></a>Using D`Alembert Dynamic Equilibrium</h2><p>Similar to the Newton`s second law, allow me to omit this process.</p>
 <h2 id="Using-Stiffness-Damping-and-Mass-Components"><a href="#Using-Stiffness-Damping-and-Mass-Components" class="headerlink" title="Using Stiffness, Damping, and Mass Components"></a>Using Stiffness, Damping, and Mass Components</h2><p>Newton`s second law and dynamic equilibrium methods are still the following the algebraic way of SDOF, actually we can directly convert our mind into a matrix way,</p>
 <p>Under the action of external forces \(p_1(t)\) and \(p_2(t)\), the state of the system at any time instant is described by displacements \(u_j(t)\), velocities\(\dot{u}_j(t)\), and accelerations \(\ddot{u}_j(t)\). Now we visualize this system as the combination of three pure components:</p>
