@@ -20,11 +20,12 @@
   <title>Introduction to MDOF(2) - 北方SAMA</title>
 
   
-  <meta name="description" content=" 
+  <meta name="description" content="
+
 
 After the discussion about regimes and mode shapes, we shall derive the EOM of MDOF.
 There are three ways to get the EOM of MDOF. 
-Newtons Secon...">
+Newton\`s Sec...">
 
   <!-- feed -->
   
@@ -59,7 +60,7 @@ Newtons Secon...">
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Newton-s-Sencond-Law"><span class="toc-text">Using Newton&#96;s Sencond Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-D-Alembert-Dynamic-Equilibrium"><span class="toc-text">Using D&#96;Alembert Dynamic Equilibrium</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Stiffness-Damping-and-Mass-Components"><span class="toc-text">Using Stiffness, Damping, and Mass Components</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Newton-s-Sencond-Law"><span class="toc-text">Using Newton&#96;s Sencond Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-D-Alembert-Dynamic-Equilibrium"><span class="toc-text">Using D&#96;Alembert Dynamic Equilibrium</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Stiffness-Damping-and-Mass-Components"><span class="toc-text">Using Stiffness, Damping, and Mass Components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Solution-of-EOM"><span class="toc-text">The Solution of EOM</span></a></li></ol></div></div></div>
 
 
 
@@ -135,13 +136,15 @@ Newtons Secon...">
 
 <article class='content md post'>
 <h1 class="article-title"><span>Introduction to MDOF(2)</span></h1>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 <p>After the discussion about regimes and mode shapes, we shall derive the EOM of MDOF.</p>
 <p>There are three ways to get the EOM of MDOF. </p>
-<div class="tag-plugin checkbox" ><input type="radio"/><span>Newtons Second Law</span></div>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Newton\`s Second Law</span></div>
 
-<div class="tag-plugin checkbox" ><input type="radio"/><span>DAlembert Dynamic Equilibrium</span></div>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>D\`Alembert Dynamic Equilibrium</span></div>
 
 <div class="tag-plugin checkbox" ><input type="radio"/><span>Stiffness, Damping, and Mass Components</span></div>
 
@@ -166,16 +169,20 @@ Newtons Secon...">
 <p>we can get \(f_{s2} = f{s12})</p>
 <p>$$<br>f_{s2} = k_2(x_2-x_1)<br>$$</p>
 <p>$$<br>f_{s12} = f_{s1} = k_2(x_2-x_1)<br>$$</p>
-<p>Then we can get:<br>\[<br>m_2 \ddot{x_2} = -k_2(x_2-x_1) + p_2<br>\\ \rightarrow m_2 \ddot{x_2} -k_2x_1 + k_2x_2 = p_2<br>\]</p>
+<p>Then we can get:</p>
+<p>\[<br>m_2 \ddot{x_2} = -k_2(x_2-x_1) + p_2<br>\\ \rightarrow m_2 \ddot{x_2} -k_2x_1 + k_2x_2 = p_2<br>\]</p>
 <p>\[<br>m_1 \ddot{x_1} = k_2(x_2-x_1) - k_1x_1 + p_1<br>\\ \rightarrow m_1 \ddot{x_1} +(k_1+k_2)x_1 - k_2x_2 = p_1<br>\]</p>
 <p>Writing the two equations in matrix form:</p>
-<p>\[<br>\begin{bmatrix}<br>    m_1&amp;0\<br>    0&amp;m_2<br>\end{bmatrix}<br>\begin{bmatrix}<br>    \ddot{x_1}(t)\<br>    \ddot{x_2}(t)<br>\end{bmatrix}<br>+<br>\begin{bmatrix}<br>    k_1+k_2&amp;-k_2\<br>    -k_2&amp;k_2<br>\end{bmatrix}<br>\begin{bmatrix}<br>    x_1(t)\<br>    x_2(t)<br>\end{bmatrix}<br>=<br>\begin{bmatrix}<br>    p_1(t)\<br>    p_2(t)<br>\end{bmatrix}<br>\]</p>
-<p>Write it in matrix form:</p>
-<p>$$<br>{M}<em>{2×2}\ddot{x}(t)</em>{2×1} + K_{2×2}x(t)<em>{2×1} = P(t)</em>{2×1}<br>$$</p>
-<p>But what about the damping? Actually damping is really hard to tell from the structure because there are too many factors such as the non-structure members, the material, and even the furniture affect the damping. So it is usually determined by the past data and expeiments or even experience. But we always have to represent it in our fomula to calculate the response, so how do we do?</p>
-<p>We <strong><u>artificially</u></strong>  assume that a  linear viscous damping mechanism represents the energy dissipation in a structure to empirically match the reality, just as in the case of SDOF systems, which means energy dissipation is associated with the deformational motions of each story. Luckily, this assumption suits the math calculation very well. But we still have to emphasize again that this damping form does not reflect the real situation of a structure.</p>
+<p>\[<br>\left[<br>    \begin{array}{ccc}<br>    m_1&amp;0\<br>    0&amp;m_2<br>    \end{array}<br>\right]<br>\left[<br>    \begin{array}{ccc}<br>    \ddot{x_1}(t)\<br>    \ddot{x_2}(t)<br>    \end{array}<br>\right]<br>+<br>\left[<br>    \begin{array}{ccc}<br>    k_1+k_2&amp;-k_2\<br>    -k_2&amp;k_2<br>    \end{array}<br>\right]<br>\left[<br>    \begin{array}{ccc}<br>    x_1(t)\<br>    x_2(t)<br>    \end{array}<br>\right]<br>=<br>\left[<br>    \begin{array}{ccc}<br>    p_1(t)\<br>    p_2(t)<br>    \end{array}<br>\right]<br>\]</p>
+<p>Thus,</p>
+<p>\[<br>M_{2×2} \ddot{x} (t)_{2×1} + K_{2×2}x(t)_{2×1} = P(t)_{2×1}<br>\]</p>
+<p>This equation indicates that when we give an excitation to a structure, the structure`s response will never stop which is unrealistic. So what about the damping? Actually damping is really hard to tell from the structure because there are too many factors such as the non-structure members, the material, the air and even the furniture affect the damping. So it is usually determined by the past data and experiments or even experience. But we always have to represent it in our formula to calculate the response, so how do we do?</p>
+<p>We <strong><u>artificially</u></strong> assume that a  linear viscous damping mechanism represents the energy dissipation in a structure to empirically match the reality, just as in the case of SDOF systems, which means energy dissipation is associated with the deformational motions of each story. Luckily, this assumption suits the math calculation very well. But we still have to emphasize again that this damping form does not reflect the real situation of a structure.</p>
+<blockquote>
+<p>For example, friction contributes to the damping, but friction is not proportional to the velocity, which contradicts the linear viscous damping mechanism in the formula.<br>So we can joke that this viscous damping assumption is just to make things easier.</p>
+</blockquote>
 <p>Then we can give the general EOM form:</p>
-<p>$$<br>{M}<em>{n×n}\ddot{x}(t)</em>{n×1} + C_{n×n}\dot{x}(t)<em>{n×1} + K</em>{n×n}x(t)<em>{n×1} = P(t)</em>{n×1}<br>$$</p>
+<p>\[<br>M_{n×n}\ddot{x}(t)_{n×1} + C_{n×n}\dot{x}(t)_{n×1} + K_{n×n}x(t)_{n×1} = P(t)_{n×1}<br>\]</p>
 <h2 id="Using-D-Alembert-Dynamic-Equilibrium"><a href="#Using-D-Alembert-Dynamic-Equilibrium" class="headerlink" title="Using D`Alembert Dynamic Equilibrium"></a>Using D`Alembert Dynamic Equilibrium</h2><p>Similar to the Newton`s second law, allow me to omit this process.</p>
 <h2 id="Using-Stiffness-Damping-and-Mass-Components"><a href="#Using-Stiffness-Damping-and-Mass-Components" class="headerlink" title="Using Stiffness, Damping, and Mass Components"></a>Using Stiffness, Damping, and Mass Components</h2><p>Newton`s second law and dynamic equilibrium methods are still the following the algebraic way of SDOF, actually we can directly convert our mind into a matrix way,</p>
 <p>Under the action of external forces \(p_1(t)\) and \(p_2(t)\), the state of the system at any time instant is described by displacements \(u_j(t)\), velocities\(\dot{u}_j(t)\), and accelerations \(\ddot{u}_j(t)\). Now we visualize this system as the combination of three pure components:</p>
@@ -186,6 +193,33 @@ Newtons Secon...">
 <div class="tag-plugin checkbox" ><input type="radio"/><span>mass component: the floor masses without the stiffness or damping of the frame</span></div>
 
 <p>Thus we can get the external forces \(f_{sj}\),  \(f_{Dj}\),  \(f_{Ij}\) on these components seperately. And finally write the EOM in matrix form directly.</p>
+<h2 id="The-Solution-of-EOM"><a href="#The-Solution-of-EOM" class="headerlink" title="The Solution of EOM"></a>The Solution of EOM</h2><p>To motivate the concept of natural frequencies and mode shapes, consider an undamped structure under free vibration (give a disturbance rather than excitation).</p>
+<p>\[<br>M_{n×n}\ddot{x}(t)_{n×1} + K_{n×n}x(t)_{n×1} = 0_{n×1}<br>\]</p>
+<p>You won’t believe how we solved it. We just assume solution form \(x(t)<em>{n×1} = u</em>{n×1} z(t)<em>{scalar}\), then \(\ddot{x}(t)</em>{n×1} = u_{n×1} \ddot{z}(t)_{scalar}\). This assumption helps us turn a vector variable into an algebraic variable, and the original vector variable becomes a constant. Then the form turns to:</p>
+<p>\[<br>M_{n×n}u_{n×1}\ddot{z}(t) + K_{n×n}u_{n×1}z(t) = 0_{n×1}<br>\\ \rightarrow \overbrace{K_{n×n} u_{n×1}}^{constant} = - \frac{\ddot{z}(t)}{z(t)} \overbrace{M_{n×n} u_{n×1}}^{constant}<br>\]</p>
+<p>So, apparently, the \(\frac{\ddot{z}(t)}{z(t)}\) must be a constant too. So, we assume the \(\frac{\ddot{z}(t)}{z(t)} = w^2\) for convenience. (Note that at this moment we do not know what \(w\) is)</p>
+<p>Then we can get two information from the equation above.</p>
+<p>\[<br>\begin{cases}<br>Ku= w^2Mu<br>\\ \ddot{z}(t)+w^2z(t) = 0<br> \end{cases}<br>\]</p>
+<p>Thus, this problem becomes an eigenvalue problem, the \(u\) is the eigenvector and the \(w^2\) is the eigenvalue.</p>
+<blockquote>
+<p>I think it is necessary to review the mathematical explanation of eigenvector.</p>
+<p>Essentially, the vector u cannot be arbitrary. Otherwise, the Ku and Mu need not be proportional to each other. So, actually this problem is about finding the only vector and the proportion value which link Ku and Mu.</p>
+</blockquote>
+<p>In a SDOF system, we have already know that stiffness K = w²m, then it turns out the square root of the eigenvalue plays the role of natural freq. That is why we write it as w².</p>
+<p>Rearranging the eigenvalue equation gives</p>
+<p>\[<br>(K_{n×n}-w^2M_{n×n})u_{n×1} = 0<br>\]</p>
+<p>For the equation to have non-trivial solution u≠0, the matrix (K-w²M) must be singular with zero determinant.</p>
+<p>\[<br>\vert K_{n×n}-w^2M_{n×n}\vert = 0<br>\]</p>
+<blockquote>
+<p>If you have nonzero column vectors x that make the Ax = 0, then A is not invertible,</p>
+<p>Then the determinant of A is equal to 0, you can also say A is singular.</p>
+</blockquote>
+<p>Thus, we can get the value of w. Then we plug it in the equation, we can also get u. And u is not unique, except for the proportions between the elements because the singular matrix cannot give us enough equations to solve each unknown (you can verify from the linear algebra). So, we call u mode shape, which explains what we have found in the last article.</p>
+<blockquote>
+<p>“If we mark the displacement of every instance of the response of MDOF, we can find an amazing thing that the ratio \(\frac{x_2}{x_1}\) remains the same, and this constant is the <strong><u>“mode shape”</u></strong> we will discuss after.”</p>
+</blockquote>
+<p>For example, if \(u_1 = [0.5\  1]^T\), then the mode shape in structure is:</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="4.png"></p>
 
 
 
