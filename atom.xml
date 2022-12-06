@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-09-20T05:09:30.690Z</updated>
+  <updated>2022-12-06T14:15:31.861Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Simplifying analysis using complex numbers</title>
+    <link href="http://samanorth.github.io/2022/12/05/2022120501/"/>
+    <id>http://samanorth.github.io/2022/12/05/2022120501/</id>
+    <published>2022-12-05T14:40:04.000Z</published>
+    <updated>2022-12-06T14:15:31.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Introduction to MDOF(2)</title>
     <link href="http://samanorth.github.io/2022/09/19/2022091901/"/>
     <id>http://samanorth.github.io/2022/09/19/2022091901/</id>
     <published>2022-09-19T01:57:14.000Z</published>
-    <updated>2022-09-20T05:09:30.690Z</updated>
+    <updated>2022-12-06T14:22:03.406Z</updated>
     
     
       
@@ -67,7 +90,7 @@
     <link href="http://samanorth.github.io/2022/09/07/2022090701/"/>
     <id>http://samanorth.github.io/2022/09/07/2022090701/</id>
     <published>2022-09-07T14:39:01.000Z</published>
-    <updated>2022-12-05T06:48:59.930Z</updated>
+    <updated>2022-12-06T14:20:49.399Z</updated>
     
     
       
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/08/31/2022083101/</id>
     <published>2022-08-31T15:26:23.000Z</published>
     <updated>2022-09-07T14:45:47.958Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Advanced Concrete" scheme="http://samanorth.github.io/categories/Advanced-Concrete/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>The Mechanism of Air-entraining Admixture</title>
-    <link href="http://samanorth.github.io/2022/08/30/2022083001/"/>
-    <id>http://samanorth.github.io/2022/08/30/2022083001/</id>
-    <published>2022-08-30T14:16:24.000Z</published>
-    <updated>2022-09-03T14:14:04.552Z</updated>
     
     
       
