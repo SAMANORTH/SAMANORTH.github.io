@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-12-07T03:42:38.543Z</updated>
+  <updated>2022-12-07T08:11:47.584Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Basic Theory of TMD</title>
+    <title>Basic Theory of TMD(2)</title>
+    <link href="http://samanorth.github.io/2022/12/07/2022120701/"/>
+    <id>http://samanorth.github.io/2022/12/07/2022120701/</id>
+    <published>2022-12-07T04:03:23.000Z</published>
+    <updated>2022-12-07T08:11:47.584Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Theory of TMD(1)</title>
     <link href="http://samanorth.github.io/2022/12/06/2022120601/"/>
     <id>http://samanorth.github.io/2022/12/06/2022120601/</id>
     <published>2022-12-06T14:28:44.000Z</published>
-    <updated>2022-12-07T03:42:38.543Z</updated>
+    <updated>2022-12-07T05:32:00.621Z</updated>
     
     
       
@@ -44,7 +67,7 @@
     <link href="http://samanorth.github.io/2022/12/05/2022120501/"/>
     <id>http://samanorth.github.io/2022/12/05/2022120501/</id>
     <published>2022-12-05T14:40:04.000Z</published>
-    <updated>2022-12-07T03:00:30.337Z</updated>
+    <updated>2022-12-07T04:02:59.181Z</updated>
     
     
       
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/09/07/2022090702/</id>
     <published>2022-09-07T14:39:10.000Z</published>
     <updated>2022-09-20T05:09:25.555Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Response to Step &amp; Pulse force</title>
-    <link href="http://samanorth.github.io/2022/09/07/2022090701/"/>
-    <id>http://samanorth.github.io/2022/09/07/2022090701/</id>
-    <published>2022-09-07T14:39:01.000Z</published>
-    <updated>2022-12-06T14:20:49.399Z</updated>
     
     
       

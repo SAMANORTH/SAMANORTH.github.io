@@ -17,10 +17,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Basic Theory of TMD - 北方SAMA</title>
+  <title>Basic Theory of TMD(1) - 北方SAMA</title>
 
   
-  <meta name="description" content="Brief IntroductionTuned mass dampers (TMD) are designed to suppress the vibration of structures by means of resonance. They can be classified as tw...">
+  <meta name="description" content=" 
+
+Brief IntroductionTuned mass dampers (TMD) are designed to suppress the vibration of structures by means of resonance. They can be classified as...">
 
   <!-- feed -->
   
@@ -130,7 +132,9 @@
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Dynamics-of-Structures/">Dynamics of Structures</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-12-06T14:28:44.000Z">2022-12-06</time></div></div>
 
 <article class='content md post'>
-<h1 class="article-title"><span>Basic Theory of TMD</span></h1>
+<h1 class="article-title"><span>Basic Theory of TMD(1)</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
 <h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><p>Tuned mass dampers (TMD) are designed to suppress the vibration of structures by means of resonance. They can be classified as two types: passive TMD and active TMD, the former ones control force arises mechanically from the interaction of the device with the subject structure without feedback of response whereas the latter one is often electro-mechanical and have operation and stability issues.</p>
 <h2 id="Basic-Theory"><a href="#Basic-Theory" class="headerlink" title="Basic Theory"></a>Basic Theory</h2><p>Here I just want to remind you that the theory of TMD is based on a two degree of freedom system that treats the structure and the damper as single degrees of freedom respectively. </p>
 <p>The basic theory is always easy to understand, which is boring, but what’s really interesting is how do you find tricks from simple theory.😊😊😊</p>
@@ -150,14 +154,16 @@
 <p>Assume the complex-valued harmonic force:<br>$$<br>F(t) = F_0e^{iwt}<br>$$<br>Assume the following steady-state solutions:<br>$$<br>x(t) = Xe^{iwt};\ \ddot x=-w^2Xe^{iwt}<br>\\ u(t) = Ue^{iwt};\ \dot u(t)=iwUe^{iwt};\ \ddot u=-w^2Ue^{iwt}<br>$$<br>Subs. into (2):<br>$$<br>(w_d^2-w^2+2\zeta_dw_dwi)Ue^{iwt}=w^2Xe^{iwt}<br>\\ \Rightarrow U = \frac{w^2X}{w^2_d-w^2+2\zeta_dw_dwi}=\frac{\beta^2X}{\alpha^2-\beta^2+2\zeta_d\alpha\beta i}<br>\\ \alpha=w_d/w_1,\beta=w/w_1<br>$$<br>Now we get the expression of U in terms of X from above. Subs. into (3) to solve for X and simplify:<br>$$<br>X = \frac{F_0}{mw_1^2}×\frac{P}{Q}<br>\\ P = \alpha^2-\beta^2+2\zeta_d\alpha\beta i<br>\\ Q = [1-(1+\mu)\beta^2](\alpha^2-\beta^2+2\zeta_d\alpha\beta i)-\mu\beta^4<br>$$<br>Where,</p>
 <p>TMD freq. ratio \(\alpha=w_d/w_1\)</p>
 <p>Excitation freq. ratio \(\beta = w/w_1\)</p>
-<p>The steady-state amplitude of x(t) is equal to |X|:<br>$$<br>|X|=\underbrace{\frac{F_0}{mw_1^2}}<em>{static}×\underbrace{\frac{|P|}{|Q|}}</em>{Dyn.Amp\ D(w)}<br>$$<br>Except for \(\beta\), the parameters \(\alpha,\zeta_d,\mu\) can be controlled by design.</p>
+<p>The steady-state amplitude of x(t) is equal to |X|:<br>$$<br>|X| = \underbrace{\frac{F_0}{mw_1^2}} _ {static} × \underbrace{\frac{|P|}{|Q|}} _ {Dyn.Amp\ D(w)}<br>$$<br>Hence, from the equation above we can say that the steady-state amplitude of x(t) is controlled by \(\alpha,\beta,\zeta_d,\mu\). In other words, now we have a clue about how to control structural response with TMD.</p>
+<p>Except for \(\beta\), the parameters \(\alpha,\zeta_d,\mu\) can be controlled by design. </p>
+<p>So, how to choose these parameters?</p>
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/12/05/2022120501/">Simplifying Analysis Using Complex Numbers<span class="note">较早</span></a><div class="line"></div><div class="line"></div><a id="more" href="/archives">检索全部文章</a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/12/05/2022120501/">Simplifying Analysis Using Complex Numbers<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/12/07/2022120701/">Basic Theory of TMD(2)<span class="note">较新</span></a><div class="line"></div><a id="more" href="/archives">检索全部文章</a></section></div>
 
 
 
