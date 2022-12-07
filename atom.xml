@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-12-06T14:15:31.861Z</updated>
+  <updated>2022-12-07T03:42:38.543Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Simplifying analysis using complex numbers</title>
+    <title>Basic Theory of TMD</title>
+    <link href="http://samanorth.github.io/2022/12/06/2022120601/"/>
+    <id>http://samanorth.github.io/2022/12/06/2022120601/</id>
+    <published>2022-12-06T14:28:44.000Z</published>
+    <updated>2022-12-07T03:42:38.543Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Simplifying Analysis Using Complex Numbers</title>
     <link href="http://samanorth.github.io/2022/12/05/2022120501/"/>
     <id>http://samanorth.github.io/2022/12/05/2022120501/</id>
     <published>2022-12-05T14:40:04.000Z</published>
-    <updated>2022-12-06T14:15:31.861Z</updated>
+    <updated>2022-12-07T03:00:30.337Z</updated>
     
     
       
@@ -104,29 +127,6 @@
     
     
     <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>The Mechanism of Water Reducers</title>
-    <link href="http://samanorth.github.io/2022/08/31/2022083101/"/>
-    <id>http://samanorth.github.io/2022/08/31/2022083101/</id>
-    <published>2022-08-31T15:26:23.000Z</published>
-    <updated>2022-09-07T14:45:47.958Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Advanced Concrete" scheme="http://samanorth.github.io/categories/Advanced-Concrete/"/>
     
     
   </entry>
