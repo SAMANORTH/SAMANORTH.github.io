@@ -22,7 +22,7 @@
   
   <meta name="description" content=" 
 
-Design of TMD ParametersSince we have already know the equation governing the structure response:$$|X| = \underbrace{\frac{F_0}{mw_1^2}} _ {stat...">
+Observations of TMD ParametersSince we have already know the equation governing the structure response:$$|X| = \underbrace{\frac{F_0}{mw_1^2}} _...">
 
   <!-- feed -->
   
@@ -57,7 +57,7 @@ Design of TMD ParametersSince we have already know the equation governing the st
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Design-of-TMD-Parameters"><span class="toc-text">Design of TMD Parameters</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Observations-of-TMD-Parameters"><span class="toc-text">Observations of TMD Parameters</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-zeta-d-0"><span class="toc-text">1.\(\zeta_d &#x3D; 0\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-zeta-d-infty"><span class="toc-text">2.\(\zeta_d &#x3D; \infty\)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Classical-TMD-Design"><span class="toc-text">Classical TMD Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-The-two-fixed-points-have-the-same-height"><span class="toc-text">1.The two fixed points have the same height</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-The-peaks-pass-through-the-fixed-points"><span class="toc-text">2.The peaks pass through the fixed points</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Response-When-Optimally-Tuned"><span class="toc-text">Response When Optimally Tuned</span></a></li></ol></div></div></div>
 
 
 
@@ -135,21 +135,53 @@ Design of TMD ParametersSince we have already know the equation governing the st
 <h1 class="article-title"><span>Basic Theory of TMD(2)</span></h1>
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
 
-<h2 id="Design-of-TMD-Parameters"><a href="#Design-of-TMD-Parameters" class="headerlink" title="Design of TMD Parameters"></a>Design of TMD Parameters</h2><p>Since we have already know the equation governing the structure response:<br>$$<br>|X| = \underbrace{\frac{F_0}{mw_1^2}} _ {static} × \underbrace{\frac{|P|}{|Q|}} _ {Dyn.Amp\ D(w)}<br>\\ P = \alpha^2-\beta^2+2\zeta_d\alpha\beta i<br>\\ Q = [1-(1+\mu)\beta^2](\alpha^2-\beta^2+2\zeta_d\alpha\beta i)-\mu\beta^4<br>$$<br>Then how do we select the parameters \(\alpha,\zeta_d,\mu\) to control the response?</p>
+<h2 id="Observations-of-TMD-Parameters"><a href="#Observations-of-TMD-Parameters" class="headerlink" title="Observations of TMD Parameters"></a>Observations of TMD Parameters</h2><p>Since we have already know the equation governing the structure response:<br>$$<br>|X| = \underbrace{\frac{F_0}{mw_1^2}} _ {static} × \underbrace{\frac{|P|}{|Q|}} _ {Dyn.Amp\ D(w)}<br>\\ P = \alpha^2-\beta^2+2\zeta_d\alpha\beta i<br>\\ Q = [1-(1+\mu)\beta^2](\alpha^2-\beta^2+2\zeta_d\alpha\beta i)-\mu\beta^4<br>$$<br>Then how do we select the parameters \(\alpha,\zeta_d,\mu\) to control the response?</p>
 <p>Intuition tells us that we can iterate through every parameter value and find the smallest response. True, it sounds reasonable, but I have to say that it is not elegant.😂😂😂</p>
 <p>So, no rush, let`s consider the plot of dyn. amp. vs excitation freq. ratio (D vs β) at first.</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="dh1.gif"></p>
 <p>First check the extreme cases to see if it makes sense:</p>
-<p>1.\(\zeta_d = 0\)</p>
-<p>A <u>2- DOF</u> structure with <u>no damping</u>, so <u>two clear peaks</u> in dyn. amp.</p>
-<p>2.\(\zeta_d = \infty\)</p>
-<p>TMD stuck with structure (almost zero relative disp. u(t)), so effectively an <u>SDOF</u> structure with mass \(m(1+\mu)\) having only one peak.</p>
-<p>Now we fix \(\mu\) and consider typical values of \(\zeta_d\) and \(\alpha\) to try to find an ingenious observation. What a hard luck, we truly observe something:</p>
+<h3 id="1-zeta-d-0"><a href="#1-zeta-d-0" class="headerlink" title="1.\(\zeta_d = 0\)"></a>1.\(\zeta_d = 0\)</h3><p>A <u>2- DOF</u> structure with <u>no damping</u>, so <u>two clear peaks</u> in dyn. amp.</p>
+<h3 id="2-zeta-d-infty"><a href="#2-zeta-d-infty" class="headerlink" title="2.\(\zeta_d = \infty\)"></a>2.\(\zeta_d = \infty\)</h3><p>TMD stuck with structure (almost zero relative disp. u(t)), so effectively an <u>SDOF</u> structure with mass \(m(1+\mu)\) having only one peak.</p>
+<p>In fact, we have found that when the damping ratio is close to 1, the double peaks are no longer obvious, and when it is above 1.5, it converges to only one peak.</p>
+<h2 id="Classical-TMD-Design"><a href="#Classical-TMD-Design" class="headerlink" title="Classical TMD Design"></a>Classical TMD Design</h2><p>Now we fix \(\mu\) and consider typical values of \(\zeta_d\) and \(\alpha\) to try to find an ingenious observation. What a hard luck, we truly observe something:</p>
 <p>〇<u><strong>For given \(\mu\) and \(\alpha\), there are two points invariant to \(\zeta_d\).</strong></u>❗❗❗</p>
-<p>So, engineers come up with classical TMD design aiming at:</p>
-<p>1.The two fixed points have the same height;</p>
-<p>2.The peaks pass through the fixed points</p>
-<p>In this way, we can say with certainty that the response of the structure must be <u>lower than these two high fixed points</u>.</p>
+<blockquote>
+<p><strong>Derivation:</strong></p>
+<p>\(D=\frac{|P|}{|Q|}\Rightarrow D^2 =\frac{A^2 }{B^2 }×\frac{1+(2\zeta_d\alpha\beta)^ 2/A^ 2}{1+C^ 2(2\zeta_d\alpha\beta)^2 /B^2}\)<br>where </p>
+<p>\(A=\alpha^2 -\beta^2;\)</p>
+<p>\(B = [1-(1+\mu)\beta^2 ](\alpha^2-\beta^2)-\mu\beta^4;\)</p>
+<p>\(C=1-(1+\mu)\beta^2\)</p>
+<p>Since A, B and C do not depend on \(\zeta_d\), D is invariant to \(\zeta_d\) if \(\zeta_d→\infty\) or \(1/A^2 =C^2 /B^2\). </p>
+<p>Algebra gives \(AC+B = \mu\beta^4≠0\) and so the only possibility is \(AC-B=0\), which yields the following equation:</p>
+<p>\((2+\mu)\beta^4-2[1+(1+\mu)\alpha^2]\beta^2+2\alpha^2=0…(1)\) at fixed point;<br>\(D^2=\frac{A^2}{B^2}=\frac{1}{C^2}=\frac{1}{[1-(1+\mu)\beta^2]^2}…(2)\) at fixed point.</p>
+</blockquote>
+<p>This is a really powerful clue: with this property, engineers have the chance to make these two points the control points of the structural response. To be specific:</p>
+<p><strong><u>1.The two fixed points have the same height</u></strong></p>
+<p><strong><u>2.The peaks pass through the fixed points</u></strong></p>
+<p>In this way, we can say with certainty that the response of the structure must be <u>lower than these two high fixed points</u>. Such approach is called &quot;classical TMD design&quot;.</p>
+<p>So, what are the mathematics expressions?</p>
+<h3 id="1-The-two-fixed-points-have-the-same-height"><a href="#1-The-two-fixed-points-have-the-same-height" class="headerlink" title="1.The two fixed points have the same height"></a>1.The two fixed points have the same height</h3><p>$$<br>\alpha = \frac{1}{1+\mu}<br>$$</p>
+<blockquote>
+<p>From (1):</p>
+<p>\(\beta_ 1^ 2+ \beta_ 2 ^2 = \frac{2[1+(1+\mu)\alpha^2]}{2+\mu}…(3)\)</p>
+<p>From (2):</p>
+<p>\(\frac{1}{1-(1+\mu)\beta_ 1 ^ 2}=-\frac{1}{1-(1+\mu) \beta _2 ^2}<br>\Rightarrow \beta _1 ^2+ \beta_2 ^2 = \frac{2}{1 + \mu}…(4)\)</p>
+<p>Combining (3) and (4):</p>
+<p>\(\alpha = \frac{1}{1+\mu}…(5)\)</p>
+</blockquote>
+<h3 id="2-The-peaks-pass-through-the-fixed-points"><a href="#2-The-peaks-pass-through-the-fixed-points" class="headerlink" title="2.The peaks pass through the fixed points"></a>2.The peaks pass through the fixed points</h3><p>$$<br>\zeta_d=\sqrt{\frac{3\mu}{8(1+\mu)^3}}<br>$$</p>
+<blockquote>
+<p>Subs. (5) into D equation,</p>
+<p>\(\zeta_d^2 = \frac{\mu[3 ± \sqrt{\mu / (\mu + 2)} ] }{8(1+\mu)^3}\)</p>
+<p>For small \(\mu\), the two values of \(\zeta_d^2\) differ by a negligible fraction of the order of \(\sqrt{\mu}\). The average value may be empirically taken, giving:</p>
+<p>\(\zeta_d=\sqrt{\frac{3\mu}{8(1+\mu)^3}}\)</p>
+</blockquote>
+<h2 id="Response-When-Optimally-Tuned"><a href="#Response-When-Optimally-Tuned" class="headerlink" title="Response When Optimally Tuned"></a>Response When Optimally Tuned</h2><p>$$<br>u(t) = U e^ {iwt}; |U| = \frac{F_0}{mw_1^2}D_u<br>\\ D_u = \frac{\beta^2 D}{\sqrt{(\alpha^2 - \beta^2)^2 + (2\zeta_d \alpha\beta)^2}}<br>\\ D=\sqrt{1+\frac{2}{\mu}}<br>$$</p>
+<p>*Could be derived from the two fixed points when optimally tuned.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="dh2.gif"></p>
+<p>We can observe that when optimally tuned:</p>
+<p>⚪The response of TMD is much larger than that of structure.</p>
+<p>⚪\(D\) and \(D_u\) will both decrease with increase of TMD mass ratio and TMD damping ratio.</p>
 
 
 
