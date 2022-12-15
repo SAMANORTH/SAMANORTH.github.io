@@ -1,4 +1,4 @@
-const sitesjs = {
+const FCircle = {
   requestAPI: (url, callback, timeout) => {
     let retryTimes = 5;
     function request() {
@@ -42,24 +42,30 @@ const sitesjs = {
     }
     request();
   },
-  layout: (cfg) => {
+  layoutDiv: (cfg) => {
     const el = $(cfg.el)[0];
     $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-    sitesjs.requestAPI(cfg.api, function(data) {
+    FCircle.requestAPI(cfg.api, function(data) {
       $(el).find('.loading-wrap').remove();
-      const arr = data.content;
+      const arr = data.article_data || [];
+      const limit = el.getAttribute('limit');
       arr.forEach((item, i) => {
-        var cell = '<div class="site-card">';
-        cell += '<a class="card-link" target="_blank" rel="external nofollow noopener noreferrer" href="' + item.url + '">';
-        cell += '<img src="' + (item.screenshot || ('https://screenshot-api.xaoxuu.com/api?url=' + item.url + '&width=1280&height=720')) + '" onerror="javascript:this.src=\'' + cfg.screenshot + '\';"/>';
-        cell += '<div class="info">';
-        cell += '<img src="' + (item.avatar || cfg.avatar) + '" onerror="javascript:this.src=\'' + cfg.avatar + '\';"/>';
-        cell += '<span class="title">' + item.title + '</span>';
-        cell += '<span class="desc">' + (item.description || item.url) + '</span>';
+        if (limit && i >= limit) {
+          return;
+        }
+        var cell = '<div class="timenode" index="' + i + '">';
+        cell += '<div class="header">';
+        cell += '<div class="user-info">';
+        cell += '<img src="' + (item.avatar || cfg.avatar) + '" onerror="javascript:this.src=\'' + cfg.avatar + '\';">';
+        cell += '<span>' + item.author + '</span>';
         cell += '</div>';
+        cell += '<p>' + item.created + '</p>';
+        cell += '</div>';
+        cell += '<a class="body" href="' + item.link + '" target="_blank" rel="external nofollow noopener noreferrer">';
+        cell += item.title;
         cell += '</a>';
         cell += '</div>';
-        $(el).find('.group-body').append(cell);
+        $(el).append(cell);
       });
     }, function() {
       $(el).find('.loading-wrap svg').remove();
@@ -70,7 +76,7 @@ const sitesjs = {
 }
 
 $(function () {
-  const els = document.getElementsByClassName('stellar-sites-api');
+  const els = document.getElementsByClassName('stellar-fcircle-api');
   for (var i = 0; i < els.length; i++) {
     const el = els[i];
     const api = el.getAttribute('api');
@@ -78,11 +84,9 @@ $(function () {
       continue;
     }
     var cfg = new Object();
-    cfg.class = el.getAttribute('class');
     cfg.el = el;
     cfg.api = api;
-    cfg.avatar = 'https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg';
-    cfg.screenshot = 'https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg';
-    sitesjs.layout(cfg);
+    cfg.avatar = 'https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg';
+    FCircle.layoutDiv(cfg);
   }
 });
