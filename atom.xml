@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>北方|BEIFANG</title>
   
-  <subtitle>Ph.D.︱CEE×MAE︱SC3DP︱NTU|Nothing for nothing.</subtitle>
+  <subtitle>PhD︱CEE×MAE︱SC3DP︱NTU|Nothing for nothing.</subtitle>
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://samanorth.github.io/</id>
   
   <author>
-    <name>北方</name>
+    <name>Beifang</name>
     
   </author>
   
