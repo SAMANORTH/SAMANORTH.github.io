@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>北方SAMA</title>
+  <title>北方</title>
   
-  <subtitle>PhD/CEE/MAE/NTU_sg</subtitle>
+  <subtitle>Ph.D./CEE×MAE/SC3DP/NTU</subtitle>
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
