@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>Simplifying Analysis Using Complex Numbers - 北方|BEIFANG</title>
+
+  
+  <meta name="description" content=" 
+
+We hold a clear perception that complex number is just a tool, use it only when it is useful, otherwise throw it away. One of the most common an...">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="北方|BEIFANG" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/image/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/messages/"><div class="main">北方|BEIFANG</div><div class="sub normal cap">PhD Candidate︱SC3DP︱NTU</div><div class="sub hover cap" style="opacity:0">Nothing for nothing.</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">Posts</a><a class="nav-item" href="/wiki/">Wiki</a><a class="nav-item" href="/messages/">Messages</a></nav></header>
+
+
+<div class="widgets">
+
+
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">Recent Update</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="line"></div><a class="more-item" href="/2024/04/21/20240421/"><div class="cap"><time>2024-04-21</time></div><span class="title">20240421</span></a><div class="line"></div><a class="more-item" href="/2022/12/07/2022120701/"><div class="cap"><time>2022-12-18</time><span>Dynamics of Structures</span></div><span class="title">Basic Theory of TMD(2)</span></a><div class="line"></div><a class="more-item" href="/2022/12/06/2022120601/"><div class="cap"><time>2022-12-11</time><span>Dynamics of Structures</span></div><span class="title">Basic Theory of TMD(1)</span></a><div class="line"></div><a class="more-item" href="/2022/12/05/2022120501/"><div class="cap"><time>2022-12-07</time><span>Dynamics of Structures</span></div><span class="title">Simplifying Analysis Using Complex Numbers</span></a></div></div>
+
+
+
+
+</div><div class="Aplayer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/css/aplayerst.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/aplayer.reversed.main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    autoplay: false, //自动播放
+    listFolded: true, //播放列表默认折叠
+    listMaxHeight: 90, //播放列表最大高度
+    order: 'list', //音频循环顺序, 可选值: 'list', 'random'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
+    theme: '#e9e9e9', //切换音频时的主题色，优先级低于audio.theme
+    preload: 'none', //音频预加载，可选值: 'none', 'metadata', 'auto'
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    lrcType: 3, //歌词格式，可选值：3（LRC文件歌词格式），1（JS字符串歌词格式）
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [{
+          name: 'Out of Control',
+        artist: 'Gloria Tells',
+        lrc: '/music/Out of Control/Out of Control.lrc',
+        cover: '/music/Out of Control/Out of Control.jpg',
+        url: '/music/Out of Control/Out of Control.mp3'
+      },
+      {
+        name: 'Shivers',
+        artist: 'Loving Caliber',
+        lrc: '/music/Shivers/Shivers.lrc',
+        cover: '/music/Shivers/Shivers.jpg',
+        url: '/music/Shivers/Shivers.mp3'
+      },
+      {
+      name: 'In and Out of Love',
+        artist: 'The Eastern Plain',
+        lrc: '/music/In and Out of Love/In and Out of Love.lrc',
+        cover: '/music/In and Out of Love/In and Out of Love.jpg',
+        url: '/music/In and Out of Love/In and Out of Love.mp3'
+      }
+    ]
+  });
+
+  //实现切换音频时，根据音频的封面图片自适应主题色
+  const colorThief = new ColorThief();
+  const setTheme = (index) => {
+    if (!ap.list.audios[index].theme) {
+      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+      });
+    }
+  };
+  setTheme(ap.list.index);
+  ap.on('listswitch', (data) => {
+    setTheme(data.index);
+  });
+</script>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="RSS" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/css.svg"/></a><a class="social" title="Weibo" href="https://weibo.com/u/5613132323" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/weibo.svg"/></a><a class="social" title="Instagram" href="https://www.instagram.com/samanorth" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/ins.svg"/></a><a class="social" title="Mail" href="mailto:beifang001@e.ntu.edu.sg" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/mail.svg"/></a></div></footer>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Dynamics-of-Structures/">Dynamics of Structures</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-12-05T14:40:04.000Z">2022-12-05</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>Simplifying Analysis Using Complex Numbers</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
+<p>We hold a clear perception that complex number is just a tool, use it only when it is useful, otherwise throw it away. One of the most common and vital applications is about TMD, which will be posted on other articles.</p>
+<div class="tag-plugin link dis-select"><a class="link-card" title="Basic" href="https://samanorth.github.io/2022/12/06/2022120601/" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><span class="title fs14">Basic</span><span class="url fs12">Theory of TMD(1)</span></div><div class="right"><div class="lazy img" data-bg="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+
+<p>Here we focus on the solution of SDOF subjected separately to two harmonic loadings.🫡<br>$$<br>\ddot x+2\zeta w_1\dot x+w_1^2x=P_0coswt…(1)<br>\\ \ddot y+2\zeta w_1 \dot y+w_1^2y = P_0sinwt…(2)<br>$$<br>Instead of solving for \(x(t)\) and \(y(t)\) individually, let`s define the complex-valued function and solve it at once.<br>$$<br>z(t) = x(t) +iy(t)<br>$$<br>It turns out that the algebra involved is much easier, to such an extent that this approach almost becomes the standard procedure for steady state problems or more generally frequency domain approach.</p>
+<p>Taking (1)+(2)×i gives:<br>$$<br>(\ddot x+i\ddot y) + 2\zeta w_1(\dot x+i\dot y)+w_1^2(x+iy)=p_0(coswt+isinwt)<br>\\ \Rightarrow\ddot z+2\zeta w_1\dot z +w_1^2z=p_0e^{iwt}…(3)<br>$$<br>Let the steady state response of z(t) be of the form:<br>$$<br>z(t)=Ze^{iwt}<br>$$<br>Where Z is a complex number to be determined. The important thing is this form implies:<br>$$<br>\dot z(t) = iwZe^{iwt};\ \ddot z(t) = (iw)^2Ze^{iwt} = -w^2Ze^{iwt}<br>$$<br>Subs. into (3) and the result must hold for all t:<br>\[<br>(w_1^2-w^2+2\zeta ww_1i)Ze^{iwt}=p_0e^{iwt}<br>\\ \Rightarrow Z=p_0 × \underbrace{\frac{1}{w_1^2-w^2+2\zeta ww_1i}} _ {h(w)}=p_0h(w)<br>\]<br>Where h(w) is named as frequency response function (FRF). And we are quite familiar with it, thus we can rewrite its modulus to link dynamic ampification \(D(w)\).<br>\[<br>h(w)=|h(w)|e^{-i\phi};\ \beta=\frac{w}{w_1}<br>\|h(w)| = \frac{1}{w_1^2}×\underbrace{\frac{1}{\sqrt{(1-\beta^2)^2+(2\zeta\beta)^2}}}_ {D(w)}= \frac{D(w)}{w_1^2}<br>\]<br>The phase of FRF is related to the phase lag of response from the harmonic load:<br>\[<br>∠ h(w) = -\phi\Rightarrow \phi = tan^{-1}\frac{2\zeta\beta}{1-\beta^2}<br>\]<br>Hence, subs. into \(z(t)=Ze^{iwt}\):<br>\[<br>z(t) = \underbrace{\frac{p_0}{w_1^2}} _ {static}×\underbrace{D(w)}_ {dyn.amp.}×\underbrace{e^{i(wt-\phi)}}_{phase}<br>\]<br>Taking real and imaginary part of z(t) gives the same expressions of x(t) and y(t) derived in the SDOF lecture notes, but now the algebra is much simpler:<br>\[<br>x(t) = Re\ z(t)=\frac{p_0}{w_1^2}D(w)cos(wt-\phi)<br>\\ y(t) = Im\ z(t)=\frac{p_0}{w_1^2}D(w)sin(wt-\phi)<br>\]</p>
+<blockquote>
+<p>Euler`s identity: \(e^{i\theta}=cos\theta+isin\theta,\ |e^{i\theta}|=1\) </p>
+<p>How we come up with it?</p>
+<p>From laurent series: \(e^{i\theta}=1+\frac{i\theta}{1!}+\frac{(i\theta)^2}{2!}+\frac{(i\theta)^3}{3!}+… \)</p>
+<p>We can separate it into 2 parts:</p>
+<p>\(Re = 1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-…=cos\theta\)</p>
+<p>\(Im = \frac{i\theta}{1!}-\frac{i\theta^3}{3!}+\frac{i\theta^5}{5!}-…=isin\theta\)</p>
+</blockquote>
+<p>All above process is like magic, right? But don`t be too excited, as we mentioned at the beginning, complex number is just a tool so they don’t work in all cases, throw it away when it cannot help.😂</p>
+
+
+
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/09/19/2022091901/">Introduction to MDOF(2)<span class="note">Older</span></a><div class="line"></div><a id="prev" href="/2022/12/06/2022120601/">Basic Theory of TMD(1)<span class="note">Newer</span></a><div class="line"></div><a id="more" href="/archives">All Articles</a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      Join the discussion
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://samanorth.github.io/">@Beifang</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0" title="v1.5.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://northsama.top/","commentCount":true,"pageview":false,"locale":{"placeholder":null},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"]}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":0,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.7,"show":false},"log":false});</script></body>
+</html>

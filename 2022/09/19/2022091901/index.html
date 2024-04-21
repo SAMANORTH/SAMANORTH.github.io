@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>Introduction to MDOF(2) - 北方|BEIFANG</title>
+
+  
+  <meta name="description" content=" 
+
+After the discussion about regimes and mode shapes, we shall derive the EOM of MDOF.
+There are three ways to get the EOM of MDOF. 
+Newton`s Seco...">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="北方|BEIFANG" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/image/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/messages/"><div class="main">北方|BEIFANG</div><div class="sub normal cap">PhD Candidate︱SC3DP︱NTU</div><div class="sub hover cap" style="opacity:0">Nothing for nothing.</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">Posts</a><a class="nav-item" href="/wiki/">Wiki</a><a class="nav-item" href="/messages/">Messages</a></nav></header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Newton-s-Sencond-Law"><span class="toc-text">Using Newton&#96;s Sencond Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-D-Alembert-Dynamic-Equilibrium"><span class="toc-text">Using D&#96;Alembert Dynamic Equilibrium</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Stiffness-Damping-and-Mass-Components"><span class="toc-text">Using Stiffness, Damping, and Mass Components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Solution-of-EOM"><span class="toc-text">The Solution of EOM</span></a></li></ol></div></div></div>
+
+
+
+</div><div class="Aplayer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/css/aplayerst.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/aplayer.reversed.main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    autoplay: false, //自动播放
+    listFolded: true, //播放列表默认折叠
+    listMaxHeight: 90, //播放列表最大高度
+    order: 'list', //音频循环顺序, 可选值: 'list', 'random'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
+    theme: '#e9e9e9', //切换音频时的主题色，优先级低于audio.theme
+    preload: 'none', //音频预加载，可选值: 'none', 'metadata', 'auto'
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    lrcType: 3, //歌词格式，可选值：3（LRC文件歌词格式），1（JS字符串歌词格式）
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [{
+          name: 'Out of Control',
+        artist: 'Gloria Tells',
+        lrc: '/music/Out of Control/Out of Control.lrc',
+        cover: '/music/Out of Control/Out of Control.jpg',
+        url: '/music/Out of Control/Out of Control.mp3'
+      },
+      {
+        name: 'Shivers',
+        artist: 'Loving Caliber',
+        lrc: '/music/Shivers/Shivers.lrc',
+        cover: '/music/Shivers/Shivers.jpg',
+        url: '/music/Shivers/Shivers.mp3'
+      },
+      {
+      name: 'In and Out of Love',
+        artist: 'The Eastern Plain',
+        lrc: '/music/In and Out of Love/In and Out of Love.lrc',
+        cover: '/music/In and Out of Love/In and Out of Love.jpg',
+        url: '/music/In and Out of Love/In and Out of Love.mp3'
+      }
+    ]
+  });
+
+  //实现切换音频时，根据音频的封面图片自适应主题色
+  const colorThief = new ColorThief();
+  const setTheme = (index) => {
+    if (!ap.list.audios[index].theme) {
+      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+      });
+    }
+  };
+  setTheme(ap.list.index);
+  ap.on('listswitch', (data) => {
+    setTheme(data.index);
+  });
+</script>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="RSS" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/css.svg"/></a><a class="social" title="Weibo" href="https://weibo.com/u/5613132323" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/weibo.svg"/></a><a class="social" title="Instagram" href="https://www.instagram.com/samanorth" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/ins.svg"/></a><a class="social" title="Mail" href="mailto:beifang001@e.ntu.edu.sg" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/mail.svg"/></a></div></footer>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Dynamics-of-Structures/">Dynamics of Structures</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-09-19T01:57:14.000Z">2022-09-19</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>Introduction to MDOF(2)</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
+<p>After the discussion about regimes and mode shapes, we shall derive the EOM of MDOF.</p>
+<p>There are three ways to get the EOM of MDOF. </p>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Newton`s Second Law</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>D`Alembert Dynamic Equilibrium</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Stiffness, Damping, and Mass Components</span></div>
+
+<p>The first two methods are the same as SDOF.</p>
+<p>So, we first formulate a highly idealized two-story shear-frame subjected to external forces \(p_1(t)\) and \(p_2(t)\). The assumptions of the frame are as follows:</p>
+<p>①The beams and floor systems are rigid (infinitely stiff) in flexture;</p>
+<p>②Neglect the axial deformation of the beams and columns and the effect of axial force on the stiffness of the columns;</p>
+<p>③Neglect the mass of columns and only consider the stiffness;</p>
+<p>④The mass is concentrated at the floor levels.</p>
+<p>In these cases, the frame has two DOFs: the lateral displacements \(u_1\) and \(u_2\) of the two floors in the direction of the \(x-axis\), the number of DOF directly determines the number of the unknowns and thus the number of equations required.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="1.png"></p>
+<blockquote>
+<p>This ideal model is a shear-building model. I think it is necessary to summarize the differences between shear-building model and bending-building model.<br>The most straightforward difference is the position of the reverse bending porint under lateral force. The position of the reverse bending point of the shear-frame occurs on the column, while the bending-frame  appears on the beam and floor.<br>This is because the floor stiffness of the former is much higher than that of the pillar, while the latter is just the opposite. In engineering practice, frame structure is generally shear deformation, shear wall structure is generally bending deformation just like a huge beam, frame shear structure have both.<br>It’s a very basic concept.</p>
+</blockquote>
+<h2 id="Using-Newton-s-Sencond-Law"><a href="#Using-Newton-s-Sencond-Law" class="headerlink" title="Using Newton`s Sencond Law"></a>Using Newton`s Sencond Law</h2><p>According to Newton`s second law, the EOM is:</p>
+<p>$$<br>m_i \ddot{u_i} = p_i - f_{si} - f_{Di}<br>$$</p>
+<p>And then these assumptions come in handy.</p>
+<p>①Because the beams and floor systems have EI → ∞, the number of DOF goes down from 6 to 2, which means that there are 2 unknowns to solve.</p>
+<p>②Because we neglect the mass of columns, </p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="2.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="3.png"></p>
+<p>we can get \(f_{s2} = f{s12})</p>
+<p>$$<br>f_{s2} = k_2(x_2-x_1)<br>$$</p>
+<p>$$<br>f_{s12} = f_{s1} = k_2(x_2-x_1)<br>$$</p>
+<p>Then we can get:</p>
+<p>\[<br>m_2 \ddot{x_2} = -k_2(x_2-x_1) + p_2<br>\\ \rightarrow m_2 \ddot{x_2} -k_2x_1 + k_2x_2 = p_2<br>\]</p>
+<p>\[<br>m_1 \ddot{x_1} = k_2(x_2-x_1) - k_1x_1 + p_1<br>\\ \rightarrow m_1 \ddot{x_1} +(k_1+k_2)x_1 - k_2x_2 = p_1<br>\]</p>
+<p>Writing the two equations in matrix form:</p>
+<p>\[<br>\left[<br>    \begin{array}{ccc}<br>    m_1&amp;0\<br>    0&amp;m_2<br>    \end{array}<br>\right]<br>\left[<br>    \begin{array}{ccc}<br>    \ddot{x_1}(t)\<br>    \ddot{x_2}(t)<br>    \end{array}<br>\right]<br>+<br>\left[<br>    \begin{array}{ccc}<br>    k_1+k_2&amp;-k_2\<br>    -k_2&amp;k_2<br>    \end{array}<br>\right]<br>\left[<br>    \begin{array}{ccc}<br>    x_1(t)\<br>    x_2(t)<br>    \end{array}<br>\right]<br>=<br>\left[<br>    \begin{array}{ccc}<br>    p_1(t)\<br>    p_2(t)<br>    \end{array}<br>\right]<br>\]</p>
+<p>Thus,</p>
+<p>\[<br>M_{2×2} \ddot{x} (t)_{2×1} + K_{2×2}x(t)_{2×1} = P(t)_{2×1}<br>\]</p>
+<p>This equation indicates that when we give an excitation to a structure, the structure`s response will never stop which is unrealistic. So what about the damping? Actually damping is really hard to tell from the structure because there are too many factors such as the non-structure members, the material, the air and even the furniture affect the damping. So it is usually determined by the past data and experiments or even experience. But we always have to represent it in our formula to calculate the response, so how do we do?</p>
+<p>We <strong><u>artificially</u></strong> assume that a  linear viscous damping mechanism represents the energy dissipation in a structure to empirically match the reality, just as in the case of SDOF systems, which means energy dissipation is associated with the deformational motions of each story. Luckily, this assumption suits the math calculation very well. But we still have to emphasize again that this damping form does not reflect the real situation of a structure.</p>
+<blockquote>
+<p>For example, friction contributes to the damping, but friction is not proportional to the velocity, which contradicts the linear viscous damping mechanism in the formula.<br>So we can joke that this viscous damping assumption is just to make things easier.</p>
+</blockquote>
+<p>Then we can give the general EOM form:</p>
+<p>\[<br>M_{n×n}\ddot{x}(t)_{n×1} + C_{n×n}\dot{x}(t)_{n×1} + K_{n×n}x(t)_{n×1} = P(t)_{n×1}<br>\]</p>
+<h2 id="Using-D-Alembert-Dynamic-Equilibrium"><a href="#Using-D-Alembert-Dynamic-Equilibrium" class="headerlink" title="Using D`Alembert Dynamic Equilibrium"></a>Using D`Alembert Dynamic Equilibrium</h2><p>Similar to the Newton`s second law, allow me to omit this process.</p>
+<h2 id="Using-Stiffness-Damping-and-Mass-Components"><a href="#Using-Stiffness-Damping-and-Mass-Components" class="headerlink" title="Using Stiffness, Damping, and Mass Components"></a>Using Stiffness, Damping, and Mass Components</h2><p>Newton`s second law and dynamic equilibrium methods are still the following the algebraic way of SDOF, actually we can directly convert our mind into a matrix way,</p>
+<p>Under the action of external forces \(p_1(t)\) and \(p_2(t)\), the state of the system at any time instant is described by displacements \(u_j(t)\), velocities\(\dot{u}_j(t)\), and accelerations \(\ddot{u}_j(t)\). Now we visualize this system as the combination of three pure components:</p>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>stiffness component: the frame without damping or mass</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>damping component: the frame with its damping properties but no stiffness or mass</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>mass component: the floor masses without the stiffness or damping of the frame</span></div>
+
+<p>Thus we can get the external forces \(f_{sj}\),  \(f_{Dj}\),  \(f_{Ij}\) on these components seperately. And finally write the EOM in matrix form directly.</p>
+<h2 id="The-Solution-of-EOM"><a href="#The-Solution-of-EOM" class="headerlink" title="The Solution of EOM"></a>The Solution of EOM</h2><p>To motivate the concept of natural frequencies and mode shapes, consider an undamped structure under free vibration (give a disturbance rather than excitation).</p>
+<p>\[<br>M_{n×n}\ddot{x}(t)_{n×1} + K_{n×n}x(t)_{n×1} = 0_{n×1}<br>\]</p>
+<p>You won’t believe how we solved it. We just assume solution form \(x(t)<em>{n×1} = u</em>{n×1} z(t)<em>{scalar}\), then \(\ddot{x}(t)</em>{n×1} = u_{n×1} \ddot{z}(t)_{scalar}\). This assumption helps us turn a vector variable into an algebraic variable, and the original vector variable becomes a constant. Then the form turns to:</p>
+<p>\[<br>M_{n×n}u_{n×1}\ddot{z}(t) + K_{n×n}u_{n×1}z(t) = 0_{n×1}<br>\\ \rightarrow \overbrace{K_{n×n} u_{n×1}}^{constant} = - \frac{\ddot{z}(t)}{z(t)} \overbrace{M_{n×n} u_{n×1}}^{constant}<br>\]</p>
+<p>So, apparently, the \(\frac{\ddot{z}(t)}{z(t)}\) must be a constant too. So, we assume the \(\frac{\ddot{z}(t)}{z(t)} = w^2\) for convenience. (Note that at this moment we do not know what \(w\) is)</p>
+<p>Then we can get two information from the equation above.</p>
+<p>\[<br>\begin{cases}<br>Ku= w^2Mu<br>\\ \ddot{z}(t)+w^2z(t) = 0<br> \end{cases}<br>\]</p>
+<p>Thus, this problem becomes an eigenvalue problem, the \(u\) is the eigenvector and the \(w^2\) is the eigenvalue.</p>
+<blockquote>
+<p>I think it is necessary to review the mathematical explanation of eigenvector.</p>
+<p>Essentially, the vector u cannot be arbitrary. Otherwise, the Ku and Mu need not be proportional to each other. So, actually this problem is about finding the only vector and the proportion value which link Ku and Mu.</p>
+</blockquote>
+<p>In a SDOF system, we have already know that stiffness K = w²m, then it turns out the square root of the eigenvalue plays the role of natural freq. That is why we write it as w².</p>
+<p>Rearranging the eigenvalue equation gives</p>
+<p>\[<br>(K_{n×n}-w^2M_{n×n})u_{n×1} = 0<br>\]</p>
+<p>For the equation to have non-trivial solution u≠0, the matrix (K-w²M) must be singular with zero determinant.</p>
+<p>\[<br>\vert K_{n×n}-w^2M_{n×n}\vert = 0<br>\]</p>
+<blockquote>
+<p>If you have nonzero column vectors x that make the Ax = 0, then A is not invertible,</p>
+<p>Then the determinant of A is equal to 0, you can also say A is singular.</p>
+</blockquote>
+<p>Thus, we can get the value of w. Then we plug it in the equation, we can also get u. And u is not unique, except for the proportions between the elements because the singular matrix cannot give us enough equations to solve each unknown (you can verify from the linear algebra). So, we call u mode shape, which explains what we have found in the last article.</p>
+<blockquote>
+<p>“If we mark the displacement of every instance of the response of MDOF, we can find an amazing thing that the ratio \(\frac{x_2}{x_1}\) remains the same, and this constant is the <strong><u>“mode shape”</u></strong> we will discuss after.”</p>
+</blockquote>
+<p>For example, if \(u_1 = [0.5\  1]^T\), then the mode shape in structure is:</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="4.png"></p>
+
+
+
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/09/07/2022090702/">Introduction to MDOF(1)<span class="note">Older</span></a><div class="line"></div><a id="prev" href="/2022/12/05/2022120501/">Simplifying Analysis Using Complex Numbers<span class="note">Newer</span></a><div class="line"></div><a id="more" href="/archives">All Articles</a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      Join the discussion
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://samanorth.github.io/">@Beifang</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0" title="v1.5.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://northsama.top/","commentCount":true,"pageview":false,"locale":{"placeholder":null},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"]}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":0,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.7,"show":false},"log":false});</script></body>
+</html>

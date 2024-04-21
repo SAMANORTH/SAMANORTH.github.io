@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>The Mechanism of Water Reducers - 北方|BEIFANG</title>
+
+  
+  <meta name="description" content=" 
+
+In the last article, we discussed the mechanism of air-entraining concrete, now we introduce another admixture, water reducer. The water reducer...">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="北方|BEIFANG" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/image/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/messages/"><div class="main">北方|BEIFANG</div><div class="sub normal cap">PhD Candidate︱SC3DP︱NTU</div><div class="sub hover cap" style="opacity:0">Nothing for nothing.</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">Posts</a><a class="nav-item" href="/wiki/">Wiki</a><a class="nav-item" href="/messages/">Messages</a></nav></header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Nomal-water-reducers-mid-range-8-12-reduction"><span class="toc-text">1.Nomal water reducers(mid-range 8%-12% reduction)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Superplasticizers-high-range-12-40-reduction"><span class="toc-text">2.Superplasticizers(high-range 12-40% reduction)</span></a></li></ol></div></div></div>
+
+
+
+</div><div class="Aplayer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/css/aplayerst.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/aplayer.reversed.main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    autoplay: false, //自动播放
+    listFolded: true, //播放列表默认折叠
+    listMaxHeight: 90, //播放列表最大高度
+    order: 'list', //音频循环顺序, 可选值: 'list', 'random'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
+    theme: '#e9e9e9', //切换音频时的主题色，优先级低于audio.theme
+    preload: 'none', //音频预加载，可选值: 'none', 'metadata', 'auto'
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    lrcType: 3, //歌词格式，可选值：3（LRC文件歌词格式），1（JS字符串歌词格式）
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [{
+          name: 'Out of Control',
+        artist: 'Gloria Tells',
+        lrc: '/music/Out of Control/Out of Control.lrc',
+        cover: '/music/Out of Control/Out of Control.jpg',
+        url: '/music/Out of Control/Out of Control.mp3'
+      },
+      {
+        name: 'Shivers',
+        artist: 'Loving Caliber',
+        lrc: '/music/Shivers/Shivers.lrc',
+        cover: '/music/Shivers/Shivers.jpg',
+        url: '/music/Shivers/Shivers.mp3'
+      },
+      {
+      name: 'In and Out of Love',
+        artist: 'The Eastern Plain',
+        lrc: '/music/In and Out of Love/In and Out of Love.lrc',
+        cover: '/music/In and Out of Love/In and Out of Love.jpg',
+        url: '/music/In and Out of Love/In and Out of Love.mp3'
+      }
+    ]
+  });
+
+  //实现切换音频时，根据音频的封面图片自适应主题色
+  const colorThief = new ColorThief();
+  const setTheme = (index) => {
+    if (!ap.list.audios[index].theme) {
+      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+      });
+    }
+  };
+  setTheme(ap.list.index);
+  ap.on('listswitch', (data) => {
+    setTheme(data.index);
+  });
+</script>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="RSS" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/css.svg"/></a><a class="social" title="Weibo" href="https://weibo.com/u/5613132323" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/weibo.svg"/></a><a class="social" title="Instagram" href="https://www.instagram.com/samanorth" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/ins.svg"/></a><a class="social" title="Mail" href="mailto:beifang001@e.ntu.edu.sg" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/mail.svg"/></a></div></footer>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Advanced-Concrete/">Advanced Concrete</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-08-31T15:26:23.000Z">2022-08-31</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>The Mechanism of Water Reducers</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
+<p>In the last article, we discussed the mechanism of air-entraining concrete, now we introduce another admixture, water reducer. The water reducers can lower the water required to attain a given slump. In this case, they can be used to improve workability at same w/c ratio, increase strength at same workability, reduce cost at same w/c ratio and workability.</p>
+<p>The water reducers can be divided into two groups: Normal or mid-range water reducers, and Superplasticizers which are high-range water reducers.</p>
+<h2 id="1-Nomal-water-reducers-mid-range-8-12-reduction"><a href="#1-Nomal-water-reducers-mid-range-8-12-reduction" class="headerlink" title="1.Nomal water reducers(mid-range 8%-12% reduction)"></a>1.Nomal water reducers(mid-range 8%-12% reduction)</h2><p>Now we are looking at the charged properties of water reducer molecules and cement particles:</p>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Cement particles with either +VE or -VE electrostatic charge</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Water reducer provide equal polarity to cement particles</span></div>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="1.png"></p>
+<p>The water reducer molecule with 1 +VE and 2 -VE (you can also use water reducer whose molecule has 2 +VE ad 1 -VE, the effect is the same as a matter of fact) will combine with the positive and negative charges on the surface of the cement particles. So the extra - VE will be left on the surface of the cement particles, making the surface of the cement particles negatively charged so that the cement particles can repel each other.</p>
+<p>If the cement particles repel each other, the repulsion of like charges will push the cement grains apart so that the water trapped in the particles could release, increasing hydration and workability.(It is easy to understand, The release of trapped water means there’s more water available for hydration.)</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="2.png"></p>
+<h2 id="2-Superplasticizers-high-range-12-40-reduction"><a href="#2-Superplasticizers-high-range-12-40-reduction" class="headerlink" title="2.Superplasticizers(high-range 12-40% reduction)"></a>2.Superplasticizers(high-range 12-40% reduction)</h2><p>These kind of water reducers are more recent and more effective type of water reducer. It can make 12-40% reduction compared to 8-12% caused by normal water reducers. So it can be applied to produce flowing concrete in situations where placing in inaccessible locations (too many steel bars in a small area) or where very rapid placing is required. It is also used to produce very-high strength concrete, using normal workability but a very low w/c. Just regard it as a very effective replacement of water, then all of the properties make sense.</p>
+<p>So how do superplasticizers work? They work the same way as water reducers, separating cement particles from each other to release water. But in addition to providing electrostatic repulsion, it can also separate particles by steric hindrance effect. On the sulfonated polymer and copolymer superplasticizers, for example, the electrostatic repulsion comes from the negatively charged side sulfonic group and side carboxyl group, both of which are attached on the main polymer chain. On the other hand, the steric hindrance effect comes from the neutral side long graft chain which is also attached on the main polymer chain. That`s the mechanics of superplasticizers.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="3.png"></p>
+<p>As we can see from the figure above, the steric hindrance caused by the long graft chain may be stronger than the electrostatic repulsion as it is a kind of physical blockage.</p>
+<p>Now let us talk about the properties of SP.</p>
+<p>This figure shows the slope of Slump-Time curve for repeated re-dosage is getting higher ang higher, it means that the water reducing effect of SP becomes worse and worse with the number of times the water reducing agent is added. As for why we add more than once, it can be seen from the figure that the workability of cement decreases a lot only after the first 1h addition.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="4.png"></p>
+<p>So, we can get the side effects:</p>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Increase bleeding and segregation</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Set retardation</span></div>
+
+<div class="tag-plugin checkbox" ><input type="radio"/><span>Workability restored by the second dosage may decrease at a fast rate</span></div>
+
+<p>We also care about the compatibility, what will influence the properties of SP?  C3A content could effect the cement strength, it could also reduce the effectiveness of a given dosage or the SP as the C3A has highly reactive affinity to SP. Besides, the fineness also make a difference, the finer the cement, the more the surface area would need to water to react with, and the higher the dosage of a SP required to obtain a given workability.</p>
+<p>What`s more, SP also has a saturated point. According to the figure as follow, we find that the flowability of cement will decrease with time and then reach a plateau. We al find that SP could make a role even is added after 1 hour.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="5.png"></p>
+<p>The related calculation of SP</p>
+<p>SP can be regarded as a mixture of water and solid, both of which would vary with the type of SP.<br>\[<br>Mass\ of\ solid = s×G_{sup}×V_{liq}<br>\\ Where:\ G_{sup} = specific gravity = \frac{\rho (kg/m^3)}{1000(kg/m^3)}<br>\\ V_{liq} = volume\ of\ liquid(L)<br>\]</p>
+<p>Determine the solid content of 8 litres of melamine SP(Sp.gr. of 1.10 and solid content 22%)<br>$$<br>Solid\ content = 0.22 × 1.1 × 6 = 1.45 kg\ of\ solids<br>$$</p>
+<p>\[<br>M_w = V_{liq}×s×G_{sup}/100×\frac{100-s}{s}<br>\\ V_w = V_{liq}×G_{sup}×\frac{100-s}{s}<br>\]</p>
+<p>Determine the volume of water added from 8.25 litres of SP per cu.m of concrete with the specific gravity of 1.21 and a solid content of 40% to achieve a desired slump.<br>$$<br>V_w = 8.25×1.21×\frac{100-40}{100} = 6.0L/m^3<br>$$</p>
+
+
+
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/08/30/2022083001/">The Mechanism of Air-entraining Admixture<span class="note">Older</span></a><div class="line"></div><a id="prev" href="/2022/09/07/2022090701/">Response to Step & Pulse force<span class="note">Newer</span></a><div class="line"></div><a id="more" href="/archives">All Articles</a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      Join the discussion
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://samanorth.github.io/">@Beifang</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0" title="v1.5.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://northsama.top/","commentCount":true,"pageview":false,"locale":{"placeholder":null},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"]}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":0,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.7,"show":false},"log":false});</script></body>
+</html>

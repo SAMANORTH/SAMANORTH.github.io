@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>北方|BEIFANG</title>
+  
+  <subtitle>PhD Candidate︱SC3DP︱NTU |Nothing for nothing.</subtitle>
+  <link href="http://samanorth.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://samanorth.github.io/"/>
+  <updated>2024-04-21T08:51:34.305Z</updated>
+  <id>http://samanorth.github.io/</id>
+  
+  <author>
+    <name>Beifang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20240421</title>
+    <link href="http://samanorth.github.io/2024/04/21/20240421/"/>
+    <id>http://samanorth.github.io/2024/04/21/20240421/</id>
+    <published>2024-04-21T08:51:16.000Z</published>
+    <updated>2024-04-21T08:51:34.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Theory of TMD(2)</title>
+    <link href="http://samanorth.github.io/2022/12/07/2022120701/"/>
+    <id>http://samanorth.github.io/2022/12/07/2022120701/</id>
+    <published>2022-12-07T04:03:23.000Z</published>
+    <updated>2022-12-17T17:51:37.279Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Theory of TMD(1)</title>
+    <link href="http://samanorth.github.io/2022/12/06/2022120601/"/>
+    <id>http://samanorth.github.io/2022/12/06/2022120601/</id>
+    <published>2022-12-06T14:28:44.000Z</published>
+    <updated>2022-12-11T01:49:28.538Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Simplifying Analysis Using Complex Numbers</title>
+    <link href="http://samanorth.github.io/2022/12/05/2022120501/"/>
+    <id>http://samanorth.github.io/2022/12/05/2022120501/</id>
+    <published>2022-12-05T14:40:04.000Z</published>
+    <updated>2022-12-07T04:02:59.181Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Introduction to MDOF(2)</title>
+    <link href="http://samanorth.github.io/2022/09/19/2022091901/"/>
+    <id>http://samanorth.github.io/2022/09/19/2022091901/</id>
+    <published>2022-09-19T01:57:14.000Z</published>
+    <updated>2022-12-06T14:22:03.406Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+</feed>

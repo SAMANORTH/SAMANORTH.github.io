@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 5.4.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>屈曲约束支撑的设计应用 - 北方|BEIFANG</title>
+
+  
+  <meta name="description" content=" 
+
+设计参数及工程概括详见：
+毕业设计&nbsp;-&nbsp;城市绿建筑——建筑学部联合毕业设计icon: https://samanorth.github.io/image/logo/pkpm.png
+
+1. 屈曲约束支撑的类型
+需要注意的是，承载型屈曲约束支撑本质上是不会发生屈曲的支撑...">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="北方|BEIFANG" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/image/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/messages/"><div class="main">北方|BEIFANG</div><div class="sub normal cap">PhD Candidate︱SC3DP︱NTU</div><div class="sub hover cap" style="opacity:0">Nothing for nothing.</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">Posts</a><a class="nav-item" href="/wiki/">Wiki</a><a class="nav-item" href="/messages/">Messages</a></nav></header>
+
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B1%88%E6%9B%B2%E7%BA%A6%E6%9D%9F%E6%94%AF%E6%92%91%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. 屈曲约束支撑的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E6%89%BF%E8%BD%BD%E5%9E%8B%E5%B1%88%E6%9B%B2%E7%BA%A6%E6%9D%9F%E6%94%AF%E6%92%91"><span class="toc-text">1.1承载型屈曲约束支撑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E5%B1%88%E6%9B%B2%E7%BA%A6%E6%9D%9F%E6%94%AF%E6%92%91%E5%9E%8B%E9%98%BB%E5%B0%BC%E5%99%A8"><span class="toc-text">1.2屈曲约束支撑型阻尼器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E5%B1%88%E6%9B%B2%E7%BA%A6%E6%9D%9F%E6%94%AF%E6%92%91%E7%9A%84%E5%B8%83%E7%BD%AE"><span class="toc-text">1.3屈曲约束支撑的布置</span></a></li></ol></li></ol></div></div></div>
+
+
+
+</div><div class="Aplayer">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/css/aplayerst.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/gh/SAMANORTH/SAMANORTH.github.io@master/aplayer.reversed.main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    autoplay: false, //自动播放
+    listFolded: true, //播放列表默认折叠
+    listMaxHeight: 90, //播放列表最大高度
+    order: 'list', //音频循环顺序, 可选值: 'list', 'random'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
+    theme: '#e9e9e9', //切换音频时的主题色，优先级低于audio.theme
+    preload: 'none', //音频预加载，可选值: 'none', 'metadata', 'auto'
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    lrcType: 3, //歌词格式，可选值：3（LRC文件歌词格式），1（JS字符串歌词格式）
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [{
+          name: 'Out of Control',
+        artist: 'Gloria Tells',
+        lrc: '/music/Out of Control/Out of Control.lrc',
+        cover: '/music/Out of Control/Out of Control.jpg',
+        url: '/music/Out of Control/Out of Control.mp3'
+      },
+      {
+        name: 'Shivers',
+        artist: 'Loving Caliber',
+        lrc: '/music/Shivers/Shivers.lrc',
+        cover: '/music/Shivers/Shivers.jpg',
+        url: '/music/Shivers/Shivers.mp3'
+      },
+      {
+      name: 'In and Out of Love',
+        artist: 'The Eastern Plain',
+        lrc: '/music/In and Out of Love/In and Out of Love.lrc',
+        cover: '/music/In and Out of Love/In and Out of Love.jpg',
+        url: '/music/In and Out of Love/In and Out of Love.mp3'
+      }
+    ]
+  });
+
+  //实现切换音频时，根据音频的封面图片自适应主题色
+  const colorThief = new ColorThief();
+  const setTheme = (index) => {
+    if (!ap.list.audios[index].theme) {
+      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+      });
+    }
+  };
+  setTheme(ap.list.index);
+  ap.on('listswitch', (data) => {
+    setTheme(data.index);
+  });
+</script>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="RSS" href="/atom.xml" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/css.svg"/></a><a class="social" title="Weibo" href="https://weibo.com/u/5613132323" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/weibo.svg"/></a><a class="social" title="Instagram" href="https://www.instagram.com/samanorth" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/ins.svg"/></a><a class="social" title="Mail" href="mailto:beifang001@e.ntu.edu.sg" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/image/mail.svg"/></a></div></footer>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%97%A5%E8%AE%B02022007/">日记2022007</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-07-05T05:54:42.000Z">2022-07-05</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>屈曲约束支撑的设计应用</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+
+<p>设计参数及工程概括详见：</p>
+<div class="tag-plugin link dis-select"><a class="link-card" title="毕业设计&nbsp;-&nbsp;城市绿建筑——建筑学部联合毕业设计" href="https://samanorth.github.io/wiki/pkpm0101/index.html#start" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><span class="title fs14">毕业设计&nbsp;-&nbsp;城市绿建筑——建筑学部联合毕业设计</span><span class="url fs12">icon: https://samanorth.github.io/image/logo/pkpm.png</span></div><div class="right"><div class="lazy img" data-bg="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
+
+<h2 id="1-屈曲约束支撑的类型"><a href="#1-屈曲约束支撑的类型" class="headerlink" title="1. 屈曲约束支撑的类型"></a>1. 屈曲约束支撑的类型</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="12.png"></p>
+<div class="tag-plugin checkbox" ><input type="radio"/><span>需要注意的是，承载型屈曲约束支撑本质上是不会发生屈曲的支撑，在结构设计过程中并不考虑它的阻尼作用，而屈曲约束支撑型阻尼器本质上基于位移型的通过拉压屈服完成耗能功效，且控制在多遇地震下屈服的阻尼器，是作为减震措施的一种</span></div>
+
+<p>在设计过程中，我们需要注意屈曲约束支撑类型的选用：</p>
+<h3 id="1-1承载型屈曲约束支撑"><a href="#1-1承载型屈曲约束支撑" class="headerlink" title="1.1承载型屈曲约束支撑"></a>1.1承载型屈曲约束支撑</h3><p>针对框架剪力墙主楼而言，剪力墙充当了地震作用下的第一道防线，其自身刚度很大（k↑），对结构的自振周期起控制作用(T↓)<br>$$<br>T = 2\pi\sqrt{\frac{m}{k}}<br>$$</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="8.jpg"></p>
+<p>$$<br>F = \alpha G<br>$$<br>结合地震影响系数曲线可见，对于框剪主楼而言，理想的阻尼器布置方法是：①将部分刚度极大的剪力墙换为粘滞阻尼墙②在层间位移大的楼层较多得布置阻尼器，从而尽可能靠向曲线平滑段。但是在建筑方案（如空间和立面要求）严格限制阻尼器的布置的情况下，这种做法通常很难实现，阻尼器的阻尼比和能够提供的阻尼影响系数对地震影响系数的优化是十分有限的，通常会出现布置了阻尼器后结构层间位移角变大超限的情况。所以，对于地震作用较大的框剪结构而言，我们应该追求的是在减少楼层荷载（G↓）的同时，适当增设支撑”硬抗“地震作用。</p>
+<p>如此一来，在框剪主楼增设承载型屈曲约束支撑是十分合适的，这种支撑通过引入屈曲约束机制来提高支撑构件的设计承载力，保证支撑在屈服前不会发生失稳破坏，从而充分发挥钢材强度。</p>
+<p>PKPM中我们可以采用等效截面积法来定义承载型屈曲约束支撑，如根据内力简图计算得出所需支撑截面积为358cm²，则定义200mm×200mm（400cm²）的截面即可，但直接采用矩形截面往往会导致PKPM计算结果出错，可变通得定义为留有2mm×2mm小孔的箱型截面。通常结果会因稳定性问题飘红，但由于其不存在稳定性问题，所以我们只需要核对其轴力小于其承载力，忽略飘红即可。</p>
+<div class="tag-plugin tabs" align="center"id="tab_1""><ul class="nav-tabs"><li class="tab"><a href="#tab_1-1">承载型屈曲约束支撑</a></li><li class="tab active"><a href="#tab_1-2">截面定义</a></li><li class="tab"><a href="#tab_1-3">实例照片</a></li></ul><div class="tab-content"><div class="tab-pane" id="tab_1-1"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/9.jpg" style="width:300px;"/></div></div></div><div class="tab-pane active" id="tab_1-2"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/10.png" style="width:300px;"/></div></div></div><div class="tab-pane" id="tab_1-3"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/11.jpg" style="width:300px;"/></div></div></div></div></div>
+
+<h3 id="1-2屈曲约束支撑型阻尼器"><a href="#1-2屈曲约束支撑型阻尼器" class="headerlink" title="1.2屈曲约束支撑型阻尼器"></a>1.2屈曲约束支撑型阻尼器</h3><p>对于框架结构而言，阻尼器的减震作用立竿见影，PKPM的减震器产品库中提供了不同指标的屈曲约束支撑型阻尼器，可结合工程实际需要选用，在该毕业设计项目中，我们选用了BR-500×5.5位移型消能器。</p>
+<div class="tag-plugin tabs" align="center"id="tab_2""><ul class="nav-tabs"><li class="tab"><a href="#tab_2-1">截面定义</a></li><li class="tab active"><a href="#tab_2-2">实例照片</a></li></ul><div class="tab-content"><div class="tab-pane" id="tab_2-1"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/13.png" style="width:300px;"/></div></div></div><div class="tab-pane active" id="tab_2-2"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/14.jpg" style="width:300px;"/></div></div></div></div></div>
+
+<p>通过方案比对结合管科专业的相关调研，可以明显看到屈曲约束支撑型阻尼器对纯框架结构具有极好的适用性，用砼量减少近20%，单位面积用钢量减少约37%。</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>结构方案</th>
+<th>混凝土用量(m^3)</th>
+<th>钢筋用量(kg)</th>
+<th>楼层面积(m^2)</th>
+<th>单位面积用钢量(kg/m^2)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>无阻尼器</strong></td>
+<td>纯框架结构，少量抗震墙</td>
+<td>2812.5</td>
+<td>294160</td>
+<td>11881.8</td>
+<td>31.5</td>
+</tr>
+<tr>
+<td><strong>设阻尼器</strong></td>
+<td>框架结构</td>
+<td><strong>2261.9</strong></td>
+<td><strong>250570</strong></td>
+<td>12815.6</td>
+<td><strong>19.6</strong></td>
+</tr>
+</tbody></table>
+<h3 id="1-3屈曲约束支撑的布置"><a href="#1-3屈曲约束支撑的布置" class="headerlink" title="1.3屈曲约束支撑的布置"></a>1.3屈曲约束支撑的布置</h3><p>1.布置在层间位移较大楼层，但尽量避开客房层，满足建筑要求</p>
+<p>2.采用人形、V形布置</p>
+<p>3.针对该项目而言，着重加强短肢Y向及转角</p>
+<p>4.沿两个主轴方向对称布置（该对称意指刚度对称）</p>
+<p>5.尽量通高布置</p>
+<div class="tag-plugin tabs" align="center"id="tab_3""><ul class="nav-tabs"><li class="tab"><a href="#tab_3-1">主楼承载型屈曲约束支撑布置</a></li><li class="tab active"><a href="#tab_3-2">裙房屈曲约束支撑型阻尼器布置</a></li></ul><div class="tab-content"><div class="tab-pane" id="tab_3-1"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/15.png"/></div></div></div><div class="tab-pane active" id="tab_3-2"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://samanorth.github.io/2022/07/05/2022070501/16.png"/></div></div></div></div></div>
+
+
+
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/02/04/2022020401/">板配筋计算与施工图绘制<span class="note">Older</span></a><div class="line"></div><a id="prev" href="/2022/08/20/2022082001/">Harmonic Vibration With Viscous Damping<span class="note">Newer</span></a><div class="line"></div><a id="more" href="/archives">All Articles</a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      Join the discussion
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://samanorth.github.io/">@Beifang</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0" title="v1.5.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.5.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper/swiper-bundle.min.css","js":"https://unpkg.com/swiper/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://northsama.top/","commentCount":true,"pageview":false,"locale":{"placeholder":null},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"]}, {
+        el: '#waline_container',
+        path: path,
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":0,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.7,"show":false},"log":false});</script></body>
+</html>
