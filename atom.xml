@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>北方|BEIFANG</title>
   
-  <subtitle>PhD Candidate︱SC3DP︱NTU |Nothing for nothing.</subtitle>
+  <subtitle>Ph.D. Student︱NTU |Nothing for nothing.</subtitle>
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2024-04-21T08:51:34.305Z</updated>
+  <updated>2022-12-17T17:51:37.279Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>20240421</title>
-    <link href="http://samanorth.github.io/2024/04/21/20240421/"/>
-    <id>http://samanorth.github.io/2024/04/21/20240421/</id>
-    <published>2024-04-21T08:51:16.000Z</published>
-    <updated>2024-04-21T08:51:34.305Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Basic Theory of TMD(2)</title>
@@ -112,6 +91,29 @@
     <id>http://samanorth.github.io/2022/09/19/2022091901/</id>
     <published>2022-09-19T01:57:14.000Z</published>
     <updated>2022-12-06T14:22:03.406Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Introduction to MDOF(1)</title>
+    <link href="http://samanorth.github.io/2022/09/07/2022090702/"/>
+    <id>http://samanorth.github.io/2022/09/07/2022090702/</id>
+    <published>2022-09-07T14:39:10.000Z</published>
+    <updated>2022-09-20T05:09:25.555Z</updated>
     
     
       
