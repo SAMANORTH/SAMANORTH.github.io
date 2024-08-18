@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2022-12-17T17:51:37.279Z</updated>
+  <updated>2024-08-18T10:25:53.885Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The interpretation of several &quot;strain&quot;s in CDP model</title>
+    <link href="http://samanorth.github.io/2024/08/18/2024081801/"/>
+    <id>http://samanorth.github.io/2024/08/18/2024081801/</id>
+    <published>2024-08-18T07:53:11.000Z</published>
+    <updated>2024-08-18T10:25:53.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="CDP model" scheme="http://samanorth.github.io/categories/CDP-model/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Basic Theory of TMD(2)</title>
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/09/19/2022091901/</id>
     <published>2022-09-19T01:57:14.000Z</published>
     <updated>2022-12-06T14:22:03.406Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Introduction to MDOF(1)</title>
-    <link href="http://samanorth.github.io/2022/09/07/2022090702/"/>
-    <id>http://samanorth.github.io/2022/09/07/2022090702/</id>
-    <published>2022-09-07T14:39:10.000Z</published>
-    <updated>2022-09-20T05:09:25.555Z</updated>
     
     
       

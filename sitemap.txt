@@ -1,3 +1,4 @@
+http://samanorth.github.io/2024/08/18/2024081801/
 http://samanorth.github.io/messages/index.html
 http://samanorth.github.io/wiki/su1226/index.html
 http://samanorth.github.io/2022/12/07/2022120701/
@@ -27,3 +28,5 @@ http://samanorth.github.io/categories/PKPM%E5%A4%8D%E4%B9%A0/
 http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022007/
 http://samanorth.github.io/categories/Dynamics-of-Structures/
 http://samanorth.github.io/categories/Advanced-Concrete/
+http://samanorth.github.io/categories/Computational-Fluid-Dynamics/
+http://samanorth.github.io/categories/CDP-model/
