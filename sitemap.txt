@@ -29,3 +29,4 @@ http://samanorth.github.io/categories/%E6%97%A5%E8%AE%B02022007/
 http://samanorth.github.io/categories/Dynamics-of-Structures/
 http://samanorth.github.io/categories/Advanced-Concrete/
 http://samanorth.github.io/categories/CDP-model/
+http://samanorth.github.io/categories/Concrete-Damaged-Plasticity/

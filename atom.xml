@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2024-08-19T09:45:31.772Z</updated>
+  <updated>2024-08-19T09:48:31.161Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>The interpretation of several &quot;strain&quot;s in CDP model</title>
+    <title>Interpretation of &quot;strain&quot;s in CDP model</title>
     <link href="http://samanorth.github.io/2024/08/18/2024081801/"/>
     <id>http://samanorth.github.io/2024/08/18/2024081801/</id>
     <published>2024-08-18T07:53:11.000Z</published>
-    <updated>2024-08-19T09:45:31.772Z</updated>
+    <updated>2024-08-19T09:48:31.161Z</updated>
     
     
       
@@ -34,7 +34,7 @@
     
     
     
-    <category term="CDP model" scheme="http://samanorth.github.io/categories/CDP-model/"/>
+    <category term="Concrete Damaged Plasticity" scheme="http://samanorth.github.io/categories/Concrete-Damaged-Plasticity/"/>
     
     
   </entry>
