@@ -17,12 +17,13 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Interpretation of "strain"s in CDP model - 北方|BEIFANG</title>
+  <title>Introduction to FEA - 北方|BEIFANG</title>
 
   
-  <meta name="description" content=" 
+  <meta name="description" content=" 
 
-Concrete damage plasticity (CDP) model is a very commonly used constitutive model of concrete. Abaqus has provided a basic introduction and oper...">
+Discretization
+A continuum with infinite DOF → dividing into finite elements with finite DOF and connected by nodes → Solving governed equation ...">
 
   <!-- feed -->
   
@@ -57,7 +58,9 @@ Concrete damage plasticity (CDP) model is a very commonly used constitutive mode
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tilde-epsilon-c-pl-and-epsilon-c-el"><span class="toc-text">\(\tilde \epsilon_c^{pl}\) and \(\epsilon_c^{el}\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tilde-epsilon-c-in-and-epsilon-0c-el"><span class="toc-text">\(\tilde \epsilon_c^{in}\) and \(\epsilon_{0c}^{el}\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Some-comments"><span class="toc-text">Some comments</span></a></li></ol></div></div></div>
+
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">Recent Update</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="line"></div><a class="more-item" href="/2024/08/21/2024082101/"><div class="cap"><time>2024-08-25</time><span>FEM</span></div><span class="title">Introduction to FEA</span></a><div class="line"></div><a class="more-item" href="/2024/08/18/2024081801/"><div class="cap"><time>2024-08-25</time><span>Concrete Damaged Plasticity</span></div><span class="title">Interpretation of "strain"s in CDP model</span></a><div class="line"></div><a class="more-item" href="/2022/12/07/2022120701/"><div class="cap"><time>2022-12-18</time><span>Dynamics of Structures</span></div><span class="title">Basic Theory of TMD(2)</span></a><div class="line"></div><a class="more-item" href="/2022/12/06/2022120601/"><div class="cap"><time>2022-12-11</time><span>Dynamics of Structures</span></div><span class="title">Basic Theory of TMD(1)</span></a></div></div>
+
 
 
 
@@ -129,33 +132,34 @@ Concrete damage plasticity (CDP) model is a very commonly used constitutive mode
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Concrete-Damaged-Plasticity/">Concrete Damaged Plasticity</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2024-08-18T07:53:11.000Z">2024-08-18</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/FEM/">FEM</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2024-08-21T08:48:23.000Z">2024-08-21</time></div></div>
 
 <article class='content md post'>
-<h1 class="article-title"><span>Interpretation of "strain"s in CDP model</span></h1>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
+<h1 class="article-title"><span>Introduction to FEA</span></h1>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"> </script>
 
-<p>Concrete damage plasticity (CDP) model is a very commonly used constitutive model of concrete. Abaqus has provided a basic introduction and operational guidance for this model (linked below). </p>
-<div class="tag-plugin link dis-select"><a class="link-card" title="Concrete" href="https://help.3ds.com/2023/English/DSSIMULIA_Established/SIMACAEMATRefMap/simamat-c-concretedamaged.htm?contextscope=all#simamat-c-concretedamaged-t-UniaxialTensionAndCompressionStressBehavior-sma-topic1__simamat-c-concrete-uniaxial" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><span class="title fs14">Concrete</span><span class="url fs12">Damaged Plasticity</span></div><div class="right"><div class="lazy img" data-bg="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div></div></a></div>
-
-<p>However, the explanation of the stress-strain curve of concrete in the manual is somewhat lacking, especially for the definition of the four “strain”s, which has caused me some trouble, so I will make further explanation here. And has been animated to show the way.</p>
-<h2 id="tilde-epsilon-c-pl-and-epsilon-c-el"><a href="#tilde-epsilon-c-pl-and-epsilon-c-el" class="headerlink" title="\(\tilde \epsilon_c^{pl}\) and \(\epsilon_c^{el}\)"></a>\(\tilde \epsilon_c^{pl}\) and \(\epsilon_c^{el}\)</h2><p>Select a point (\(\epsilon _c^1\), \(\sigma_c^1\) on the strain-softening regime for explanation:</p>
-<p>Since this point is already in the stress softening regime, the stiffness should be reduced due to damage to the concrete. If we consider unloading from this point, then the slope of the unloading curve will certainly be less than the initial undamaged elastic modulus (\(E_0\). Therefore, the CDP model introduces a damage factor \(d\) to represent such damage and reduction in stiffness. Then the equivalent elastic modulus of the unloading curve is calculated as \((1-d)E_0\). The strain change corresponding to the unloading phase is denoted as ‘\(\epsilon_c^{el}\)’. Such equivalent elastic strain has also included the damage. Accordingly, the remaining portion of the strain is naturally called the equivalent plastic strain \(\tilde{\epsilon}_c^{pl}\). (As shown in <strong>animation 1</strong>)</p>
-<p>Different researchers proposed different expressions of damage factor \(d\).</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Animation1.gif" alt="Animation1"></p>
-<h2 id="tilde-epsilon-c-in-and-epsilon-0c-el"><a href="#tilde-epsilon-c-in-and-epsilon-0c-el" class="headerlink" title="\(\tilde \epsilon_c^{in}\) and \(\epsilon_{0c}^{el}\)"></a>\(\tilde \epsilon_c^{in}\) and \(\epsilon_{0c}^{el}\)</h2><p>However, there is no way to define equivalent plastic strain and equivalent elastic strain in Abaqus. This is because Abaqus uses inelastic strain ‘\(\tilde\epsilon_c^{in}\)’ to replace the equivalent plastic strain ‘\(\tilde\epsilon_c^{pl}\)’. My explanation for such replacement is that in the context of material science, plastic strain refers specifically to permanent and non-recoverable deformation. Thus, this term does not include some possibly recoverable strains due to other field variables (like temperature). Therefore, it is logical to use the broader term “inelastic strain” to replace it and reorganize the mathematical expression.</p>
-<p>So how should we reorganize the term and  mathematical relation? If the unloading curve rebounds with the undamaged stiffness, then the modulus during this phase would be \(E_0\), and the corresponding strain would be purely elastic strain without any damage (\(\epsilon_{0c}^{el}\). Logically, the remaining part would be inelastic strain \(\tilde \epsilon_c^{in}\) as shown in <strong>animation 2</strong>.</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="Animation2.gif" alt="Animation2"></p>
-<p>The the relation is clear, and will be converted by Abaqus automatically:<br>$$<br>\tilde \epsilon_c^{pl}+\epsilon_c^{el}=\tilde \epsilon_c^{in}+\epsilon_{0c}^{el}\<br>\Rightarrow\epsilon_c^{pl}=\tilde\epsilon_c^{in}-\frac{d_c}{1-d_c}\frac{\sigma_c}{E_0}<br>$$</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="sketch.png"></p>
-<h2 id="Some-comments"><a href="#Some-comments" class="headerlink" title="Some comments"></a>Some comments</h2><p>From a physical standpoint, the combination of \(\tilde \epsilon_c^{in}\) and \(\epsilon_{0c}^{el}\) seems questionable because it does not account for the influence of stress history. Specifically, such combination considers the pure elastic strain based on the current stress state (\(\sigma_c^1\). However, before reaching this stress state, the material has already experienced the yield stress which is higher. Therefore, it is debatable whether the pure elastic strain can be simply regarded as \(\frac{\sigma_c^1}{E_0}\). Of course, if we do not delve too deeply into the physical nuances and consider it purely in terms of terminology, there is no issue. After all, from a mathematical perspective, it merely represents a transformation of the combination of \(\tilde \epsilon_c^{pl}\) and \(\epsilon_c^{el}\), without any fundamental change.</p>
+<p>Discretization</p>
+<p>A continuum with infinite DOF → dividing into finite elements with finite DOF and connected by nodes → Solving governed equation by nodes only → Interpolation desired variables between every two nodes</p>
+<p>Explain in a mathematical way:</p>
+<p>Partial differential equations → linear algebraic equations for unknowns at nodes → filed quantity within element is described by interpolation function → filed quantity over the entire structure domain is approximated element by element in piecewise function</p>
+<p>Force method → to establish flexibility matrix [f]</p>
+<p>Displacement method → to establish stiffness matrix [K]</p>
+<p>The FEM is conventionally a displacement method. So the main objective is to construct the stiffness matrix for the structure before the solving the linear algebraic equations</p>
+<p>The steps of FEM:</p>
+<p>Element, Assembly, Reduction, Solution</p>
+<p>Considering 1D element:</p>
+<p>1D element acts like a spring, the stiffness can be derived from the force-displacement relationship:<br>$$<br>f=(\frac{AE}{L})q=kq<br>$$<br>Thus, for a 1D elements with 2 end nodes, the element force-displacement relation can be written as:<br>$$<br>f_1 = k(q_1-q_2)\<br>f_2=-k(q_1-q_2)\<br>\Rightarrow<br>\left{\begin{matrix}<br>f_1\f_2<br>\end{matrix}\right}<br>=<br>\begin{bmatrix}<br>k, -k\<br>-k, k<br>\end{bmatrix}<br>\left{\begin{matrix}<br>q_1\q_2<br>\end{matrix}\right}\<br>\Rightarrow<br>\left{\begin{matrix}f\end{matrix}\right}=[k^e]\left{\begin{matrix}q\end{matrix}\right}<br>$$<br>Then, the element nodal force vector, element stiffness matrix and element nodal displacement vector are noticeable.</p>
+<p>If we consider one more element connected in series, the force-displacement relations can be written as:</p>
+<p>For ease of understanding, we mark this way: the superscripts a and b denote the different sides of the nodes, the subscripts 1, 2, and 3 denote the serial number of the nodes, while the subscripts of stiffness k denote the elements between the two nodes.<br>$$<br>f_1^b=k_{12}q_1^b-k_{12}q_2^a\<br>f_2^a+f_2^b=-k_{12}q_1^b+(k_{12}+k_{23})q_2^a-k_{23}q_3^a\<br>f_3^a=-k_{12}q_2^b+k_{23}q_3^a\<br>$$<br>Since these two elements share a common node where the total force is also shared at, then some basic local-global relations can be determined (For ease of expression):<br>$$<br>Q_1=q_1^b,Q_2=q_2^a=q_2^b,Q_3=q_3^a\<br>F_1=f_1^b,F_2=f_2^a+f_2^b,F_3=f_3^a<br>$$<br>Thus, rewrite the relations and transform into linear algebraic way:<br>$$<br>\left{\begin{matrix}<br>F_1\F_2\F_3<br>\end{matrix}\right}<br>=<br>\begin{bmatrix}<br>k_{12} &amp; -k_{12} &amp; 0\<br>-k_{12} &amp; k_{12}+k_{23} &amp; -k_{23}\<br>0 &amp; -k_{23}{} &amp; k_{23}<br>\end{bmatrix}<br>\left{\begin{matrix}<br>Q_1\Q_2\Q_3<br>\end{matrix}\right}\<br>\Rightarrow<br>\underbrace<em>{force \ vector}=\underbrace{[K]}</em>{stiffness\ matrix}\underbrace_{disp.\ vector}<br>$$<br>In the process of expressing the force-displacement relationship with linear algebra, the construction of the stiffness matrix is actually like assembling the separate stiffness matrix of each connected element. Such stiffness matrix clearly shows the connectivity between elements.</p>
+<p>After constructing the force-displacement relation, how to solve it? During the solution, we can reduce the matrix system by imposing boundary conditions and loading conditions,</p>
+<p>For above 1D element examples, there are other elements like surface of solid element. However, no matter which kind of element, they only affect the stiffness matrix and the corresponding assembly.</p>
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/12/07/2022120701/">Basic Theory of TMD(2)<span class="note">Older</span></a><div class="line"></div><a id="prev" href="/2024/08/21/2024082101/">Introduction to FEA<span class="note">Newer</span></a><div class="line"></div><a id="more" href="/archives">All Articles</a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2024/08/18/2024081801/">Interpretation of "strain"s in CDP model<span class="note">Older</span></a><div class="line"></div><div class="line"></div><a id="more" href="/archives">All Articles</a></section></div>
 
 
 

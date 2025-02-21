@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2024-08-19T09:48:31.161Z</updated>
+  <updated>2024-08-25T13:24:24.593Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Introduction to FEA</title>
+    <link href="http://samanorth.github.io/2024/08/21/2024082101/"/>
+    <id>http://samanorth.github.io/2024/08/21/2024082101/</id>
+    <published>2024-08-21T08:48:23.000Z</published>
+    <updated>2024-08-25T13:24:24.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="FEM" scheme="http://samanorth.github.io/categories/FEM/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Interpretation of &quot;strain&quot;s in CDP model</title>
     <link href="http://samanorth.github.io/2024/08/18/2024081801/"/>
     <id>http://samanorth.github.io/2024/08/18/2024081801/</id>
     <published>2024-08-18T07:53:11.000Z</published>
-    <updated>2024-08-19T09:48:31.161Z</updated>
+    <updated>2024-08-25T13:08:36.769Z</updated>
     
     
       
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/12/05/2022120501/</id>
     <published>2022-12-05T14:40:04.000Z</published>
     <updated>2022-12-07T04:02:59.181Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Introduction to MDOF(2)</title>
-    <link href="http://samanorth.github.io/2022/09/19/2022091901/"/>
-    <id>http://samanorth.github.io/2022/09/19/2022091901/</id>
-    <published>2022-09-19T01:57:14.000Z</published>
-    <updated>2022-12-06T14:22:03.406Z</updated>
     
     
       
