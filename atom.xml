@@ -6,7 +6,7 @@
   <link href="http://samanorth.github.io/atom.xml" rel="self"/>
   
   <link href="http://samanorth.github.io/"/>
-  <updated>2024-08-25T13:24:24.593Z</updated>
+  <updated>2025-08-26T11:45:06.841Z</updated>
   <id>http://samanorth.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Basic of topological optimization</title>
+    <link href="http://samanorth.github.io/2025/08/26/2025082601/"/>
+    <id>http://samanorth.github.io/2025/08/26/2025082601/</id>
+    <published>2025-08-26T11:38:44.000Z</published>
+    <updated>2025-08-26T11:45:06.841Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Topological Optimization" scheme="http://samanorth.github.io/categories/Topological-Optimization/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Introduction to FEA</title>
@@ -91,29 +114,6 @@
     <id>http://samanorth.github.io/2022/12/06/2022120601/</id>
     <published>2022-12-06T14:28:44.000Z</published>
     <updated>2022-12-11T01:49:28.538Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Dynamics of Structures" scheme="http://samanorth.github.io/categories/Dynamics-of-Structures/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Simplifying Analysis Using Complex Numbers</title>
-    <link href="http://samanorth.github.io/2022/12/05/2022120501/"/>
-    <id>http://samanorth.github.io/2022/12/05/2022120501/</id>
-    <published>2022-12-05T14:40:04.000Z</published>
-    <updated>2022-12-07T04:02:59.181Z</updated>
     
     
       

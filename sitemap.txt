@@ -1,3 +1,4 @@
+http://samanorth.github.io/2025/08/26/2025082601/
 http://samanorth.github.io/2024/08/21/2024082101/
 http://samanorth.github.io/2024/08/18/2024081801/
 http://samanorth.github.io/messages/index.html
@@ -31,3 +32,4 @@ http://samanorth.github.io/categories/Dynamics-of-Structures/
 http://samanorth.github.io/categories/Advanced-Concrete/
 http://samanorth.github.io/categories/Concrete-Damaged-Plasticity/
 http://samanorth.github.io/categories/FEM/
+http://samanorth.github.io/categories/Topological-Optimization/
